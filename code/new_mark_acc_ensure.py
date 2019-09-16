@@ -13,13 +13,6 @@ base_dir = '/home/yinshuai/nlp/nlp_competition_private/tianchi/bert_in_keras/dat
 base_dir = '../data/prepare_data'
 
 
-# 旧的,保留
-# correct_q_path = os.path.join(base_dir, 'correct_q') # 不区分类型的 正确匹配
-# digit_double_match_q = os.path.join(base_dir, 'digit_double_match_q')
-# col_in_q_digit_path = os.path.join(base_dir, 'col_in_digit') # 不区分类型的 正确匹配
-# col_in_q_text_path = os.path.join(base_dir, 'col_in_text') # 不区分类型的 正确匹配
-# digit_double_match_q_fh = open(digit_double_match_q, 'w')
-
 
 
 # 新的
