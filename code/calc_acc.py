@@ -5,33 +5,7 @@ import numpy as np
 import os
 import json 
 from config import *
-data_path = '../data/logs'
 
-
-table_ids = ['69cc8c0c334311e98692542696d6e445']
-
-db_path = os.path.join(valid_data_path, 'val.db')
- 
-PY2 = sys.version_info[0] == 2
-PY3 = sys.version_info[0] == 3
-
-def execute_accuracy(query_gt, pred_queries, table_ids, db_path, sql_data):
-    """
-        Execution Accuracy 执行精确性，只要sql的执行结果一致就行
-
-    """
-    engine = DBEngine(db_path)
-    ex_acc_num = 0
-    for sql_gt, sql_pred, tid in zip(query_gt, pred_queries, table_ids):
-        ret_gt = engine.execute(tid, sql_gt['sel'], sql_gt['agg'], sql_gt['conds'], sql_gt['cond_conn_op'])
-
-        try:
-            ret_pred = engine.execute(tid, sql_pred['sel'], sql_pred['agg'], sql_pred['conds'], sql_pred['cond_conn_op'])
-        except Exception as  e:
-            ret_pred = None
-        ex_acc_num += (ret_gt == ret_pred)
-    print('\nexecute acc is {}'.format(ex_acc_num / len(sql_data)))
-    return  ex_acc_num / len(sql_data)
 
 class Sqlite3Oper():
     def __init__(self, engine):
@@ -49,7 +23,7 @@ class Sqlite3Oper():
         return ret_gt == ret_pred
         
         
-engine = DBEngine(db_path)
+engine = DBEngine(os.path.join(valid_data_path, 'val.db'))
 sqlite_oper = Sqlite3Oper(engine)
 
 def check_part_acc(pred_queries, gt_queries, tables_list, valid_data):
@@ -61,15 +35,14 @@ def check_part_acc(pred_queries, gt_queries, tables_list, valid_data):
                 tables_list: 表列表
                 valid_data: valid data 带有数据比较多
         ouput: xxx 
-
-          
+ 
     """
     NEED_REWRITE_LOG = True
     if NEED_REWRITE_LOG:
-        fh_where_val = open(os.path.join(data_path, 'where_val_error.log'), 'w')
-        fh_where_oper = open(os.path.join(data_path, 'where_oper_error.log'), 'w')
-        fh_where_col = open(os.path.join(data_path, 'where_col_error.log'), 'w')
-        fh_where_cnt = open(os.path.join(data_path, 'where_cnt_error.log'), 'w')
+        fh_where_val_err = open(os.path.join(log_path, 'where_val_error.log'), 'w')
+        fh_where_oper_err = open(os.path.join(log_path, 'where_oper_error.log'), 'w')
+        fh_where_col_err = open(os.path.join(log_path, 'where_col_error.log'), 'w')
+        fh_where_cnt_err = open(os.path.join(log_path, 'where_cnt_error.log'), 'w')
 
     tot_err = sel_num_err = agg_err = sel_err = 0.0
     cond_num_err = cond_col_err = cond_op_err = cond_val_err = cond_rela_err = 0.0
@@ -109,26 +82,14 @@ def check_part_acc(pred_queries, gt_queries, tables_list, valid_data):
 
         cond_pred = pred_qry['conds']
         cond_gt = gt_qry['conds']
+        strs_py3 = json.dumps(eval(str({'question': valid_d['question'], 'table': valid_d['table_id']})), ensure_ascii=False) + '\n' + \
+                       json.dumps(eval(str({'sql_right': valid_d['sql']})), ensure_ascii=False) + '\n' + \
+                       json.dumps(eval(str({'sql_pred': valid_d['sql_pred']})), ensure_ascii=False) + '\n'
         if len(cond_pred) != len(cond_gt):
             good = False
             cond_num_err += 1
-            if PY2:
-                # right first 
-                fh_where_cnt.write(
-                        json.dumps({'question': valid_d['question'], 'table': valid_d['table_id']}, ensure_ascii=False).encode('utf-8') + '\n')
-                fh_where_cnt.write(
-                        json.dumps({'sql_right': valid_d['sql']}, ensure_ascii=False).encode('utf-8') + '\n')
-                fh_where_cnt.write(
-                        json.dumps({'sql_pred': valid_d['sql_pred']}, ensure_ascii=False).encode('utf-8') + '\n')
-            elif PY3 and NEED_REWRITE_LOG: 
-
-                fh_where_cnt.write(
-                        json.dumps(eval(str({'question': valid_d['question'], 'table': valid_d['table_id']})), ensure_ascii=False) + '\n')
-                fh_where_cnt.write(
-                        json.dumps(eval(str({'sql_right': valid_d['sql']})), ensure_ascii=False) + '\n')
-                fh_where_cnt.write(
-                        json.dumps(eval(str({'sql_pred': valid_d['sql_pred']})), ensure_ascii=False) + '\n')
-
+            if PY3 and NEED_REWRITE_LOG: fh_where_cnt_err.write(strs_py3)
+            
         else:
             cond_op_pred, cond_op_gt = {}, {}
             cond_val_pred, cond_val_gt = {}, {}
@@ -141,72 +102,23 @@ def check_part_acc(pred_queries, gt_queries, tables_list, valid_data):
             if set(cond_op_pred.keys()) != set(cond_op_gt.keys()):
                 cond_col_err += 1
                 good = False
-                if PY2:
-                    # right first 
-                    fh_where_col.write(
-                            json.dumps({'question': valid_d['question'], 'table': valid_d['table_id']}, ensure_ascii=False).encode('utf-8') + '\n')
-                    fh_where_col.write(
-                            json.dumps({'sql_right': valid_d['sql']}, ensure_ascii=False).encode('utf-8') + '\n')
-                    fh_where_col.write(
-                            json.dumps({'sql_pred': valid_d['sql_pred']}, ensure_ascii=False).encode('utf-8') + '\n')
-                elif PY3 and NEED_REWRITE_LOG: 
-                    fh_where_col.write(
-                            json.dumps(eval(str({'question': valid_d['question'], 'table': valid_d['table_id']})), ensure_ascii=False) + '\n')
-                    fh_where_col.write(
-                            json.dumps(eval(str({'sql_right': valid_d['sql']})), ensure_ascii=False) + '\n')
-                    fh_where_col.write(
-                            json.dumps(eval(str({'sql_pred': valid_d['sql_pred']})), ensure_ascii=False) + '\n')
-
-
-
+                if PY3 and NEED_REWRITE_LOG: fh_where_col_err.write(strs_py3)
 
             where_op_pred = [cond_op_pred[x] for x in sorted(cond_op_pred.keys())]
             where_op_gt = [cond_op_gt[x] for x in sorted(cond_op_gt.keys())]
             if where_op_pred != where_op_gt:
                 cond_op_err += 1
                 good = False
-                if PY2:
-                    fh_where_oper.write(
-                            json.dumps({'question': valid_d['question'], 'table': valid_d['table_id']}, ensure_ascii=False).encode('utf-8') + '\n')
-                    fh_where_oper.write(
-                            json.dumps({'sql_right': valid_d['sql']}, ensure_ascii=False).encode('utf-8') + '\n')
-                    fh_where_oper.write(
-                            json.dumps({'sql_pred': valid_d['sql_pred']}, ensure_ascii=False).encode('utf-8') + '\n')
+                if PY3 and NEED_REWRITE_LOG: fh_where_oper_err.write(strs_py3)
 
-                elif PY3 and NEED_REWRITE_LOG: 
-                    fh_where_oper.write(
-                            json.dumps(eval(str({'question': valid_d['question'], 'table': valid_d['table_id']})), ensure_ascii=False) + '\n')
-                    fh_where_oper.write(
-                            json.dumps(eval(str({'sql_right': valid_d['sql']})), ensure_ascii=False) + '\n')
-                    fh_where_oper.write(
-                            json.dumps(eval(str({'sql_pred': valid_d['sql_pred']})), ensure_ascii=False) + '\n')
-
-   
 
             where_val_pred = [cond_val_pred[x] for x in sorted(cond_val_pred.keys())]
             where_val_gt = [cond_val_gt[x] for x in sorted(cond_val_gt.keys())]
 
             if where_val_pred != where_val_gt:
-            
                 cond_val_err += 1
                 good = False
-                if PY2:
-                    # right first 
-                    fh_where_val.write(
-                            json.dumps({'question': valid_d['question'], 'table': valid_d['table_id']}, ensure_ascii=False).encode('utf-8') + '\n')
-                    fh_where_val.write(
-                            json.dumps({'sql_right': valid_d['sql']}, ensure_ascii=False).encode('utf-8') + '\n')
-                    fh_where_val.write(
-                            json.dumps({'sql_pred': valid_d['sql_pred']}, ensure_ascii=False).encode('utf-8') + '\n')
-                elif PY3 and NEED_REWRITE_LOG: 
-                    fh_where_val.write(
-                            json.dumps(eval(str({'question': valid_d['question'], 'table': valid_d['table_id']})), ensure_ascii=False) + '\n')
-                    fh_where_val.write(
-                            json.dumps(eval(str({'sql_right': valid_d['sql']})), ensure_ascii=False) + '\n')
-                    fh_where_val.write(
-                            json.dumps(eval(str({'sql_pred': valid_d['sql_pred']})), ensure_ascii=False) + '\n')
-        # print(res)
-                
+                if PY3 and NEED_REWRITE_LOG: fh_where_val_err.write(strs_py3)
 
         if not good:
             tot_err += 1

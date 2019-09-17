@@ -2,15 +2,13 @@
 
 import json
 import os
-
+# os.environ['PYTHONHASHSEED'] = '0'
 import numpy as np
 import tensorflow as tf
-import random as rn
-np.random.seed(42)
-rn.seed(12345)
-tf.set_random_seed(1234)
-
-os.environ['PYTHONHASHSEED'] = '0'
+# import random as rn
+# np.random.seed(42)
+# rn.seed(12345)
+# tf.set_random_seed(1234)
 
 from keras_bert import load_trained_model_from_checkpoint, Tokenizer
 import codecs
@@ -25,17 +23,14 @@ import jieba
 import editdistance
 import re
 import numpy as np 
-
 import sys
 from dbengine import DBEngine
 from  calc_acc import * 
 from check_input_feature import * 
 from post_treat import * 
-# from mark_acc_ensure import * 
 from new_mark_acc_ensure import * 
 from question_prepro import * 
-# from exceptdata import * 
-
+from data_generator import read_data
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--mode', type=str, default='', help='execute mode, eg: train/test/evaluate')
@@ -44,7 +39,6 @@ if args.mode not in set(['train', 'test', 'evaluate']):
     raise ValueError('Please input correct execute mode')
 mode = args.mode 
 
-
 maxlen = 160
 num_agg = 7 # agg_sql_dict = {0:"", 1:"AVG", 2:"MAX", 3:"MIN", 4:"COUNT", 5:"SUM", 6:"不被select"}
 num_op = 5 # {0:">", 1:"<", 2:"==", 3:"!=", 4:"不被select"}
@@ -52,15 +46,10 @@ num_cond_conn_op = 3 # conn_sql_dict = {0:"", 1:"and", 2:"or"}
 csel_num = 20 # col cnt 最大为20 
 
 # learning_rate = 5e-5
-learning_rate = 3e-5 # from 15 to 8 
+learning_rate = 15e-5 # from 15 to 8 
 min_learning_rate = 1e-5
-PY2 = sys.version_info[0] == 2
-PY3 = sys.version_info[0] == 3
-toy = False     
-toy_data_cnt = 200
+
 except_cnt = 0 
-
-
 
 config_path = os.path.join(model_bert_wwm_path, 'chinese-bert_chinese_wwm_L-12_H-768_A-12/bert_config.json')
 checkpoint_path = os.path.join(model_bert_wwm_path, 'chinese-bert_chinese_wwm_L-12_H-768_A-12/bert_model.ckpt')
@@ -68,41 +57,6 @@ dict_path = os.path.join(model_bert_wwm_path, 'chinese-bert_chinese_wwm_L-12_H-7
 weight_save_path = os.path.join(model_path, 'weights/nl2sql_finetune_add_div2.weights')
 
 # weight_save_path = os.path.join(model_path, 'weights/nl2sql_finetune_add_div_goodest_0.804.weights')
-
-
-
-def read_data(data_file, table_file):
-    data, tables = [], {}
-    with open(data_file) as f:
-        for l in f:
-            data.append(json.loads(l))
-    with open(table_file) as f:
-        for l in f:
-            l = json.loads(l)
-            d = {}
-            d['headers'] = l['header']
-            d['header2id'] = {j: i for i, j in enumerate(d['headers'])}
-            d['content'] = {}
-            d['keywords'] = {}
-            d['all_values'] = set()
-            d['types'] = l['types']
-            d['title'] = l['title']
-            rows = np.array(l['rows'])
-            for i, h in enumerate(d['headers']):
-                d['content'][h] = set(rows[:, i])
-                if d['types'][i] == 'text':
-                    d['keywords'][i] = ''
-                    # get_key_words(d['content'][h])
-                else:
-                    d['keywords'][i] = ''
-
-                d['all_values'].update(d['content'][h])
-            # print(d['keywords'])
-            d['all_values'] = set([i for i in d['all_values'] if hasattr(i, '__len__')])
-            tables[l['id']] = d
-    if toy:
-        data = data[:toy_data_cnt]
-    return data, tables
 
 if mode != 'test':
     train_data, train_tables = read_data(
@@ -155,7 +109,6 @@ def seq_padding(X, padding=0, maxlen=None):
     ])
 
 
-
 class data_generator:
 
     def __init__(self, data, tables, batch_size=32): # 32 to 256 for cpu , 32 for gpu 
@@ -184,7 +137,6 @@ class data_generator:
             for i in idxs:
                 d = self.data[i]
                 ori_q = d['question']
-
                 d['question'] = trans_question_acc(d['question'])
                 t = self.tables[d['table_id']]['headers']
                 dtypes = self.tables[d['table_id']]['types']
@@ -227,7 +179,6 @@ class data_generator:
 
                 is_wrong_q = False 
 
-
                 for cond in d['sql']['conds']:
                     # 重新在这里面弄
                     if d['question'] in correct_q_set:
@@ -236,7 +187,6 @@ class data_generator:
                             _, start_pos, end_pos = check_num_exactly_match(cond[2], d['question'])
 
                             # print(start_pos, end_pos, d['question'][start_pos: end_pos + 1])
-
                             csel0[start_pos + 1: end_pos + 1 + 1] = cond[0] + 1 
                             cop[start_pos + 1: end_pos + 1 + 1] = cond[1] 
                         else:
@@ -275,8 +225,6 @@ class data_generator:
                         cop[start_pos + 1: end_pos + 1 + 1] = cond[1] 
 
                         # print(start_pos, end_pos, d['question'][start_pos: end_pos + 1])
-
-
 
                     elif d['question'] in q_need_exactly_match_set:
                         _, start_pos, end_pos = check_num_exactly_match(cond[2], d['question'])
@@ -369,11 +317,6 @@ class data_generator:
                 else:
                     pass 
 
-
-
-
-
-
 def seq_gather(x):
     """seq是[None, seq_len, s_size]的格式，
     idxs是[None, n]的格式，在seq的第i个序列中选出第idxs[i]个向量，
@@ -443,45 +386,15 @@ pcsel_att = Lambda(lambda x: x[..., 0])(pcsel_att) # [None,q_n_step，h_n_step]
 pcsel_h_part = Lambda(lambda x: K.batch_dot(x[0], x[1]))([pcsel_att, x4h_ori]) # [None, q_n_step, hidden_siz]    
 
 
-#pcsel = Lambda(lambda x: K.batch_dot(x[0], x[1]))([att_val, x4h_ori]) # [None, q_n_step, hidden_size]
-
-
-#pcsel = Lambda(lambda x: x[0] + x[1])([x_ori, pcsel_h_part]) # [None, q_n_step, hidden]
-
-
 pcsel = concatenate([x_ori, pcsel_h_part], axis=-1) 
 
-# pcsel = Dropout(0.2)(pcsel)
-
-# 支持 cdiv 
-
-
 # new add 
-pcsel = Dense(1200, activation='relu')(pcsel) #[None, q_n_step, 1200] 看看这个对于缓解 loss 作用大不大 梯度爆炸
+pcsel = Dense(1200, activation='relu')(pcsel) #[None, q_n_step, 1200]  relu 缓解梯度爆炸
 pcdiv = Dense(2, activation='softmax')(pcsel)
-
-# # ## add Drop out layer 
-# # pcsel = Dense(1200, activation='relu')(pcsel) #[None, q_n_step, 1200]
-# pcsel = Lambda(lambda x: x, output_shape=lambda s:s)(pcsel)
-# pcsel = Reshape((-1, 3, 400))(pcsel)
-# #pcsel = Lambda(lambda x: K.reshape(x, (-1, 3, 400)))(pcsel) # header的mask.shape=(None, 1, h_len)
-
-
-
-
-
-
-
-# pcsel = concatenate([x_ori, pcsel_h_part], axis=-1) 
-
 
 pcsel0 = Dense(csel_num, activation='softmax')(pcsel) # [bs, q_step, 3, num_op]
 pcsel1 = Dense(csel_num, activation='softmax')(pcsel) # [bs, q_step, 3, num_op]
 pcsel2 = Dense(csel_num, activation='softmax')(pcsel) # [bs, q_step, 3, num_op]
-
-
-
-
 
 # Model的参数    def __init__(self, inputs, outputs, name=None): 
 model = Model(
@@ -523,22 +436,12 @@ cm = K.cast(K.not_equal(cop, num_op - 1), 'float32') # conds的mask.shape=(None,
 
 几乎所有参数都是带有batch_size维度的，因为计算损失是在整个batch上计算的
 ''' 
-
-print(pcsel.get_shape()[2])
-print(type(pcsel))
-#pcsel0 = pcsel[32, int(pcsel.get_shape()[2]), 1, 20]
-
-#print(pcsel0.get_shape())
-
 psel_loss = K.sparse_categorical_crossentropy(sel_in, psel)
 psel_loss = K.sum(psel_loss * hm) / K.sum(hm) # case: test10  padding位置的header不纳入损失计算
 pconn_loss = K.sparse_categorical_crossentropy(conn_in, pconn)
 pconn_loss = K.mean(pconn_loss) # 取均值，是为了算在整个batch中的损失
 pcop_loss = K.sparse_categorical_crossentropy(cop_in, pcop) 
 pcop_loss = K.sum(pcop_loss * xm) / K.sum(xm)
-
-
-
 
 pcsel0_loss = K.sparse_categorical_crossentropy(csel0_in, pcsel0)
 pcsel0_loss = K.sum(pcsel0_loss * xm * cm) / K.sum(xm * cm)
@@ -565,19 +468,12 @@ model.load_weights(weight_save_path) #
 except_tr_cnt = 0 
 
 
-log_file = open('./asser_log.log', 'w') 
-
-assert_wrong_log_file = open('./asser_wrong_log.log', 'w') 
-
 def nl2sql(question, table):
     """输入question和headers，转SQL
     """
     try:
         question = trans_question_acc(question) 
         question = trans_question_short_year(question)
-
-        # shuai 
-
         question = question.replace('负数', '小于0')
         question = question.replace('负值', '小于0')
         question = question.replace('为负', '小于0')
@@ -586,23 +482,10 @@ def nl2sql(question, table):
         question = question.replace('为正', '大于0')
         question = question.replace('没什么要求', '不限')
         question = question.replace('没要求', '不限')
-
-
     except: 
         pass 
-        #raise ValueError
-        
+        #raise ValueErr
     x1, x2 = tokenizer.encode(question)
-    if question in set(['月涨跌幅低于-5%，并且年涨跌幅也低于-10%的锂电池企业是？',
-                        '你好，你帮我查查看哪些锂电池公司其月涨跌幅在-5%以下，而且年涨跌幅也低于-10%的呀',
-                        '属于材料学院且价值35万的设备是哪个？',
-                        '哪些子行业的市值大于3677.69亿或者指数涨跌幅大于-30%',
-                        '市值高于3677.69亿，或者是指数涨跌幅高于-30%的子行业有哪些',
-                        '你好，请问一下市值超过3677.69亿，或是指数涨跌幅超过-30%的子行业指的是啥行业',
-                        '变化率咋算啊，目前只知道本周销售套数为1000套，有用吗',
-                        '本周销售套数1000，变化率为多少']):
-        print(question)
-        print(question)
     h = []
     for i in table['headers']:
         _x1, _x2 = tokenizer.encode(i)
@@ -618,47 +501,7 @@ def nl2sql(question, table):
         np.array([h]),
         np.array([hm])
     ])
-
-
-    if max(pcsel2[0][1:len(question) + 1].argmax(1)) > 0:
-        print('pcsel is > 0 with q \n {}\nand pcsel is :{}\n'.format(question, pcsel2[0][1:len(question) + 1].argmax(1)))
-        
-
     pcsel_ori = pcsel
-    # pcsel0 = np.squeeze(pcsel[:,:,:1,:], axis=(2,)) # numpy 不能是tensor哈 ，返回是numpy格式数据
-
-    # test 
-    if max(pcdiv[0][0:len(question) + 1].argmax(1)) > 0: 
-        pass 
-        
-        # print(question)
-        # print(pcdiv[0][0:len(question) + 1].argmax(1))
-        # print(pcop[0][0:len(question) + 1].argmax(1))
-        # print(pcsel0[0][0:len(question) + 1].argmax(1))  
-    '''
-    print('\ncop and csel is  ---------\n')
-    # pcsel1 = np.squeeze(pcsel[:,:,1:2,:], axis=(2,))
-    
-    if max(pcsel1[0][1:len(question) + 1].argmax(1)) > 0: 
-        print('\nmul col ---------\n')
-        print(question)
-        print(pcop[0][0:len(question) + 1].argmax(1))
-        print(pcsel0[0][0:len(question) + 1].argmax(1))
-        print(pcsel1[0][0:len(question) + 1].argmax(1))
-    else: 
-        print('\single op and col ---------\n')
-        print(question)
-        print(pcop[0][0:len(question) + 1].argmax(1))
-        print(pcsel0[0][0:len(question) + 1].argmax(1))
-    print('\pcdiv is  ---------\n')
-    print(pcdiv[0][0:len(question) + 1].argmax(1))
-    print('\pconn is  ---------\n')
-    print(pconn[0, 1:].argmax())
-    '''
-
-
-
-
 
     R = {'agg': [], 'sel': []}
     # psel是对header的[CLS]位置做处理的出来的，各个header的聚合或者是否被select的概率。
@@ -670,7 +513,6 @@ def nl2sql(question, table):
             R['agg'].append(j)
     conds = []
     v_op = -1
-
 
     # pcop: shape [bs, seq_len(n_step), num_op] 下面截取了:len(question) + 1 
     # 截取之后shape: [bs, question_len] 
@@ -707,20 +549,13 @@ def nl2sql(question, table):
                             for idx in range(len(entity_start_pos_list) - 1):
                                 new_s = entity_start_pos_list[idx]
                                 new_e = entity_start_pos_list[idx + 1]
-                                print(question[new_s - 1: new_e - 1])
-
                                 csel = pcsel0[0][new_s: new_e].mean(0).argmax() - 1 
                                 v_str1 = question[new_s - 1: new_e - 1] 
-
-
                                 if v_str1 is not None and csel >= 0:
                                     
                                     unit_first_list.append(unit_first)
                                     unit_second_list.append(unit_second)
                                     conds.append((csel, v_op, v_str1))  
-
-                                
-                        print(conds)
                     else:  
                         csel = pcsel0[0][v_start: v_end].mean(0).argmax() - 1 
 
@@ -729,15 +564,9 @@ def nl2sql(question, table):
                             unit_first_list.append(unit_first)
                             unit_second_list.append(unit_second)
                             conds.append((csel, v_op, v_str))
-
-
                         if pcsel1[0][v_start: v_end].mean(0).argmax() - 1  >= 0:  # add 
                             csel = pcsel1[0][v_start: v_end].mean(0).argmax() - 1 
                             if csel >= 0: 
-                                print('warnings_ok ---- ')
-                                print(question)
-                                print((csel, v_op, v_str))
-
                                 if v_str is not None:   
                                     v_str = smooth_val
                                     unit_first_list.append(unit_first)
@@ -746,36 +575,21 @@ def nl2sql(question, table):
                         
                         if pcsel2[0][v_start: v_end].mean(0).argmax() - 1 > 0:  # add 
                             csel = pcsel2[0][v_start: v_end].mean(0).argmax() - 1 
-                            print('warnings_ok ---- ')
-                            print(question)
-                            print((csel, v_op, v_str))
-
                             if v_str is not None:   
                                 v_str = smooth_val
                                 unit_first_list.append(unit_first)
                                 unit_second_list.append(unit_second)
-                                conds.append((csel, v_op, v_str))
-                        
-                        
-                        
+                                conds.append((csel, v_op, v_str))    
                 v_start = i 
                 v_op = j # v_op在这里第一次赋值
                 v_str = question[i - 1] # v_str在这里第一次赋值
-
-
-                
             else: # 在 这里 j == num_op-1,说明当前运算符在question上延续着
                 v_str += question[i - 1]
-
-
-
-
             if i == len(question):
                 v_end = v_start + len(v_str)
 
                 v_start_idx, v_end_idx, smooth_val = smooth_numeric(v_start - 1, v_end - 1, question)
                 unit_first, unit_second  = get_append_unit(v_start - 1, v_end - 1, question) # unit_firt: 亿 unit_second: 元
-                
                 # 添加div中的信息
                 # print(max(pcdiv[0][v_start: v_end].argmax(1)))
                 if max(pcdiv[0][v_start: v_end].argmax(1)) > 0:# 0 
@@ -801,19 +615,10 @@ def nl2sql(question, table):
                                 unit_first_list.append(unit_first)
                                 unit_second_list.append(unit_second)
                                 conds.append((csel, v_op, v_str1))  
-                    print(conds)
                 else:
-
-                    print('here_break--')
-                    print(pcsel1[0][v_start: v_end].argmax(1))
-
                     if pcsel1[0][v_start: v_end].mean(0).argmax() - 1  >= 0:  # add 
                         csel = pcsel1[0][v_start: v_end].mean(0).argmax() - 1 
                         if csel >= 0: 
-                            print('warnings_ok ---- ')
-                            print(question)
-                            print((csel, v_op, v_str))
-
                             if v_str is not None:   
                                 v_str = smooth_val
                                 unit_first_list.append(unit_first)
@@ -822,52 +627,27 @@ def nl2sql(question, table):
                     
                     if pcsel2[0][v_start: v_end].mean(0).argmax() - 1 >= 0:  # add 
                         csel = pcsel2[0][v_start: v_end].mean(0).argmax() - 1 
-                        print('warnings_ok ---- ')
-                        print(question)
-                        print((csel, v_op, v_str))
-
                         if v_str is not None:   
                             v_str = smooth_val
                             unit_first_list.append(unit_first)
                             unit_second_list.append(unit_second)
                             conds.append((csel, v_op, v_str))
-                    
-                    
-
-
+                
                     csel = pcsel0[0][v_start: v_end].mean(0).argmax() - 1 
                     if v_str is not None:
-
                         v_str = smooth_val
-
                         unit_first_list.append(unit_first)
                         unit_second_list.append(unit_second)
                         conds.append((csel, v_op, v_str))
-                        print(conds)
                         break 
-
-
-
         elif v_op != -1:  # 遇到了"not selected" 了
             v_end = v_start + len(v_str)
             # pcsel (1, 105, 9) => (None, q_len+h_len, col_cnt ) 
             # 第二个维度为105, 105 =  32(question len)+2(question cls&sep)+ 53(all header col len) +18(header cls+sep,total 9 column in table
             # pcsel的作用是定位question中的每个字段对应header中的哪个列,所以最后一维为9,当前测试样例的表有９列
-
             v_start_idx, v_end_idx, smooth_val = smooth_numeric(v_start - 1, v_end - 1, question)
             unit_first, unit_second  = get_append_unit(v_start - 1, v_end - 1, question) # unit_firt: 亿 unit_second: 元
-            
-
-
-            # 添加div中的信息
-            # print(max(pcdiv[0][v_start: v_end].argmax(1)))
             if max(pcdiv[0][v_start: v_end].argmax(1)) > 0: 
-                print(question)
-                print(smooth_val)
-                print(v_start)
-                print(v_end)
-                print(pcdiv[0][v_start: v_end].argmax(1))
-                
                 if 1 in pcdiv[0][v_start: v_end].argmax(1) and pcdiv[0][v_start].argmax() != 1 :
 
                     entity_start_pos_list = [v_start + 1 + idx  for idx, mark in enumerate(pcdiv[0][v_start + 1: v_end].argmax(1)) if mark == 1]
@@ -884,23 +664,14 @@ def nl2sql(question, table):
 
                         csel = pcsel0[0][new_s: new_e].mean(0).argmax() - 1 
                         v_str1 = question[new_s - 1: new_e - 1] 
-
-
-
-
-
-
                         if v_str1 is not None and csel >= 0:
                             
                             unit_first_list.append(unit_first)
                             unit_second_list.append(unit_second)
                             conds.append((csel, v_op, v_str1))  
-                print(conds)
             else:
 
                 csel = pcsel0[0][v_start: v_end].mean(0).argmax() - 1 
-
-
                 # 做一些处理
                 v_e = v_end - 1 
                 untreat_unit = ''
@@ -909,31 +680,15 @@ def nl2sql(question, table):
                     # print('unit is{}, first{}'.format(untreat_unit))
                     if v_e + 1 < len(question) and len(re.findall(regex_tail, question[v_e + 1])) > 0:
                         untreat_unit += re.findall(regex_tail, question[v_e + 1])[0]
-                if untreat_unit != '':
-                    print('untreat_unit is not null and is{} and q is {}\n and v_str is {} \n '.format(untreat_unit, question, v_str))
-                
-
-
                 if v_str is not None:
                     v_str = smooth_val
                     unit_first_list.append(unit_first)
                     unit_second_list.append(unit_second)
                     conds.append((csel, v_op, v_str))
 
-                print('here--')
-                print(pcsel1[0][v_start: v_end].argmax(1))
-
-
-
-
-
                 if pcsel1[0][v_start: v_end].mean(0).argmax() - 1  >= 0:  # add 
                     csel = pcsel1[0][v_start: v_end].mean(0).argmax() - 1 
                     if csel >= 0:
-                        print('warnings_ok ---- ')
-                        print(question)
-                        print((csel, v_op, v_str))
-
                         if v_str is not None:   
                             v_str = smooth_val
                             unit_first_list.append(unit_first)
@@ -942,52 +697,19 @@ def nl2sql(question, table):
                 
                 if pcsel2[0][v_start: v_end].mean(0).argmax() - 1 >= 0:  # add 
                     csel = pcsel2[0][v_start: v_end].mean(0).argmax() - 1 
-                    print('warnings_ok ---- ')
-                    print(question)
-                    print((csel, v_op, v_str))
-
                     if v_str is not None:   
                         v_str = smooth_val
                         unit_first_list.append(unit_first)
                         unit_second_list.append(unit_second)
                         conds.append((csel, v_op, v_str))
-                
-                
-
-
             v_op = -1
     R['conds'] = set() # 集合自己去重
-
     idx = 0 
-
     for i, j, k in conds:
         if re.findall('[^\d\-\.\%]', k): # 找到非数字
             j = 2 # 非数字只能用等号,,
-            #  and len(re.findall('[\d\-\.\%]', k)) != len(k)
-            #   re.findall('[^\d\-\.\%]', k)
-
-
-        # 如果目标列的所有值里面没有除数字之外的东西，那么就不要模糊匹配了
-        # try:
-        #     col_table_vals = table['content'][table['headers'][i]]
-        # except: col_table_vals = {'--------'}
-        # no_other_text = True   
-        # print(col_table_vals)
-        # for val in col_table_vals:
-        #     print('val is {}'.format(val))
-        #     if re.findall('[^\d\-\.\%]', str(val)): no_other_text = False  
-
-        
-
-
         if j == 2 : # 这里判定出条件运算符是等号哦  等号也有可能是数字的
-
-
             ori_k = k 
-            before_treat = 'before of i,j, k is({},{},{})\n'.format(i, j, k)
-            before_ikj = (i, j, k)
-            
-
             if k not in table['all_values']:
                 k = most_similar_new(k, list(table['all_values'])) 
                 if k is None: continue 
@@ -1005,16 +727,6 @@ def nl2sql(question, table):
                     if k in v:
                         i = table['header2id'][r]  
                         break
-
-            # if not re.findall('[^\d\-\.\%]', ori_k):
-            #     # 字符串还是要精准匹配的，比如 2015跟2015.0
-            #     after_ijk = (i, j, k)
-            #     if before_ikj != after_ijk:
-            #         print(before_treat)
-            #         print(types[i])
-            #     print('after of i,j, k is({},{},{})\n'.format(i, j, k))
-
-
         unit_first = None if  unit_first_list[idx] == '' else unit_first_list[idx]
         unit_second = None if  unit_second_list[idx] == '' else unit_second_list[idx]
         idx += 1 
@@ -1022,12 +734,7 @@ def nl2sql(question, table):
             # 添加一个预处理，预测的数字左右缺失的话 
             ori_k = k 
             try:
-                right_str = "\n{},'{}','{}',format_of_number={}, format_desc={}\n".format(k, table['headers'][i], table['title'], unit_first, unit_second)
-
-                assert_str = "assert number_trans({},'{}','{}',format_of_number='{}', format_desc='{}') ==".format(k, table['headers'][i], table['title'], unit_first, unit_second)
                 k = number_trans(int(k), table['headers'][i], table['title'], format_of_number=unit_first, format_desc=unit_second)
-
-
                 max_col_val = None 
                 have_text_in_col = False 
                 for col_val in table['content'][table['headers'][i]]:
@@ -1038,52 +745,19 @@ def nl2sql(question, table):
                             max_col_val = max(max_col_val, float(col_val))
                     else: 
                         have_text_in_col = True 
-                        break 
-                            
-                    
-                if '万平' in question:
-                    if max_col_val is not None and not re.findall('[^\d\.]', str(k))  and float(k) > max_col_val * 10:
-                        k = ori_k 
-                        print('--- warining  -- \n use ori {}'.format(k))
-                    print(question)
-                    
-                    print(table['content'][table['headers'][i]])
-                    print('max is {}'.format(max_col_val))
-                    assert_str = assert_str + '{}'.format(k)
-                    print(assert_str)
-
-
-
-                # print('number_trans right {} \n right param is \n{}\n'.format(question, right_str))
-                assert_str = assert_str + '{}\n'.format(k)
-                print(assert_str)
-                log_file.write(assert_str)
-
-                       
+                        break        
             except:
-                 
-                # print('number_trans error {} \n'.format(question))
-                # print("\n{},'{}','{}',format_of_number={}, format_desc={}\n".format(k, table['headers'][i], table['title'], unit_first, unit_second))
-                assert_str = assert_str + '{}\n'.format(k)
-                assert_wrong_log_file.write(assert_str)
-
-    
+                pass 
         #这里如果k是　数字的话，包含百分数，那么去掉后面的百分号
         if not re.findall('[^\d\-\.\%]', str(k))  and '%' in str(k):
-            # print('\n get percent val {} '.format(k))
             k = str(k)[:-1]
-            # print('percent after treate {}\n'.format(k))
         R['conds'].add((i, j, k))
-
     if max(pcsel2[0][1:len(question) + 1].argmax(1)) > 0:
-        # print('pcsel cond is \n {}\n'.format(R['conds']))
         pass 
-    
     R['conds'] = list(R['conds'])
     if len(R['conds']) <= 1: # 条件数少于等于1时，条件连接符直接为0
         R['cond_conn_op'] = 0
     else:
-        # pconn (1,3) => (None, con_conn_cnt)
         R['cond_conn_op'] = 1 + pconn[0, 1:].argmax() # 不能是0
     return R
 

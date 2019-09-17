@@ -6,72 +6,21 @@ from check_input_feature import *
 from utils import * 
 
 
-
- #  文件路径配置
-# base_dir = '/home/yinshuai/code/code/nlp/nlp_competition_private/tianchi/bert_in_keras/data'
-base_dir = '/home/yinshuai/nlp/nlp_competition_private/tianchi/bert_in_keras/data'
-base_dir = '../data/prepare_data'
-
-
-
-
 # 新的
-q_correct_path = os.path.join(base_dir, 'new_q_correct') # 不区分类型的 正确匹配
-q_no_num_similar_path = os.path.join(base_dir, 'new_q_no_num_similar') # 非数字的，通过相似函数可以匹配正确的
-q_num_double_more_path = os.path.join(base_dir, 'q_num_double_more.log')
-q_need_col_similar_path = os.path.join(base_dir, 'new_q_need_col_sim.log')
-q_one_vs_more_col_path = os.path.join(base_dir, 'new_q_one_vs_more_col.log')
-q_need_exactly_match_path = os.path.join(base_dir, 'new_q_exactly_match.log')
-q_need_exactly_match_more_strict_path =  os.path.join(base_dir, 'new_q_exactly_more_strict_match.log')
-q_text_contain_similar_path =  os.path.join(base_dir, 'new_q_text_contain_similar.log')
-
-
-
-
-
-q_real_text_mix_path =  os.path.join(base_dir, 'new_q_exactly_more_strict_match.log')
-
-
-
-
-
-
-
-# _ = os.path.join(base_dir, 'q_num_double_match')
-# col_in_q_digit_path = os.path.join(base_dir, 'col_in_digit') # 不区分类型的 正确匹配
-# col_in_q_text_path = os.path.join(base_dir, 'col_in_text') # 不区分类型的 正确匹配
-
-
-
-# correct_q_f_h = open(correct_q_path, 'r')
-# # col_in_q_text_path_fh = open(col_in_q_text_path, 'r')
-
-# # 去重set 配置
-# digit_double_match_q_set = set([])
-
-# correct_exact_match_q = set([])
-
-# correct_exact_match_data =  correct_q_f_h.readlines()
-
-# col_in_q_digit_path_data = col_in_q_digit_path_fh.readlines()
-# col_in_q_text_path_data = col_in_q_text_path_fh.readlines()
-
-
-# already_set = set([])
-# correct_exact_match_q = set([q[:-1] for q in  correct_exact_match_data])
-# col_in_q_digit_path_set = set([q[:-1] for q in col_in_q_digit_path_data ])
-# col_in_q_text_path_set = set([q[:-1] for q in col_in_q_text_path_data ])
-# already_set = already_set | correct_exact_match_q
-# already_set = already_set | col_in_q_digit_path_set
-# already_set = already_set | col_in_q_text_path_set
-
-
+q_correct_path = os.path.join(prepare_data_path, 'new_q_correct') # 不区分类型的 正确匹配
+q_no_num_similar_path = os.path.join(prepare_data_path, 'new_q_no_num_similar') # 非数字的，通过相似函数可以匹配正确的
+q_num_double_more_path = os.path.join(prepare_data_path, 'q_num_double_more')
+q_need_col_similar_path = os.path.join(prepare_data_path, 'new_q_need_col_sim')
+q_one_vs_more_col_path = os.path.join(prepare_data_path, 'new_q_one_vs_more_col')
+q_need_exactly_match_path = os.path.join(prepare_data_path, 'new_q_exactly_match')
+q_need_exactly_match_more_strict_path =  os.path.join(prepare_data_path, 'new_q_exactly_more_strict_match')
+q_text_contain_similar_path =  os.path.join(prepare_data_path, 'new_q_text_contain_similar')
+q_real_text_mix_path =  os.path.join(prepare_data_path, 'new_q_exactly_more_strict_match')
 
 train_data, train_tables = read_data(
                         os.path.join(train_data_path, 'train.json'),
                         os.path.join(train_data_path, 'train.tables.json')
                         ) # 41522  5013
-
 
 table_types  = {}
 table_headers = {}
@@ -174,33 +123,6 @@ bad_question = set([
 
 ])
 
-# 需要后处理  小数是否可以完整标记??
-# 17年的每股盈余超过5毛的公司它们的市盈率平均下来会是多少呀
-# 请问有没有什么证券的2011的基本每股收益高于8毛，有的话是哪个证券代码
-# 你好啊，你帮我看一下啊倒挂率超过0.3的是什么证券啊 
-# 股价低于9块九的公司是哪个
-
-
-
-# 哪些城市去年同期去化时间在1年以上
-
-
-
-
-# case 1 
-'''
-你们可以找出有哪些地产类股票收盘价是3元并且跌幅超过10%的不？
-3 3
--10 10%
-----------
-跌幅超过10%并且收盘的价格大于3元钱的地产类股票有那几个？
-3 3
--10 10%
-----------
-能不能查出尾盘价格为大于3元的并且超过10%跌幅的股票有哪些？
-3 3
--10 10%
-'''
 
 
 def get_correct_q(file_path, mode='write', unwanted=set([])):
@@ -209,7 +131,6 @@ def get_correct_q(file_path, mode='write', unwanted=set([])):
      - 在conds中不能出现条件值相同(排除那些一词对应多列的情况)
     """
     d_s = set([])
-
     if mode == 'write':
         f_h = open(file_path, 'w')
         for d in train_data:
@@ -220,25 +141,17 @@ def get_correct_q(file_path, mode='write', unwanted=set([])):
             types = table_types[d['table_id']]
             header = table_headers[d['table_id']]
             exact_match = True 
-            question = trans_question_acc(question)
-            print(question)
-            print(conds) 
+            question = trans_question_acc(question) 
             all_correct = True 
             con_val_list = [cond[2] for cond in conds]
-            print(con_val_list)
-
             q_op_mark = [0] * len(question)
-
             for cond in conds:
                 print(con_val_list.count(cond[2]))
                 if cond[2] in question and con_val_list.count(cond[2]) == 1:
-
                     if (types[cond[0]] == 'real' and check_num_exactly_match(cond[2], question)[0] !=1) or\
                       (types[cond[0]] == 'text' and  question.count(cond[2]) != 1 ):
                         all_correct = False 
                         break 
-
-
                     if max(q_op_mark[question.index(cond[2]): question.index(cond[2]) + len(cond[2])]) == 1: 
                         all_correct = False  
                         break 
@@ -246,10 +159,8 @@ def get_correct_q(file_path, mode='write', unwanted=set([])):
                 else:
                     all_correct = False 
                     break 
-            print(all_correct)
             if all_correct == True:
-                d_s.add(question + '\n')
-            
+                d_s.add(question + '\n')    
         f_h.writelines(list(d_s))
     elif mode == 'read':
         f_h = open(file_path, 'r')
@@ -259,21 +170,20 @@ def get_correct_q(file_path, mode='write', unwanted=set([])):
     else: 
         raise ValueError('unsupported mode ')
 
-
-
+if not os.path.exists(q_correct_path):
+    get_correct_q(q_correct_path, mode='write', unwanted=wrong_mark_official) 
 correct_q_set =  get_correct_q(q_correct_path, mode='read', unwanted=wrong_mark_official) 
-print(len(correct_q_set)) # 28052 
+assert len(correct_q_set) == 28052 # 28052 
 
 
 
 def get_no_num_similar(file_path, mode='write', unwanted=set([])):
     """
-    获取非数字，而且通过similar可以匹配正确的
-    mode: 'write' or 'read' f
+    获取条件值不是数字，而且通过similar函数可以匹配正确的
+    mode: 'write' or 'read' 
     unwanted:  排除掉的question集合
     """
     d_s = set([])
-    
     if mode == 'write':
         f_h = open(file_path, 'w')
         for d in train_data:
@@ -283,19 +193,11 @@ def get_no_num_similar(file_path, mode='write', unwanted=set([])):
             header = table_headers[d['table_id']]
             question = trans_question_acc(question) # 转化是必须的
             if question in unwanted: continue
-
-            # all cond val is not 'real'
             type_set = set([types[cond[0]] for cond in conds ])
             if 'real' in type_set: continue # 获取非数字
-            print('-' * 10)
-            print(question)
             good = True 
-
             q_op_mark = [0] * len(question)
-
             for cond in conds:
-                
-                print(cond[2])
                 if cond[2] in question:
                     sim = cond[2]
                 else:
@@ -303,22 +205,12 @@ def get_no_num_similar(file_path, mode='write', unwanted=set([])):
                 if sim is None: 
                     good = False 
                     break 
-                print(most_similar_2(cond[2], question))
-
                 if max(q_op_mark[question.index(sim): question.index(sim) + len(sim)]) == 1: 
                     good = False  
                     break 
-
                 q_op_mark[question.index(sim): question.index(sim) + len(sim)] = [1] * len(sim)
-
-            
-
             if good == True:
                 d_s.add(question + '\n')
-
-
-
-            # continue 
         f_h.writelines(list(d_s)) 
 
     elif mode == 'read':
@@ -330,12 +222,10 @@ def get_no_num_similar(file_path, mode='write', unwanted=set([])):
         raise ValueError('unsupported mode ')
 
 
-
+if not os.path.exists(q_no_num_similar_path):
+    get_no_num_similar(q_no_num_similar_path, mode='write', unwanted=wrong_mark_official|correct_q_set)
 no_num_similar_set = get_no_num_similar(q_no_num_similar_path, mode='read', unwanted=wrong_mark_official|correct_q_set)
-# 7020
-print(len(no_num_similar_set))
-######
-
+assert len(no_num_similar_set) == 7020
 
 
 def q_one_vs_more_col(file_path, mode='write', unwanted=set([])):
@@ -360,16 +250,13 @@ def q_one_vs_more_col(file_path, mode='write', unwanted=set([])):
             header = table_headers[d['table_id']]
             question = trans_question_acc(question) # 转化是必须的
             if question in unwanted: continue
-
             vals = set([cond[2] for cond in conds])
             if len(vals) == len(conds) : continue 
             is_good = True
             for val in vals:
                 try: 
-                    
                     int(float(val))
                 except: 
-                    print('except')
                     is_good = False 
                     continue 
                 if check_num_exactly_match(val, question)[0] != 1 \
@@ -377,28 +264,19 @@ def q_one_vs_more_col(file_path, mode='write', unwanted=set([])):
                     is_good = False 
                     break 
             cnts += 1 
-            #f_h.write(question + '\n')
-            if question == '帮我查查市价盈利比率在10年和11都在1以上的公司共有几个':
-
-                print(question)
-                print(is_good)
-                # sys.exit(0)
             if is_good == True:
                 f_h.write(question + '\n')
-            # print(conds)
     elif mode == 'read':
         with open(q_one_vs_more_col_path, 'r') as f:
             return set([line[:-1] for line in f.readlines()])
 
+if not os.path.exists(q_one_vs_more_col_path):
+    q_one_vs_more_col(q_one_vs_more_col_path, 
+                mode='write', unwanted=wrong_mark_official|correct_q_set|no_num_similar_set)
+q_one_vs_more_col_set = q_one_vs_more_col(q_one_vs_more_col_path, 
+                mode='read', unwanted=wrong_mark_official|correct_q_set|no_num_similar_set)
 
-# q_one_vs_more_col()
-q_one_vs_more_col_set =  q_one_vs_more_col(q_one_vs_more_col_path, 
-                mode='read',unwanted=wrong_mark_official|correct_q_set|no_num_similar_set)
-
-print(len(q_one_vs_more_col_set))
-# 1349
-
-
+assert len(q_one_vs_more_col_set) == 1349 
 
 
 def q_need_exactly_match(file_path, mode='write', unwanted=set([])):
@@ -408,22 +286,17 @@ def q_need_exactly_match(file_path, mode='write', unwanted=set([])):
     那么需要find一步，一步的来
     需要条件值全是数字哦
     """
-
     cnts = 0 
-        
     if mode == 'write':
         f_h = open(file_path, 'w')
         for d in train_data:
-
             question = d['question']
             conds = d['sql']['conds']
             types = table_types[d['table_id']]
             header = table_headers[d['table_id']]
-            question = trans_question_acc(question) # 转化是必须的
+            question = trans_question_acc(question) # 转化
             if question in unwanted: continue
             is_good = True 
-
-
             for cond in conds:
                 try: 
                     int(cond[2])
@@ -437,27 +310,26 @@ def q_need_exactly_match(file_path, mode='write', unwanted=set([])):
                         break 
                 elif question.count(cond[2]) == 0:
                     is_good = False 
-
-
             if is_good:
-                #f_h.write(question + '\n' + str(conds) + '\n')
                 f_h.write(question + '\n')
     elif mode == 'read':
         with open(file_path, 'r') as f:
             return set([line[:-1] for line in f.readlines()])
 
+if not os.path.exists(q_need_exactly_match_path):
+    q_need_exactly_match(q_need_exactly_match_path, 
+                mode='write',unwanted=wrong_mark_official|correct_q_set|no_num_similar_set| q_one_vs_more_col_set)
 
 q_need_exactly_match_set =  q_need_exactly_match(q_need_exactly_match_path, 
                 mode='read',unwanted=wrong_mark_official|correct_q_set|no_num_similar_set| q_one_vs_more_col_set)
 
-print(len(q_need_exactly_match_set))# 359 
+assert len(q_need_exactly_match_set) == 368
 
 
 def q_need_exactly_match_more_strict(file_path, mode='write', unwanted=set([])):
     """
     更加严格的匹配 20就是和20匹配上，并不能匹配上2000
     """
-
     cnts = 0 
     if mode == 'write':
         f_h = open(file_path, 'w')
@@ -476,12 +348,8 @@ def q_need_exactly_match_more_strict(file_path, mode='write', unwanted=set([])):
                 except: 
                     is_good = False 
                     break 
-                print(question)
-                print(conds)
-                print(cond)
                 if question.count(cond[2]) >= 1:
                     cnt_info = check_num_exactly_match_zero_case(cond[2], question)
-                    print(cnt_info)
                     if cnt_info[0] != 1:
                         is_good = False 
                         break 
@@ -491,45 +359,27 @@ def q_need_exactly_match_more_strict(file_path, mode='write', unwanted=set([])):
                     mark_q[cnt_info[1]: cnt_info[2] + 1] = [1] * (cnt_info[1] + 1 - cnt_info[0]) 
                 elif question.count(cond[2]) == 0:
                     is_good = False 
-
             if is_good:
-                print(question)
-
-            if is_good:
-                # f_h.write(question + '\n' + str(conds) + '\n' + str(header) + '\n')
                 f_h.write(question + '\n')
     elif mode == 'read':
         with open(file_path, 'r') as f:
             return set([line[:-1] for line in f.readlines()])
 
-
+if not os.path.exists(q_need_exactly_match_more_strict_path):
+    q_need_exactly_match_more_strict(q_need_exactly_match_more_strict_path, 
+                mode='write',unwanted=wrong_mark_official|correct_q_set|no_num_similar_set| q_one_vs_more_col_set|q_need_exactly_match_set)
 q_need_exactly_match_more_strinct_set =  q_need_exactly_match_more_strict(q_need_exactly_match_more_strict_path, 
                 mode='read',unwanted=wrong_mark_official|correct_q_set|no_num_similar_set| q_one_vs_more_col_set|q_need_exactly_match_set)
+assert len(q_need_exactly_match_more_strinct_set) == 342 
 
-print(len(q_need_exactly_match_more_strinct_set))# 342 
-
-b_c = 0 
-uw = correct_q_set|no_num_similar_set| q_one_vs_more_col_set|q_need_exactly_match_set|q_need_exactly_match_more_strinct_set
-f_h = open(q_num_double_more_path, 'r')
-
-
-
-'''
-for line in f_h.readlines():
-    if line[:-1] not in uw:
-        b_c +=1 
-        print(line[:-1])
-print(b_c)
-'''
-
-## 一些纯文本的，完全可以通过most_similar啊!!!!! 文本加数字组合的也可以通过我那个精准函数
-
-
+# b_c = 0 
+# uw = correct_q_set|no_num_similar_set| q_one_vs_more_col_set|q_need_exactly_match_set|q_need_exactly_match_more_strinct_set
+# f_h = open(q_num_double_more_path, 'r')
 
 
 def q_text_contain_similar(file_path, mode='write', unwanted=set([])):
     """
-    为啥有的文本能够匹配上，还不在,
+
     """
     d_s = set([])
     unwanted = unwanted | set([
@@ -578,19 +428,11 @@ def q_text_contain_similar(file_path, mode='write', unwanted=set([])):
             conds = d['sql']['conds']
             types = table_types[d['table_id']]
             header = table_headers[d['table_id']]
-            question = trans_question_acc(question) # 转化是必须的
-
+            question = trans_question_acc(question) # 转化
             # all cond val is not 'real'
             type_set = set([types[cond[0]] for cond in conds ])
             if question in unwanted: continue
-            # if 'text' not in type_set: continue 
-            # headers = [header[cond[0]] for cond in conds]
-            # print(conds)
-            # print(headers)
             good = True 
-            ## 条件值有多个，并且是相同值的　进行标记
-            # 哪些需要留下来? 条件值出现在条件中多次
-
             # 不能出现标注重叠
             mark_list = [0] * len(question)
             for cond in conds:
@@ -598,11 +440,10 @@ def q_text_contain_similar(file_path, mode='write', unwanted=set([])):
                     find_cnt, num_start_idx, num_end_idx = check_num_exactly_match_zero_case(cond[2], question)
 
                     if find_cnt == 1 and max(mark_list[num_start_idx:num_end_idx+1]) > 0: 
-                        good = False; 
+                        good = False
                         break 
                     if find_cnt == 1:
                         mark_list[num_start_idx:num_end_idx+1] = [1] * (num_end_idx + 1 - num_start_idx)
-
                     if find_cnt > 1: 
                         good = False 
                     if find_cnt == 0: 
@@ -614,24 +455,15 @@ def q_text_contain_similar(file_path, mode='write', unwanted=set([])):
                             good = False
                             break 
                         mark_list[question.index(val): question.index(val) + len(val)] = [1] * len(val)
-
                 else: # 文本
                     val = most_similar_2(cond[2], question)
-                    # print('val is {} and after sim {}'.format(cond[2], val))
                     if not val: 
                         good = False
                         break  
                     if max(mark_list[question.index(val): question.index(val) + len(val)]) > 0: good = False; break 
-                        
                     mark_list[question.index(val): question.index(val) + len(val)] = [1] * len(val)
-
-
             if good == True:
                 cnt += 1 
-                print('-' * 10)
-                print(question)
-
-                # 重点取出逻辑
                 for cond in conds:
                     if types[cond[0]] == 'real': # 如果是数字的话，通过另外的方法判断
                         find_cnt, num_start_idx, num_end_idx = check_num_exactly_match_zero_case(cond[2], question)
@@ -641,17 +473,9 @@ def q_text_contain_similar(file_path, mode='write', unwanted=set([])):
                             val = question[num_start_idx: num_end_idx + 1]
                     else: # 文本
                         val = most_similar_2(cond[2], question)
-
-
-                        
-                    print(cond[2], val)
-                    
                 d_s.add(question + '\n')
-        print(cnt)
-            
         f_h.writelines(list(d_s))
     elif mode == 'read':
-    
         f_h = open(file_path, 'r')
         for line in f_h.readlines():
             d_s.add(line[:-1])
@@ -659,26 +483,18 @@ def q_text_contain_similar(file_path, mode='write', unwanted=set([])):
     else: 
         raise ValueError('unsupported mode ')
 
-
+if not os.path.exists(q_text_contain_similar_path):
+    q_text_contain_similar(q_text_contain_similar_path,
+                            mode='write', unwanted=wrong_mark_official|correct_q_set
+                            |no_num_similar_set| q_one_vs_more_col_set|q_need_exactly_match_set|
+                                q_need_exactly_match_more_strinct_set)
 q_text_contain_similar_set = q_text_contain_similar(q_text_contain_similar_path,
                          mode='read', unwanted=wrong_mark_official|correct_q_set
                          |no_num_similar_set| q_one_vs_more_col_set|q_need_exactly_match_set|
                             q_need_exactly_match_more_strinct_set)
 
+assert len(q_text_contain_similar_set) == 1222
 
-
-print(len(q_text_contain_similar_set))#1219
-
-## 可以掰着下
-# 股票总的市值最小为多少时溢价率大于负30或者上涨的幅度超过11.4%
-
-##
-# 在2011年北京人民日报出版社出版的题名有哪些啊？这当中作者有哪些呢？
-# 北京人民日报出版社2011 北京人民日报出版社
-# 2011 2011
-## 
-
-## 映射匹配
 
 def q_need_col_similar(file_path, mode='write', unwanted=set([])):
     """
@@ -699,67 +515,33 @@ def q_need_col_similar(file_path, mode='write', unwanted=set([])):
             conds = d['sql']['conds']
             types = table_types[d['table_id']]
             header = table_headers[d['table_id']]
-            question = trans_question_acc(question) # 转化是必须的
+            question = trans_question_acc(question) # 转化
 
-            # all cond val is not 'real'
             type_set = set([types[cond[0]] for cond in conds ])
             if question in unwanted: continue
             if 'text'  in type_set: continue 
-            # cnt += 1 
-            # print('-' * 10)
-            # print(question)
-            # headers = [header[cond[0]] for cond in conds]
-            # print(conds)
-            # print(headers)
             good = True 
-            ## 条件值有多个，并且是相同值的　进行标记
-            # 哪些需要留下来? 条件值出现在条件中多次
-
-            # print(conds)
             mark_pos = [0] * len(question)
             cond_set = list(set([cond[2] for cond in conds]))
-
-
             if len(cond_set) == 1 and check_num_exactly_match(cond_set[0], question)[0] < len(conds):
-                # print(question)
-                # print(conds)
-                # print(len(cond_set))
-                # print(check_num_exactly_match(cond_set[0], question)[0])
-                # good = False 
                 pass 
-
-
             for cond in conds:
-                # print(cond[2], most_similar_2(cond[2], question))
                 header_name = header[cond[0]]
                 header_sim = most_similar_2(header_name, question)
                 if not header_sim: good = False; break
-                
-                # print(header_name, header_sim)
-                # 如果是real才需要下面这种，文本的话，直接most_similar !!
                 start_idx, end_idx, match_val = alap_an_cn_mark(question, header_name, cond[2])
                 if not match_val or match_val != cond[2] : good = False; break 
                 if max(mark_pos[start_idx:end_idx]) > 0: good = False; break 
                 mark_pos[start_idx: end_idx] = [1] * len(match_val)
-                # print(start_idx, end_idx, match_val)
-
             if good == True:
-                print('-' * 10)
-                print(question)
-                print(conds)
                 cnt+= 1 
                 # 正确的取数口径
                 for cond in conds:
-                    # print(cond[2], most_similar_2(cond[2], question))
                     header_name = header[cond[0]]
                     header_sim = most_similar_2(header_name, question)
-                    print(header_name, header_sim)
                     # 如果是real才需要下面这种，文本的话，直接most_similar !!
-                    start_idx, end_idx, match_val = alap_an_cn_mark(question, header_name, cond[2])
-                    print(start_idx, end_idx, match_val)               
+                    start_idx, end_idx, match_val = alap_an_cn_mark(question, header_name, cond[2])             
                 d_s.add(question + '\n')
-        print(cnt)
-            
         f_h.writelines(list(d_s))
     elif mode == 'read':
         f_h = open(file_path, 'r')
@@ -769,23 +551,19 @@ def q_need_col_similar(file_path, mode='write', unwanted=set([])):
     else: 
         raise ValueError('unsupported mode ')
 
+if not os.path.exists(q_need_col_similar_path):
+    q_need_col_similar(q_need_col_similar_path, mode='write', unwanted=wrong_mark_official|correct_q_set|
+                    no_num_similar_set| q_one_vs_more_col_set|q_need_exactly_match_set|
+                   q_need_exactly_match_more_strinct_set|q_text_contain_similar_set)
+
 q_need_col_similar_set = q_need_col_similar(q_need_col_similar_path, mode='read', unwanted=wrong_mark_official|correct_q_set|
                     no_num_similar_set| q_one_vs_more_col_set|q_need_exactly_match_set|
                    q_need_exactly_match_more_strinct_set|q_text_contain_similar_set)
-print(len(q_need_col_similar_set)) # 1527  +  85? + xx = 1720 
-
-print('-' * 100)
-
-
-
-
-
+assert len(q_need_col_similar_set) == 1468
 
 def check_other():
     cnt = 0
     for d in train_data:
-
-
         question = d['question']
         conds = d['sql']['conds']
         types = table_types[d['table_id']]
@@ -803,181 +581,9 @@ def check_other():
 
 
 
-# check_other()
+check_other()
 
 
-
-'''
-# todo 废柴!!!!
-def q_real_text_mix(file_path, mode='write', unwanted=set([])):
-    """
-    　中文和数字混合在一起的，
-    　数字在conds中只出现一次
-    　数字在q中只出现一次
-      real的值可以通过most_similar匹配出来哦
-    """
-    d_s = set([])
-    cnt = 0 
-    if mode == 'write':
-        f_h = open(file_path, 'w')
-        for d in train_data:
-            question = d['question']
-            if question in unwanted: continue
-            conds = d['sql']['conds']
-            types = table_types[d['table_id']]
-            header = table_headers[d['table_id']]
-            question = trans_question_acc(question) # 转化是必须的
-            # all cond val is not 'real'
-            type_set = set([types[cond[0]] for cond in conds ])
-            if question in unwanted: continue
-            if 'real' not in type_set: continue 
-
-            headers = [header[cond[0]] for cond in conds]
-            good = True 
-            # print('-' * 10)
-            # print(question)
-            for cond in conds:
-
-                if types[cond[0]] == 'real' and check_num_exactly_match(cond[2], question)[0] != 1: good = False 
-                if types[cond[0]] == 'text' and question.count(cond[2]) != 1: good = False 
-
-
-
-                # print( most_similar_2(cond[2], question))
-                if most_similar_2(cond[2], question) is None: 
-                    good = False 
-
-            if good:
-                print(question)
-                print(conds)
-                cnt += 1 
-                d_s.add(question + '\n')
-            continue 
-        print(cnt)
-            
-        # q_need_col_similar_fh.writelines(list(q_no_num_similar_set))
-    elif mode == 'read':
-        f_h = open(file_path, 'r')
-        for line in f_h.readlines():
-            d_s.add(line[:-1])
-        return d_s
-    else: 
-        raise ValueError('unsupported mode ')
-
-q_real_text_mix(q_real_text_mix_path, mode='write', unwanted=correct_q_set|no_num_similar_set| q_one_vs_more_col_set|q_need_exactly_match_set|
-                q_need_exactly_match_more_strinct_set)
-
-
-
-
-
-
-
-
-
-def get_q_num_double_more(mode='write', unwanted=set([])):
-    """
-        - col_in_q_digit_path_fh
-        - val为"real", val出现在问题里面并且出现的次数大于1 
-        - col_name需要在question中
-        - col_name不能在question中出现多次,只能一次
-    """
-    q_num_double_more_set = set([])
-    if mode == 'read':
-        q_num_double_more_fh = open(q_num_double_more_path, 'r')
-        for line in q_num_double_more_fh.readlines():
-            q_num_double_more_set.add(line[:-1])
-        return q_num_double_more_set       
-
-    else:
-        raise ValueError('Unsupported mode')
-
-ret = get_q_num_double_more(mode='read')   
-print(ret)
-
-
-
-
-    
-
-
-def q_num_good(mode='write', unwanted=set([])):
-    """
-     条件值均在问题里面，可以直接采用 q.index()来定位
-    """
-    pass 
-
-
-
-
-
-def q_need_upper_val(mode='write', unwanted=set([])):
-    """
-    包含需要把val转换， 比如val为10000, q中为1万   
-    这里只要大于1000都是有问题 
-    在北京展出且展览面积小于2万的展会是哪些？
-    """
-    print('||||||||')
-    for d in train_data:
-        question = d['question']
-        if question in unwanted: continue
-        conds = d['sql']['conds']
-        types = table_types[d['table_id']]
-        header = table_headers[d['table_id']]
-        question = trans_question_acc(question) # 转化是必须的
-
-        # all cond val is not 'real'
-        type_set = set([types[cond[0]] for cond in conds ])
-        if question in unwanted: continue
-        if '万' in question:
-            # print(question)
-            pass 
-            # print(conds)
-            # print(header)
-                
-
-
-
-
-
-unwanted = set([])
-get_q_num_double_more_set = get_q_num_double_more(mode='read')
-unwanted = unwanted | get_q_num_double_more_set
-correct_set = get_correct_q(mode='read', unwanted=unwanted)
-unwanted = unwanted | correct_set
-q_no_num_similar_set = get_no_num_similar(mode='read', unwanted=unwanted)
-unwanted = unwanted | q_no_num_similar_set
-# q_need_col_similar_set = q_need_col_similar(mode='write', unwanted=unwanted)
-# unwanted = unwanted | q_need_col_similar_set
-
-
-q_need_upper_set = q_need_upper_val(mode='write', unwanted=unwanted)
-
-print(q_need_upper_set)
-other_cnt = 0 
-def get_other():
-    print('-*-*-*')
-    for d in train_data:
-        question = d['question']
-        question = trans_question_acc(question)
-        if question in unwanted: continue
-        print(question)
-        continue 
-        conds = d['sql']['conds']
-        is_good = True 
-        for cond in conds:
-            if cond[2] in question and question.count(cond[2]) == 1: 
-                pass 
-            else:
-                is_good=False 
-        if is_good:
-            print(question)
-            # print(conds)
-            
-   
-# get_other()
-
-'''
 # 影射
 val_mapping = {
     '无': ['没有'],

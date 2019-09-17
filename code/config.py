@@ -1,3 +1,4 @@
+import sys 
 model_path = "../data"
 # base_path = "../data"
 
@@ -8,3 +9,8 @@ valid_data_path = '../data/valid/'
 test_file_path = "/tcdata"
 
 test_submit_path = "../result.json"
+log_path = '../data/logs'
+prepare_data_path = '../data/prepare_data'
+
+PY2 = sys.version_info[0] == 2
+PY3 = sys.version_info[0] == 3
