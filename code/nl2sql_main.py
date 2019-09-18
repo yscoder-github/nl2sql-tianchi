@@ -46,7 +46,7 @@ min_learning_rate = 1e-5
 config_path = os.path.join(model_bert_wwm_path, 'chinese-bert_chinese_wwm_L-12_H-768_A-12/bert_config.json')
 checkpoint_path = os.path.join(model_bert_wwm_path, 'chinese-bert_chinese_wwm_L-12_H-768_A-12/bert_model.ckpt')
 dict_path = os.path.join(model_bert_wwm_path, 'chinese-bert_chinese_wwm_L-12_H-768_A-12/vocab.txt')
-weight_save_path = os.path.join(model_path, 'weights/nl2sql_finetune_add_div2.weights')
+weight_save_path = os.path.join(model_path, 'weights/nl2sql_finetune.weights')
 
 if mode != 'test':
     train_data, train_tables = read_data(
@@ -422,7 +422,7 @@ loss = psel_loss + pconn_loss + pcop_loss + pcsel0_loss + pcsel1_loss + pcsel2_l
 train_model.add_loss(loss)
 train_model.compile(optimizer=Adam(learning_rate))
 train_model.summary()
-model.load_weights(weight_save_path) # 
+# model.load_weights(weight_save_path) # 
 except_tr_cnt = 0 
 
 
@@ -612,7 +612,6 @@ def nl2sql(question, table):
                     for idx in range(len(entity_start_pos_list) - 1):
                         new_s = entity_start_pos_list[idx]
                         new_e = entity_start_pos_list[idx + 1]
-                        print(question[new_s - 1: new_e - 1])
 
                         csel = pcsel0[0][new_s: new_e].mean(0).argmax() - 1 
                         v_str1 = question[new_s - 1: new_e - 1] 

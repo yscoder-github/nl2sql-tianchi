@@ -1,0 +1,1113 @@
+{"question": "哪几年的商品房新开工面积超过了90000万平或者竣工面积高于50000万平的", "table": "e0ae3902333a11e99bbc542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[1, 0, "90000"], [3, 0, "50000"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 0, 90000], [2, 0, 50000]], "cond_conn_op": 2}}
+{"question": "我想知道这些年，都有哪几年的商品房竣工超过5亿平，而且新开工的也超过9亿平的呀", "table": "e0ae3902333a11e99bbc542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[1, 0, "90000"], [3, 0, "50000"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 0, 90000], [2, 0, 50000]], "cond_conn_op": 1}}
+{"question": "想了解成都在10年土地成交面积高于1500的情况下，2011年会是多少", "table": "69d2f98f334311e9814b542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[0, 2, "成都"], [1, 0, "1500"]]}}
+{"sql_pred": {"agg": [0], "sel": [7], "conds": [[1, 0, 1500], [0, 2, "成都"]], "cond_conn_op": 1}}
+{"question": "公里数小于300千米的或者其投资总额小于500亿元的高铁线路是哪到哪啊", "table": "43b1c90c1d7111e9b037f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [2], "conds": [[3, 1, "300"], [5, 1, "500"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 2], "conds": [[5, 1, 500], [3, 1, 300]], "cond_conn_op": 2}}
+{"question": "公里数在300千米以下的，又或者是其投资总额低于500亿元的高铁线路是哪到哪啊", "table": "43b1c90c1d7111e9b037f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [2], "conds": [[3, 1, "300"], [5, 1, "500"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[5, 1, 500], [3, 1, 300]], "cond_conn_op": 2}}
+{"question": "哪跟哪的高铁线路是公里数小于300千米的，或是其投资总额低于500亿元的", "table": "43b1c90c1d7111e9b037f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [2], "conds": [[3, 1, "300"], [5, 1, "500"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 2], "conds": [[5, 1, 500], [3, 1, 300]], "cond_conn_op": 2}}
+{"question": "股息率超过4%的港口股子行业是什么，它的标的又是哪儿", "table": "c5ac415934b411e99edb542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[4, 0, "4"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[2, 0, 4]], "cond_conn_op": 0}}
+{"question": "有哪些山西喷吹煤指标上月小于 -1%并且较上年大于 1的？", "table": "c5ae457034b411e98c59542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[6, 1, "-1"], [8, 0, "1"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[5, 1, "-1"], [8, 0, 1]], "cond_conn_op": 1}}
+{"question": "一手房成交本周环比小于25的二线城市是哪个", "table": "c98c8c9c332111e99ae0542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[1, 1, "52"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 1, 25]], "cond_conn_op": 0}}
+{"question": "请问哪个二线城市一手房成交这周环比低于25", "table": "c98c8c9c332111e99ae0542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[1, 1, "52"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 1, 25]], "cond_conn_op": 0}}
+{"question": "想要了解一手房成交这个星期环比低于25的二线城市有哪些", "table": "c98c8c9c332111e99ae0542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[1, 1, "52"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 1, 25]], "cond_conn_op": 0}}
+{"question": "我看到这些城市在2012年4月成交量环比是低于5的，那么同年3月它的成交量环比是多少呢？", "table": "69d14c3a334311e9b68e542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [2], "conds": [[1, 1, "5"]]}}
+{"sql_pred": {"agg": [0], "sel": [9], "conds": [[1, 1, 5]], "cond_conn_op": 0}}
+{"question": "在4月份它的成交量在5以下，那么我想知道在三月份中它的成交量环比是多少？", "table": "69d14c3a334311e9b68e542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [2], "conds": [[1, 1, "5"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 2], "conds": [[1, 1, 5]], "cond_conn_op": 0}}
+{"question": "请告诉我城市周成交在2012年4月成交量环小于5情况下，它在3月的成交量环比是多少，谢谢。", "table": "69d14c3a334311e9b68e542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [2], "conds": [[1, 1, "5"]]}}
+{"sql_pred": {"agg": [0], "sel": [9], "conds": [[1, 1, 5]], "cond_conn_op": 0}}
+{"question": "预估一下有多少家公司13年市盈率超过六倍？", "table": "69d2a666334311e9acbf542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [1], "conds": [[8, 0, "6"]]}}
+{"sql_pred": {"agg": [4], "sel": [1], "conds": [[9, 0, 6]], "cond_conn_op": 0}}
+{"question": "2013年预计本益比高于六倍的股票有多少只？", "table": "69d2a666334311e9acbf542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [1], "conds": [[8, 0, "6"]]}}
+{"sql_pred": {"agg": [4], "sel": [1], "conds": [[9, 0, 6]], "cond_conn_op": 0}}
+{"question": "一共有几家公司预计是13年的市价盈利比率在6倍以上", "table": "69d2a666334311e9acbf542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [1], "conds": [[8, 0, "6"]]}}
+{"sql_pred": {"agg": [4], "sel": [1], "conds": [[9, 0, 6]], "cond_conn_op": 0}}
+{"question": "请问一下扩产产能超过7000吨还有总投资超过5亿的正极厂商高镍产能企业是哪个呢", "table": "733bd8c534c611e9ac79542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[2, 0, "7000"], [1, 0, "5"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[3, 0, 5], [2, 0, 7000]], "cond_conn_op": 1}}
+{"question": "销售排名前三的公司哪个同比增长率小于15", "table": "43b27b231d7111e99c07f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[0, 1, "4"], [3, 1, "15"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[3, 1, 15], [0, 1, 3]], "cond_conn_op": 2}}
+{"question": "请问有哪些公司股权比例超过10以上而且利润率大于20以上，理论PB最大是多少？", "table": "5a4f2a9e312b11e9b02e542696d6e445"}
+{"sql_right": {"agg": [2], "cond_conn_op": 1, "sel": [4], "conds": [[1, 0, "10"], [3, 0, "20"]]}}
+{"sql_pred": {"agg": [0, 2], "sel": [0, 4], "conds": [[1, 0, 10], [3, 0, 20]], "cond_conn_op": 1}}
+{"question": "同比增长超过百分之百的城市机器本周的均成交面试是是多少，帮我查找一下", "table": "c98e1c19332111e9ab43542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[3, 0, "100"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[3, 0, 100]], "cond_conn_op": 0}}
+{"question": "有那几个城市本周和上周相比同比增长是大于100%的，还有该城市本周的均成交面积。", "table": "c98e1c19332111e9ab43542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[3, 0, "100"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[3, 0, 100]], "cond_conn_op": 0}}
+{"question": "平均市净率低于2%或者总市值小于100亿的股票折价率为多少", "table": "69cf2f21334311e9b2e5542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [12], "conds": [[1, 1, "100"], [10, 1, "2"]]}}
+{"sql_pred": {"agg": [0], "sel": [12], "conds": [[10, 0, 2], [1, 1, 100]], "cond_conn_op": 2}}
+{"question": "我了解到在18年10月韵达股份的快递业务营业收入达到了10亿以上，与去年同期比营收额有多少", "table": "c5accda834b411e9beb7542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[0, 2, "韵达股份"], [3, 0, "10"]]}}
+{"sql_pred": {"agg": [], "sel": [], "conds": [[3, 0, 10], [0, 2, "韵达股份"]], "cond_conn_op": 1}}
+{"question": "山西喷吹煤产地价格相比上一年大于0或者相比上个月大于0的指标名称 是多少", "table": "c5ae457034b411e98c59542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[8, 0, "0"], [6, 0, "0"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[9, 0, 0], [7, 0, 0]], "cond_conn_op": 2}}
+{"question": "哪些指标的喷吹煤产地价格相比上个月或者上一年都大于0", "table": "c5ae457034b411e98c59542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[8, 0, "0"], [6, 0, "0"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[5, 0, 0], [7, 0, 0]], "cond_conn_op": 2}}
+{"question": "喷吹煤产地价格相比上个月或者上一年都大于0的指标有哪些", "table": "c5ae457034b411e98c59542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[8, 0, "0"], [6, 0, "0"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[5, 0, 0], [7, 0, 0]], "cond_conn_op": 2}}
+{"question": "啊，你好，麻烦告诉我新房成交的一个变化率，在本周销售套数低于1000套的范围内就可以", "table": "69d2d58a334311e998d7542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [10], "conds": [[2, 0, "1000"]]}}
+{"sql_pred": {"agg": [0], "sel": [10], "conds": [[2, 1, 1000]], "cond_conn_op": 0}}
+{"question": "花语城和筑华年的4月房子套数一共有多少？", "table": "c98c1885332111e9bc50542696d6e445"}
+{"sql_right": {"agg": [5], "cond_conn_op": 1, "sel": [4], "conds": [[1, 2, "花语城"], [1, 2, "筑华年"]]}}
+{"sql_pred": {"agg": [5], "sel": [4], "conds": [[1, 2, "筑华年"], [1, 2, "花语城"]], "cond_conn_op": 2}}
+{"question": "请问4月份花语城和筑华年的房子套数的总和是多少？", "table": "c98c1885332111e9bc50542696d6e445"}
+{"sql_right": {"agg": [5], "cond_conn_op": 1, "sel": [4], "conds": [[1, 2, "花语城"], [1, 2, "筑华年"]]}}
+{"sql_pred": {"agg": [5], "sel": [4], "conds": [[1, 2, "筑华年"], [1, 2, "花语城"]], "cond_conn_op": 2}}
+{"question": "你能帮我计算一下4月份花语城和筑华年的房子套数之和吗？", "table": "c98c1885332111e9bc50542696d6e445"}
+{"sql_right": {"agg": [5], "cond_conn_op": 1, "sel": [4], "conds": [[1, 2, "花语城"], [1, 2, "筑华年"]]}}
+{"sql_pred": {"agg": [5], "sel": [4], "conds": [[1, 2, "筑华年"], [1, 2, "花语城"]], "cond_conn_op": 2}}
+{"question": "股票货币资金/总资产低于20而且货币资金/净资产也低于20，那么货币资金是多少", "table": "4d2860ab3aaa11e98eb5f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[5, 1, "20"], [6, 1, "20"]]}}
+{"sql_pred": {"agg": [0], "sel": [6], "conds": [[5, 1, 20], [6, 1, 20]], "cond_conn_op": 1}}
+{"question": "你知道股票货币资金/总资产和货币资金/净资产都小于20的货币资金吗", "table": "4d2860ab3aaa11e98eb5f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[5, 1, "20"], [6, 1, "20"]]}}
+{"sql_pred": {"agg": [], "sel": [], "conds": [[5, 1, 20], [4, 1, 20]], "cond_conn_op": 1}}
+{"question": "房价一直再涨，这个星期平均比11年增长超过12的城市有吗，主要是还有没有剩的", "table": "2531a266302e11e98644542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[9, 0, "12"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 0, 12]], "cond_conn_op": 0}}
+{"question": "房价再贵，还是买不到房，现在各个城市的住房库存情况能不能告诉我一下，主要集中房价比11年涨了超过12的城市就行", "table": "2531a266302e11e98644542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[9, 0, "12"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[6, 0, 12]], "cond_conn_op": 0}}
+{"question": "哪些游戏的服务器超过了100个，它的发行商是谁", "table": "4d2706753aaa11e9be22f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [1, 3], "conds": [[2, 0, "100"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 4], "conds": [[2, 0, 100]], "cond_conn_op": 0}}
+{"question": "你知道服务器超100个的游戏名以及它的发行商吗", "table": "4d2706753aaa11e9be22f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [1, 3], "conds": [[2, 0, "100"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 4], "conds": [[2, 0, 100]], "cond_conn_op": 0}}
+{"question": "你好啊就是请问一下建发和新湖中宝的PB值加起来一共是多少", "table": "e0ae97c5333a11e9b7cc542696d6e445"}
+{"sql_right": {"agg": [5], "cond_conn_op": 2, "sel": [8], "conds": [[0, 2, "新湖中宝"], [0, 2, "建发股份"]]}}
+{"sql_pred": {"agg": [5], "sel": [11], "conds": [[0, 2, "建发股份"], [0, 2, "新湖中宝"]], "cond_conn_op": 2}}
+{"question": "改编自什么小说的电影豆瓣评分高于7分，哪天首播啊", "table": "4d2a47ee3aaa11e99609f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [1, 4], "conds": [[3, 0, "7"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[3, 0, 7]], "cond_conn_op": 0}}
+{"question": "你知不知道豆瓣评分高于7分的电影改编自什么小说啊，还有首映日是哪天啊", "table": "4d2a47ee3aaa11e99609f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [1, 4], "conds": [[3, 0, "7"]]}}
+{"sql_pred": {"agg": [0, 0, 0], "sel": [0, 1, 4], "conds": [[3, 0, 7]], "cond_conn_op": 0}}
+{"question": "二等座单价小于0.5元每公里而且一等座单价小于0.6元每公里的动车组有哪些", "table": "c5ad8a9134b411e984f8542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[5, 1, "0.5"], [4, 1, "0.60"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[3, 1, "0.5"], [4, 1, "0.6"]], "cond_conn_op": 1}}
+{"question": "哪些动车组的一等座是低于0.6块每公里的并且二等座也小于0.5块每公里的", "table": "c5ad8a9134b411e984f8542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[5, 1, "0.5"], [4, 1, "0.60"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[3, 1, "0.5"], [2, 1, "0.6"]], "cond_conn_op": 1}}
+{"question": "有没有就是一等座每公里少于0.6，而且二等座也低于0.5每公里的动车组", "table": "c5ad8a9134b411e984f8542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[5, 1, "0.5"], [4, 1, "0.60"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[3, 1, "0.5"], [2, 1, "0.6"]], "cond_conn_op": 1}}
+{"question": "有多少家那个园区类地产公司预计12年和13年的市盈率都会低于二十倍的呀", "table": "69d5ac6b334311e9af01542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[9, 1, "20"], [10, 1, "20"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[9, 1, 20], [8, 1, 20]], "cond_conn_op": 1}}
+{"question": "查查看一二年，还有一三年的本益比估计都会在二十倍以下的有几家地产公司啊", "table": "69d5ac6b334311e9af01542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[9, 1, "20"], [10, 1, "20"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[9, 1, 20], [8, 1, 20]], "cond_conn_op": 1}}
+{"question": "你好啊，你可以帮我查一下2012年，还有2013年的市价盈利比率估值都低于二十倍的园区类公司数量吗", "table": "69d5ac6b334311e9af01542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[9, 1, "20"], [10, 1, "20"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[9, 1, 20], [8, 1, 20]], "cond_conn_op": 1}}
+{"question": "哪年的住房期房成交面积在一月份和二月份都超过了50万平", "table": "5a518cc7312b11e9a18d542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "50"], [2, 0, "50"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[2, 0, 50], [6, 0, 50]], "cond_conn_op": 1}}
+{"question": "天津住宅期房成交面积在1月份和2月份都高于50万平发生在什么时候", "table": "5a518cc7312b11e9a18d542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "50"], [2, 0, "50"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[2, 0, 50], [6, 0, 50]], "cond_conn_op": 1}}
+{"question": "哪些股PB低于3的呀", "table": "5a4f04c2312b11e99fe7542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[7, 1, "3"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 1, 3]], "cond_conn_op": 0}}
+{"question": "诶，PB低于10的都是什么股啊", "table": "5a4f04c2312b11e99fe7542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[7, 1, "3"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[7, 1, 10]], "cond_conn_op": 0}}
+{"question": "2018年三季报传媒个股商誉A净资产大于30亿而且净利润大于1000的商誉A多少钱", "table": "4d27d49e3aaa11e98715f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[3, 0, "30"], [4, 0, "1000"]]}}
+{"sql_pred": {"agg": [], "sel": [], "conds": [[9, 0, 1000], [2, 0, 30]], "cond_conn_op": 1}}
+{"question": "商誉A多少钱啊，它的净资产大于30亿而且净利润大于1000", "table": "4d27d49e3aaa11e98715f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[3, 0, "30"], [4, 0, "1000"]]}}
+{"sql_pred": {"agg": [0], "sel": [7], "conds": [[9, 0, 1000], [8, 0, 3000000000]], "cond_conn_op": 1}}
+{"question": "传媒个股商誉A净资产大于30亿以及净利润大于1000，那他到底值多少钱", "table": "4d27d49e3aaa11e98715f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[3, 0, "30"], [4, 0, "1000"]]}}
+{"sql_pred": {"agg": [], "sel": [], "conds": [[9, 0, 1000], [2, 0, 30]], "cond_conn_op": 1}}
+{"question": "净利润上限超过2亿元且净利润增速上限超过100%的证券有哪些？", "table": "4d24cf803aaa11e98789f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[2, 0, "2"], [4, 0, "100"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[4, 0, 100], [2, 0, 2]], "cond_conn_op": 1}}
+{"question": "有哪些证券净利润上限高于2亿元且净利润增速上限高于100%的？", "table": "4d24cf803aaa11e98789f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[2, 0, "2"], [4, 0, "100"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[4, 0, 100], [2, 0, 2]], "cond_conn_op": 1}}
+{"question": "请问有哪些证券净利润上限超过2亿元并且净利润增速上限超过100%的？", "table": "4d24cf803aaa11e98789f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[2, 0, "2"], [4, 0, "100"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[4, 0, 100], [2, 0, 2]], "cond_conn_op": 1}}
+{"question": "收盘价大于 5并且涨跌幅大于3的传媒股有哪些？", "table": "4d27460c3aaa11e9bb82f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[6, 0, "5"], [7, 0, "3"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 0, 5], [3, 0, 3]], "cond_conn_op": 1}}
+{"question": "有哪些传媒股收盘价大于 5并且涨跌幅大于3的？", "table": "4d27460c3aaa11e9bb82f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[6, 0, "5"], [7, 0, "3"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 0, 5], [3, 0, 3]], "cond_conn_op": 1}}
+{"question": "请问一下收盘价大于 5并且涨跌幅大于3的传媒股有哪些？", "table": "4d27460c3aaa11e9bb82f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[6, 0, "5"], [7, 0, "3"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 0, 5], [3, 0, 3]], "cond_conn_op": 1}}
+{"question": "你知道2018年第三季度的单票成本吗，已知2018年第一季度和第二季度的单票成本都小于10", "table": "c5ad055434b411e980b1542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [7], "conds": [[5, 1, "10"], [6, 1, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [6], "conds": [[5, 1, 10], [1, 1, 10]], "cond_conn_op": 1}}
+{"question": "你帮我查一下今年第4周排在第一位的电视剧或者综艺的播放量吧", "table": "4d29ed6b3aaa11e9a5d8f40f24344a08"}
+{"sql_right": {"agg": [2], "cond_conn_op": 0, "sel": [2], "conds": [[0, 1, "11"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[0, 1, 4]], "cond_conn_op": 0}}
+{"question": "有多少股票的2017本益比大于15%或者平均净资产大于2", "table": "6e614ce634ce11e991e5542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 2, "sel": [0], "conds": [[5, 0, "15"], [8, 0, "2"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[8, 0, 15], [10, 0, 2]], "cond_conn_op": 2}}
+{"question": "2017年股票收益比率大于20%或者平均市净率大于2的股票有几支啊", "table": "6e614ce634ce11e991e5542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 2, "sel": [0], "conds": [[5, 0, "15"], [8, 0, "2"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[5, 0, 20], [11, 0, 2]], "cond_conn_op": 2}}
+{"question": "你知道2017年股票收益比率大于20%或者平均市净率大于2的股票有多少吗", "table": "6e614ce634ce11e991e5542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 2, "sel": [0], "conds": [[5, 0, "15"], [8, 0, "2"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[11, 0, 2], [6, 0, 20]], "cond_conn_op": 2}}
+{"question": "2012年6月11日10APE大于17而且11APE也大于17的证券简称是什么", "table": "c98daf26332111e99d17542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[5, 0, "17"], [6, 0, "17"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[5, 0, 17], [7, 0, 17]], "cond_conn_op": 1}}
+{"question": "请问一下2012年6月11号11APE也大于17而且10APE也大于17的证券简称是什么", "table": "c98daf26332111e99d17542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[5, 0, "17"], [6, 0, "17"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[5, 0, 17], [2, 0, 17]], "cond_conn_op": 1}}
+{"question": "想要了解11APE和10APE都大于17的证券简称", "table": "c98daf26332111e99d17542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[5, 0, "17"], [6, 0, "17"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[4, 0, 17], [5, 0, 17]], "cond_conn_op": 1}}
+{"question": "喷吹煤产地价格上个月大于10000元或者上一年大于10000元的发热量/规格是多少", "table": "c5ae457034b411e98c59542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [9], "conds": [[5, 0, "1000"], [7, 0, "1000"]]}}
+{"sql_pred": {"agg": [0], "sel": [9], "conds": [[5, 0, 10000], [7, 0, 10000]], "cond_conn_op": 2}}
+{"question": "那些喷吹煤产地价格在上个月或者上一年每吨超过10000块的指标发热量/规格是多少", "table": "c5ae457034b411e98c59542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [9], "conds": [[5, 0, "1000"], [7, 0, "1000"]]}}
+{"sql_pred": {"agg": [0], "sel": [9], "conds": [[5, 0, 10000], [7, 0, 10000]], "cond_conn_op": 2}}
+{"question": "指标发热量/规格是多少时喷吹煤产地价格在上个月或者上一年每吨超过10000块", "table": "c5ae457034b411e98c59542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [9], "conds": [[5, 0, "1000"], [7, 0, "1000"]]}}
+{"sql_pred": {"agg": [0], "sel": [9], "conds": [[5, 0, 10000], [7, 0, 10000]], "cond_conn_op": 2}}
+{"question": "你帮我算一算2019年，还有2020年的股价收益比率估值都高于0.2的航空公司它们收盘的价格要是加起来的话会达到多高呀", "table": "01562780351311e995f2542696d6e445"}
+{"sql_right": {"agg": [5], "cond_conn_op": 1, "sel": [2], "conds": [[9, 0, "20"], [10, 0, "20"]]}}
+{"sql_pred": {"agg": [5], "sel": [2], "conds": [[10, 0, "0.2"], [9, 0, "0.2"]], "cond_conn_op": 1}}
+{"question": "重庆市和青岛市的住宅用地上周成交面积一共是多少", "table": "2532acee302e11e9826b542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [2], "conds": [[0, 2, "重庆市"], [0, 2, "青岛市"]]}}
+{"sql_pred": {"agg": [5], "sel": [2], "conds": [[0, 2, "青岛市"], [0, 2, "重庆市"]], "cond_conn_op": 2}}
+{"question": "请问住宅用地的上周成交面积的情况，重庆和青岛的成交面积加起来可以达到多少", "table": "2532acee302e11e9826b542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [2], "conds": [[0, 2, "重庆市"], [0, 2, "青岛市"]]}}
+{"sql_pred": {"agg": [5], "sel": [2], "conds": [[0, 2, "青岛市"], [0, 2, "重庆市"]], "cond_conn_op": 2}}
+{"question": "可以查查上周重庆和青岛住宅用地的成交面积总和吗，是多少呢", "table": "2532acee302e11e9826b542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [2], "conds": [[0, 2, "重庆市"], [0, 2, "青岛市"]]}}
+{"sql_pred": {"agg": [5], "sel": [2], "conds": [[0, 2, "青岛市"], [0, 2, "重庆市"]], "cond_conn_op": 2}}
+{"question": "房地产二线城市拟周成交大于3400万平而且近4周周均成交大于1000万平的城市有几个", "table": "c98a4e45332111e9bc29542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "3443"], [4, 0, "1000"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[1, 0, 34000000], [4, 0, 10000000]], "cond_conn_op": 1}}
+{"question": "二线城市有几个是满足拟周成交大于3400万平以及近4周周均成交大于1000万平", "table": "c98a4e45332111e9bc29542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "3443"], [4, 0, "1000"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[1, 0, 34000000], [4, 0, 10000000]], "cond_conn_op": 1}}
+{"question": "像拟周成交大于3400万平而且近4周周均成交大于1000万平的这样的二线城市有多少个", "table": "c98a4e45332111e9bc29542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "3443"], [4, 0, "1000"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[1, 0, 34000000], [4, 0, 10000000]], "cond_conn_op": 1}}
+{"question": "请问PE17大于22的公司及其代码分别是什么", "table": "c5adcb1134b411e9bc24542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[5, 0, "22"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[6, 0, 22]], "cond_conn_op": 0}}
+{"question": "哪个公司的PE17大于22，还有他的代码是多少", "table": "c5adcb1134b411e9bc24542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[5, 0, "22"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[8, 0, 22]], "cond_conn_op": 0}}
+{"question": "2012年2月成交量环比大于10并且2012年1月成交量环比小于1的城市总共有多少？", "table": "69d16454334311e99bd8542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[3, 0, "10"], [4, 1, "1"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[2, 0, 10], [6, 1, 1]], "cond_conn_op": 1}}
+{"question": "总共有多少个城市2012年2月成交量环比大于10并且2012年1月成交量环比小于1的？", "table": "69d16454334311e99bd8542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[3, 0, "10"], [4, 1, "1"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[2, 0, 10], [5, 1, 1]], "cond_conn_op": 1}}
+{"question": "请问总共有多少个城市2012年2月成交量环比大于10并且2012年1月成交量环比小于1的？", "table": "69d16454334311e99bd8542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[3, 0, "10"], [4, 1, "1"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[2, 0, 10], [6, 1, 1]], "cond_conn_op": 1}}
+{"question": "总共有多少个高速公路省份的股息率大于4%并且2017年分红比例大于40%的？", "table": "733c7e8a34c611e9a7d9542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [1], "conds": [[3, 0, "4"], [4, 0, "40"]]}}
+{"sql_pred": {"agg": [4, 4], "sel": [0, 1], "conds": [[3, 0, 4], [4, 0, 40]], "cond_conn_op": 1}}
+{"question": "请问，在这表中，总共有多少个高速公路省份的股息率大于4%并且2017年分红比例大于40%的？", "table": "733c7e8a34c611e9a7d9542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [1], "conds": [[3, 0, "4"], [4, 0, "40"]]}}
+{"sql_pred": {"agg": [4, 4], "sel": [0, 1], "conds": [[3, 0, 4], [4, 0, 40]], "cond_conn_op": 1}}
+{"question": "那个哪几年商品房的新开工面积和那个竣工面积都是大于20000万平米呀", "table": "e0ae2930333a11e9b0c6542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "20000"], [3, 0, "20000"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 0, 20000], [2, 0, 20000]], "cond_conn_op": 1}}
+{"question": "诶，可以问一下吗就是啊商品房新开工面积和竣工面积都是超过20000万平的都是哪些年的呀", "table": "e0ae2930333a11e9b0c6542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "20000"], [3, 0, "20000"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 0, 20000], [2, 0, 20000]], "cond_conn_op": 1}}
+{"question": "可以帮我查一下就是哪些年的商品房的新开工面积的和竣工面积的都是在20000万平以上的啊", "table": "e0ae2930333a11e9b0c6542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "20000"], [3, 0, "20000"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 0, 20000], [2, 0, 20000]], "cond_conn_op": 1}}
+{"question": "10年H1二线城市去化时间小于10个月，那10年H2去化时间是几个月", "table": "c98ccf54332111e98508542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [6], "conds": [[7, 1, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [6], "conds": [[5, 1, 10]], "cond_conn_op": 0}}
+{"question": "2010年，H1去化时间不足一年，同年H2为多久", "table": "c98ccf54332111e98508542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [6], "conds": [[7, 1, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [6], "conds": [[7, 1, 1]], "cond_conn_op": 0}}
+{"question": "你好，10年H2去化时间出来了吗，多久，H1还不足一年呢", "table": "c98ccf54332111e98508542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [6], "conds": [[7, 1, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [6], "conds": [[5, 1, 1]], "cond_conn_op": 0}}
+{"question": "呃你知道那个19年第二周大地影院和万达电影的一周的票房总和多少吗", "table": "4d29a3f33aaa11e99236f40f24344a08"}
+{"sql_right": {"agg": [5], "cond_conn_op": 1, "sel": [1], "conds": [[0, 2, "万达电影"], [0, 2, "大地影院"]]}}
+{"sql_pred": {"agg": [5], "sel": [1], "conds": [[0, 2, "大地影院"], [0, 2, "万达电影"]], "cond_conn_op": 2}}
+{"question": "投资组合股份最大值为多少时它的权重大于10", "table": "69d0a74c334311e9ad2d542696d6e445"}
+{"sql_right": {"agg": [2], "cond_conn_op": 0, "sel": [2], "conds": [[3, 0, "10"]]}}
+{"sql_pred": {"agg": [2, 2], "sel": [2, 4], "conds": [[3, 0, 10]], "cond_conn_op": 0}}
+{"question": "铁路运输Ⅱ(申万)在这一周涨跌幅是超过1的，那我想问问他这个月的一个涨跌幅情况。", "table": "733c4cb334c611e9b645542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[1, 2, "铁路运输Ⅱ(申万)"], [3, 0, "1"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[3, 0, 1], [1, 2, "港口Ⅱ(申万)"]], "cond_conn_op": 1}}
+{"question": "请问铁路运输Ⅱ(申万)这一周的涨跌幅已达到1，你知道这个月涨跌幅是多少吗？", "table": "733c4cb334c611e9b645542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[1, 2, "铁路运输Ⅱ(申万)"], [3, 0, "1"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[3, 0, 1], [1, 2, "港口Ⅱ(申万)"]], "cond_conn_op": 1}}
+{"question": "我获取到一些信息，在11年它的土地成交面积是高于10万平并且同期也是高于10万平，那在2010年成交的土地面积一共有多少呢？\n", "table": "69d5227d334311e9a09c542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[2, 0, "10"], [3, 0, "10"]]}}
+{"sql_pred": {"agg": [5], "sel": [1], "conds": [[3, 0, 10], [2, 0, 10]], "cond_conn_op": 1}}
+{"question": "在这些视频平台里爱奇艺排第几啊？", "table": "4d2a3de33aaa11e9bfe7f40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [1], "conds": [[2, 0, "1000"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 2, "斗魂卫之玄月奇缘"]], "cond_conn_op": 0}}
+{"question": "你知道那些预计2019年的EPS小于1，PE也小于20，还有盈利增长率也小于100%的公司的PB是多少吗", "table": "463e64ee351411e99af2542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [11], "conds": [[3, 1, "1"], [6, 1, "100"], [9, 1, "20"]]}}
+{"sql_pred": {"agg": [0], "sel": [11], "conds": [[7, 1, 100], [3, 1, 1], [9, 1, 20]], "cond_conn_op": 1}}
+{"question": "你可以帮我查一下那些19年的每股盈余估值低于1，市盈率估值也低于20，还有净利润增长率也低于100%的股票的平均市净率吗", "table": "463e64ee351411e99af2542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [11], "conds": [[3, 1, "1"], [6, 1, "100"], [9, 1, "20"]]}}
+{"sql_pred": {"agg": [0], "sel": [11], "conds": [[7, 1, 100], [4, 1, 1], [8, 1, 20]], "cond_conn_op": 1}}
+{"question": "你好，我想知道这些估计19年的盈利增长率在100%以下，每股收益也在1以下，而且本益比也在20以下的航空公司的市净率", "table": "463e64ee351411e99af2542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [11], "conds": [[3, 1, "1"], [6, 1, "100"], [9, 1, "20"]]}}
+{"sql_pred": {"agg": [0], "sel": [11], "conds": [[7, 1, 1], [7, 1, 100], [8, 1, 20]], "cond_conn_op": 1}}
+{"question": " ((城市) 小于 14城合计) 城市 的 总共 是多少", "table": "e0ac070c333a11e9849c542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [0], "conds": [[0, 1, "14城合计"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[1, 1, 14]], "cond_conn_op": 0}}
+{"question": "哪些股票是周涨跌幅小于0或年涨跌幅大于0的？", "table": "43b0145e1d7111e9841af40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[2, 1, "0"], [4, 0, "0"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 1, 0], [4, 0, 0]], "cond_conn_op": 2}}
+{"question": "在什么时间段贷款利率调整前大于6%并且贷款利率调整后大于6%？", "table": "5a4ea2c2312b11e9a25b542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[4, 0, "6"], [5, 0, "6"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 0, 6], [4, 0, 6]], "cond_conn_op": 1}}
+{"question": "2011年同期以及2012年至今土地供应都超过200万平的城市有哪些\n", "table": "69d56ffd334311e9a90e542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[3, 0, "200"], [4, 0, "200"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[3, 0, 2000000], [4, 0, 2000000]], "cond_conn_op": 1}}
+{"question": "哪些城市的土地供应在2011年同期和2012年至今都超过了200万平的", "table": "69d56ffd334311e9a90e542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[3, 0, "200"], [4, 0, "200"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[3, 0, 2000000], [4, 0, 2000000]], "cond_conn_op": 1}}
+{"question": "你知道在11年同期以及12年至今土地供应都大于200万平的城市吗", "table": "69d56ffd334311e9a90e542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[3, 0, "200"], [4, 0, "200"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[3, 0, 2000000], [4, 0, 2000000]], "cond_conn_op": 1}}
+{"question": "你知道有多少家公司在10年还有11年每股盈余都高于六毛钱的吗", "table": "e0af35d1333a11e99d28542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[3, 0, "0.6"], [2, 0, "0.6"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[3, 0, 6], [2, 0, 6]], "cond_conn_op": 1}}
+{"question": "我问你一下啊就是10和11这两年每股税后利润都达到六角以上的公司共有几家？", "table": "e0af35d1333a11e99d28542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[3, 0, "0.6"], [2, 0, "0.6"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[3, 0, 6], [2, 0, 6]], "cond_conn_op": 1}}
+{"question": "本周相对大盘收益大于 1%并且本周涨跌幅大于1%的银行有哪些？", "table": "43aec1971d7111e99f21f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[4, 0, "1"], [1, 0, "1"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[5, 0, 1], [1, 0, 1]], "cond_conn_op": 1}}
+{"question": "请问一下本周相对大盘收益大于 1%并且本周涨跌幅大于1%的银行有哪些？", "table": "43aec1971d7111e99f21f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[4, 0, "1"], [1, 0, "1"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[5, 0, 1], [1, 0, 1]], "cond_conn_op": 1}}
+{"question": "你知道本周相对大盘收益大于 1%并且本周涨跌幅大于1%的银行有哪些吗？", "table": "43aec1971d7111e99f21f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[4, 0, "1"], [1, 0, "1"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[5, 0, 1], [1, 0, 1]], "cond_conn_op": 1}}
+{"question": "有哪些城市在2012年2月成交量环比大于10并且2011年12月成交量环比小于10？", "table": "69d14c3a334311e9b68e542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[3, 0, "10"], [5, 1, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 1, 10], [2, 0, 10]], "cond_conn_op": 1}}
+{"question": "你能跟我说一下在2012年2月成交量环比超过10和2011年12月成交量环比低于10的城市有哪些吗？", "table": "69d14c3a334311e9b68e542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[3, 0, "10"], [5, 1, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 1, 10], [2, 0, 10]], "cond_conn_op": 1}}
+{"question": "我想问一下周成交的情况，哪些城市在2012年2月份成交量环比超过10以及2011年12月成交量环比低于10的", "table": "69d14c3a334311e9b68e542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[3, 0, "10"], [5, 1, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 1, 10], [6, 0, 10]], "cond_conn_op": 1}}
+{"question": "我想知道有哪些城市在2011年12月成交量环比是低于10的以及同年11月成交量环比是在5以下的", "table": "69d14c3a334311e9b68e542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[5, 1, "10"], [6, 1, "5"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 1, 10], [6, 1, 5]], "cond_conn_op": 1}}
+{"question": "有哪些城市12月成交量环比在10以下，并且11月里它的成交量环比低于5？", "table": "69d14c3a334311e9b68e542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[5, 1, "10"], [6, 1, "5"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 1, 5], [1, 1, 10]], "cond_conn_op": 1}}
+{"question": "股票的股价和PB估值有关么，目前已知PB的估值低于3，那股价可以知道吗", "table": "69d4b4c5334311e99dff542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [2], "conds": [[9, 1, "3"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [2, 9], "conds": [[9, 1, 3]], "cond_conn_op": 0}}
+{"question": "哪些城市10年的上半年一手房成交不足十万平的呀", "table": "c98c6547332111e9a739542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[4, 1, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[3, 1, 10]], "cond_conn_op": 0}}
+{"question": "你知道什么城市在2010年上半年度卖出十万平米以下的一手房吗", "table": "c98c6547332111e9a739542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[4, 1, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[3, 1, 10]], "cond_conn_op": 0}}
+{"question": "市净率大于1%或者每股净资产大于5块的股票股价是多少", "table": "0155563d351311e9b279542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[9, 0, "1"], [8, 0, "5"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[8, 0, 5], [8, 0, 1]], "cond_conn_op": 2}}
+{"question": "你知道市净率大于1%或者每股净资产大于5块的股票股价吗", "table": "0155563d351311e9b279542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[9, 0, "1"], [8, 0, "5"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[8, 0, 5], [8, 0, 1]], "cond_conn_op": 2}}
+{"question": "可以通过市净率大于1%或者每股净资产大于5块查询股票的股价吗", "table": "0155563d351311e9b279542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[9, 0, "1"], [8, 0, "5"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[8, 0, 5], [8, 0, 1]], "cond_conn_op": 2}}
+{"question": "3Q18/2Q18大于 5并且3Q18/3817大于10的区域总共有多少？", "table": "0de65b47351311e99df6542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[4, 0, "5"], [5, 0, "10"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[4, 0, 10], [4, 0, 5]], "cond_conn_op": 1}}
+{"question": "总共有多少个区域3Q18/2Q18大于 5并且3Q18/3817大于10的？", "table": "0de65b47351311e99df6542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[4, 0, "5"], [5, 0, "10"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[4, 0, 10], [4, 0, 5]], "cond_conn_op": 1}}
+{"question": "那个2019年1月7到13号综艺播放数量前十的排行榜中有什么综艺是湖南卫视上播出的呀", "table": "4d2a2fe83aaa11e99004f40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [1], "conds": [[3, 2, "芒果TV"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[3, 2, "腾讯视频"]], "cond_conn_op": 0}}
+{"question": "诶，你知道有哪些综艺节目是在今年第1周电视综艺播放量前十中啊，而且是由湖南台放的呀", "table": "4d2a2fe83aaa11e99004f40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [1], "conds": [[3, 2, "芒果TV"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[3, 2, "多平台"]], "cond_conn_op": 0}}
+{"question": "请问有几家公司所有的股票达到十亿股以上", "table": "e0af35d1333a11e99d28542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [0], "conds": [[12, 0, "10"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[1, 0, 10]], "cond_conn_op": 0}}
+{"question": "诶你知道那些P/R-V小于1或是重估市净率低于10的公司中最高市值是多少吗", "table": "69d116a1334311e9ac14542696d6e445"}
+{"sql_right": {"agg": [2], "cond_conn_op": 2, "sel": [3], "conds": [[12, 1, "0.98"], [11, 1, "10.0"]]}}
+{"sql_pred": {"agg": [2], "sel": [3], "conds": [[11, 1, 1], [11, 1, 10]], "cond_conn_op": 2}}
+{"question": "帮我算一下18年第三季度货币资金或者总资产都是不足100亿的出版公司其货币资金与总资产的比值是多少来着", "table": "4d285ad93aaa11e9912bf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [5], "conds": [[4, 1, "100"], [2, 1, "100"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[2, 1, 100], [3, 1, 100]], "cond_conn_op": 2}}
+{"question": "一线城市房地产可售环比为负值或者可售去化时间不足一年半的是哪种类型的房", "table": "c98ac519332111e9b2b0542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [4], "conds": [[2, 1, "0"], [3, 1, "36"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[2, 1, 0], [3, 1, 1]], "cond_conn_op": 2}}
+{"question": "你好，咨询一下可售去化时间不足一年半或者可售环比小于0的房产类型", "table": "c98ac519332111e9b2b0542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [4], "conds": [[2, 1, "0"], [3, 1, "36"]]}}
+{"sql_pred": {"agg": [], "sel": [], "conds": [[2, 1, 0], [3, 1, 1]], "cond_conn_op": 2}}
+{"question": "近年年房地产销售面积同比增速为负的一线城市有哪些，一共卖了多少万平", "table": "e0ac9099333a11e987e7542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [1, 3], "conds": [[2, 1, "0"]]}}
+{"sql_pred": {"agg": [4], "sel": [3], "conds": [[2, 1, 0]], "cond_conn_op": 0}}
+{"question": "哪些一线城市的同比增速低于0，累计销售面积为多少", "table": "e0ac9099333a11e987e7542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [1, 3], "conds": [[2, 1, "0"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 3], "conds": [[3, 1, 0]], "cond_conn_op": 0}}
+{"question": "同比增数为负，妈呀，那一共才能销售多少面积嘞，这样的情况一线城市有吗", "table": "e0ac9099333a11e987e7542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [1, 3], "conds": [[2, 1, "0"]]}}
+{"sql_pred": {"agg": [4], "sel": [3], "conds": [[2, 1, 0]], "cond_conn_op": 0}}
+{"question": "哪些股票的年涨跌幅没有超过0的，告诉我股票代码", "table": "c5ac5f6e34b411e9b645542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[6, 1, "0"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[6, 1, 0]], "cond_conn_op": 0}}
+{"question": "商誉/净资产2大于10并且商誉/净利润2大于 10的证券公司有哪些？", "table": "4d2488543aaa11e98fdbf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[8, 0, "10"], [9, 0, "10"]]}}
+{"sql_pred": {"agg": [], "sel": [], "conds": [[9, 0, 10], [8, 0, 10]], "cond_conn_op": 1}}
+{"question": "你知道有哪些证券公司商誉/净资产2高于10并且商誉/净利润2高于10的吗？", "table": "4d2488543aaa11e98fdbf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[8, 0, "10"], [9, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[11, 0, "10"], [8, 0, 10]], "cond_conn_op": 1}}
+{"question": "请问一下商誉/净资产2超过10并且商誉/净利润2超过10的证券公司有哪些？", "table": "4d2488543aaa11e98fdbf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[8, 0, "10"], [9, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[9, 0, 10], [8, 0, 10]], "cond_conn_op": 1}}
+{"question": "需要进行一致性评价企业的企业批文数占比低于7%左右，分别有多少企业以及其对应的药品数", "table": "43afc99c1d7111e9936af40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[3, 1, "7.2"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[1, 2, 7]], "cond_conn_op": 0}}
+{"question": "想知道这次需要进行一致性评价企业的药品数和批文数占比低于7%左右的企业有哪些", "table": "43afc99c1d7111e9936af40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[3, 1, "7.2"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 2, 7]], "cond_conn_op": 0}}
+{"question": "那个就是，那些批文数占比低于7%左右需要进行一致性评价的企业有多少家啊，还有他们的药品数", "table": "43afc99c1d7111e9936af40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[3, 1, "7.2"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[1, 2, 7]], "cond_conn_op": 0}}
+{"question": "大黄蜂和海王这两部电影在19年的第4周的票房总共是多少呀", "table": "4d29d0513aaa11e9b911f40f24344a08"}
+{"sql_right": {"agg": [5], "cond_conn_op": 2, "sel": [1], "conds": [[0, 2, "大黄蜂"], [0, 2, "海王"]]}}
+{"sql_pred": {"agg": [5], "sel": [1], "conds": [[0, 2, "海王"], [0, 2, "大黄蜂"]], "cond_conn_op": 1}}
+{"question": "你知道海王，还有大黄蜂这两部影片在这周的总票房是多少吗", "table": "4d29d0513aaa11e9b911f40f24344a08"}
+{"sql_right": {"agg": [5], "cond_conn_op": 2, "sel": [1], "conds": [[0, 2, "大黄蜂"], [0, 2, "海王"]]}}
+{"sql_pred": {"agg": [5], "sel": [1], "conds": [[0, 2, "海王"], [0, 2, "大黄蜂"]], "cond_conn_op": 1}}
+{"question": "你能告诉我这一周换手率超过5%，或者是18年动态本益比超过10%的股票名吗", "table": "c5aed12b34b411e9841a542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[3, 0, "5"], [4, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[5, 0, "10"], [3, 0, 5]], "cond_conn_op": 2}}
+{"question": "哪几个股票的总市值超过200亿或者股价大于10块钱", "table": "c98dd373332111e9b4fb542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 2, "sel": [0], "conds": [[1, 0, "10"], [11, 0, "200"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[11, 0, 200], [1, 0, 10]], "cond_conn_op": 2}}
+{"question": "降息前月还款额低于10000元需还10年的房子总价为多少，首付是多少", "table": "5a4e9730312b11e98007542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[2, 1, "10000"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[3, 1, 10000]], "cond_conn_op": 0}}
+{"question": "那些降息前月还款额不足10000的房子，首付需要多少，全额买房又需要多少", "table": "5a4e9730312b11e98007542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[2, 1, "10000"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 1, 10000]], "cond_conn_op": 0}}
+{"question": "你好啊，那个在宁沪高速哪些收费单车车型每天交通量达到2千万辆以上的呀，或者是收费在20元以上每公里的呀", "table": "733d6c1734c611e980b0542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[1, 0, "20"], [2, 0, "20000000"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[2, 0, 20], [2, 0, 20000000]], "cond_conn_op": 2}}
+{"question": "东莞住宅期房一月和二月成交面积超过9万平的有哪几年", "table": "5a523e30312b11e98b92542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[1, 0, "9"], [2, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 0, 9], [2, 0, 9]], "cond_conn_op": 1}}
+{"question": "最新的市值不足两百四亿的股票多不多啊，能不能告诉我他们的的股票代码和名称", "table": "252ca859302e11e9947d542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[2, 1, "204"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[2, 1, 240]], "cond_conn_op": 0}}
+{"question": "想要了解这礼拜成交面积高于6的城市及其上礼拜的成交面积的情况", "table": "252ebee1302e11e98294542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[2, 0, "6"]]}}
+{"sql_pred": {"agg": [0, 0, 0], "sel": [0, 1, 2], "conds": [[2, 0, 6]], "cond_conn_op": 0}}
+{"question": "哪几年的房地产销售在一线城市的销售面积小于四千万平", "table": "e0ac9099333a11e987e7542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[3, 1, "40000"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[3, 1, 4000]], "cond_conn_op": 0}}
+{"question": "一线城市的销售面积还不足四千万平，我怎么没听说啊，哪年的数据啊", "table": "e0ac9099333a11e987e7542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[3, 1, "40000"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[3, 1, 4000]], "cond_conn_op": 0}}
+{"question": "2018年到2019年春节期间的贺岁片TOP5里面影片平均的票价，我说的是包含服务费的情况下大于40元的有哪些？", "table": "4d26d4b03aaa11e9acf2f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[1, 0, "40"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[2, 0, 40]], "cond_conn_op": 0}}
+{"question": "有哪些18年到19年春节档的TOP5的电影他包括服务费之后的平均的电影票价高于40元的？", "table": "4d26d4b03aaa11e9acf2f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[1, 0, "40"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[3, 0, 40]], "cond_conn_op": 0}}
+{"question": "请问，有没有18年至19年的贺岁片排名前五的影片哪个的电影票的价格平均下来超过四十块钱的，算上服务费的话", "table": "4d26d4b03aaa11e9acf2f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[1, 0, "40"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[3, 0, 40]], "cond_conn_op": 0}}
+{"question": "季度营收同比增速2016年第四季度小于50%或者2017年第四季度小于10%，那么2018年第三季度为多少", "table": "0de60b82351311e9b473542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [11], "conds": [[4, 1, "50"], [8, 1, "10"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [9, 11], "conds": [[8, 1, 10], [2, 1, 50]], "cond_conn_op": 2}}
+{"question": "你好，你知道2018年第三季度的季度营收同比增速是多少吗，他的季度营收同比增速2016年第四季度小于50%或者2017年第四季度小于10%", "table": "0de60b82351311e9b473542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [11], "conds": [[4, 1, "50"], [8, 1, "10"]]}}
+{"sql_pred": {"agg": [0, 0, 0], "sel": [7, 9, 11], "conds": [[6, 1, 10], [3, 1, 50]], "cond_conn_op": 2}}
+{"question": "请问我可以通过季度营收同比增速2016年第四季度小于50%或者2017年第四季度小于10%来查询2018年第三季度的同比增速吗", "table": "0de60b82351311e9b473542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [11], "conds": [[4, 1, "50"], [8, 1, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [7], "conds": [[6, 1, 10], [5, 1, 50]], "cond_conn_op": 2}}
+{"question": "去年同期28日成交小于100万平或者近7日日均交小于100万平的近7日日均成交环比是多少", "table": "c98a335c332111e99ca4542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [5], "conds": [[6, 1, "100"], [4, 1, "100"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[5, 1, 1000000], [4, 1, 1000000]], "cond_conn_op": 2}}
+{"question": "近7日日均成交环比达到多少时房地产去年同期28日成交或者近7日日均交将低于100万平", "table": "c98a335c332111e99ca4542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [5], "conds": [[6, 1, "100"], [4, 1, "100"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[5, 1, 1000000], [4, 1, 1000000]], "cond_conn_op": 2}}
+{"question": "你有了解过当去年同期28日成交小于100万平或者近7日日均交小于100万平时对应的近7日日均成交环比吗", "table": "c98a335c332111e99ca4542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [5], "conds": [[6, 1, "100"], [4, 1, "100"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[6, 1, 1000000], [4, 1, 1000000]], "cond_conn_op": 2}}
+{"question": "呃就是那个全球被动元器件核心上市公司中市盈率低于10的，主要业务是电容的都是什么公司啊，他代码是啥啊", "table": "0de5bd30351311e9b355542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 1, "sel": [0, 1], "conds": [[5, 2, "电容"], [8, 1, "10"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[5, 2, "电容"], [9, 1, 10]], "cond_conn_op": 1}}
+{"question": "住宅期房成交面积三月份超过50万平而且四月份也超过50万平，那么七月份的成交面积是多少", "table": "5a51c36e312b11e9aa9b542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[3, 0, "50"], [4, 0, "50"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 2], "conds": [[3, 0, 50], [1, 0, 50]], "cond_conn_op": 1}}
+{"question": "有哪些地产公司11年的每股盈余超过0.1，12年和13年的每股盈余估值也分别超过0.3和0.5的呀？", "table": "69d378e8334311e9bb4a542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[5, 0, "0.1"], [6, 0, "0.3"], [7, 0, "0.5"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 0, "0.3"], [6, 0, "0.5"], [5, 0, "0.1"]], "cond_conn_op": 1}}
+{"question": "2018E飞机引进量均值达到多少时飞机净增长和座位增长都大于8%", "table": "c5adb61e34b411e984e7542696d6e445"}
+{"sql_right": {"agg": [1], "cond_conn_op": 1, "sel": [1], "conds": [[7, 0, "8"], [8, 0, "8"]]}}
+{"sql_pred": {"agg": [1], "sel": [1], "conds": [[9, 0, "8"], [8, 0, 8]], "cond_conn_op": 1}}
+{"question": "你知道机净增长和座位增长都大于8%的公司2018E飞机引进量均值吗", "table": "c5adb61e34b411e984e7542696d6e445"}
+{"sql_right": {"agg": [1], "cond_conn_op": 1, "sel": [1], "conds": [[7, 0, "8"], [8, 0, "8"]]}}
+{"sql_pred": {"agg": [1], "sel": [1], "conds": [[9, 0, "8"], [8, 0, 8]], "cond_conn_op": 1}}
+{"question": "对于2012年1-4月房地产开发投资超过1000亿的，同比增长达到多少？", "table": "c98df9a6332111e98a66542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[0, 2, "房地产开发投资(亿元)"], [1, 0, "1000"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 0, 100000000000], [0, 2, "房地产开发投资(亿元)"]], "cond_conn_op": 1}}
+{"question": "哪些股的收盘价高于20块或者市盈率相对盈利增长比率大于1", "table": "0156172b351311e986b3542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[2, 0, "20"], [12, 0, "1"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 0, 20], [9, 0, 1]], "cond_conn_op": 2}}
+{"question": "PEG指标超过1的或者收盘价大于20元的股票有哪些", "table": "0156172b351311e986b3542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[2, 0, "20"], [12, 0, "1"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 0, 20], [9, 0, 1]], "cond_conn_op": 2}}
+{"question": "哎，帅哥，打扰了，是这样我想咨询一下收盘价大于20元或者市盈率相对盈利增长比率大于1的是哪些股，能帮我查一下吗", "table": "0156172b351311e986b3542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[2, 0, "20"], [12, 0, "1"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 0, 20], [9, 0, 1]], "cond_conn_op": 2}}
+{"question": "公司月产能小于80K/月或是生产项目是逻辑芯片的有多少", "table": "43b1ead71d7111e98a9ef40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[6, 1, "80"], [3, 2, "逻辑芯片"]]}}
+{"sql_pred": {"agg": [0], "sel": [6], "conds": [[6, 1, 80], [3, 2, "逻辑芯片"]], "cond_conn_op": 2}}
+{"question": "小于80K/月的月产能或是生产项目是逻辑芯片的公司有多少", "table": "43b1ead71d7111e98a9ef40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[6, 1, "80"], [3, 2, "逻辑芯片"]]}}
+{"sql_pred": {"agg": [4], "sel": [1], "conds": [[3, 2, "逻辑芯片"], [0, 2, "8.0"]], "cond_conn_op": 2}}
+{"question": "PE2012E和 PE2013E都大于10%的股票，它总市值有多少", "table": "69d41833334311e99c97542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[10, 0, "10"], [11, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[9, 0, 10], [10, 0, 10]], "cond_conn_op": 1}}
+{"question": "总的市值多少的股票预计在12年和13年收益比率都会超过10%", "table": "69d41833334311e99c97542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[10, 0, "10"], [11, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[9, 0, 10], [10, 0, 10]], "cond_conn_op": 1}}
+{"question": "请问2012和2013年预计市盈率都大于10%，想知道它股票总市值会是多少", "table": "69d41833334311e99c97542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[10, 0, "10"], [11, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[9, 0, 10], [10, 0, 10]], "cond_conn_op": 1}}
+{"question": "请问有哪些城市在2012年4月成交量环比大于5并且同年的2月成交量环比低于10的？\n", "table": "69d156f8334311e9af6e542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "5"], [3, 1, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[2, 0, 5], [6, 1, 10]], "cond_conn_op": 1}}
+{"question": "你好，方便告诉我一下在12年4月成交量的环比达到5以上同时在二月份成交量比上个月是不足10的城市都有哪些", "table": "69d156f8334311e9af6e542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "5"], [3, 1, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[2, 0, 5], [1, 1, 10]], "cond_conn_op": 1}}
+{"question": "我想知道一线都有哪些城市它在2012年4月比上个月的成交量是高于5而且在2月成交量的环比小于10", "table": "69d156f8334311e9af6e542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "5"], [3, 1, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 0, 5], [5, 1, 10]], "cond_conn_op": 1}}
+{"question": "哪些板块的代码是000300.SH或者有300个成分股", "table": "4d251cf53aaa11e9bce2f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[2, 1, "300"], [0, 2, "000300.SH"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 0, 300], [0, 2, "000300.SH"]], "cond_conn_op": 2}}
+{"question": "你好，能不能帮我查一下满足成分股300个或者代码为000300.SH的板块名称", "table": "4d251cf53aaa11e9bce2f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[2, 1, "300"], [0, 2, "000300.SH"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 2, "300.0"], [0, 2, "000300.SH"]], "cond_conn_op": 2}}
+{"question": "今年第一周全国电影票房排名前十中有多少部电影是周票房超过两千万，或者是票房占比大于10%的，或者是平均每场不足10人次的", "table": "4d2a0a543aaa11e99ec0f40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 2, "sel": [0], "conds": [[1, 0, "2000"], [2, 0, "10"], [3, 0, "10"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[1, 0, 2000], [2, 0, 10], [3, 1, 10]], "cond_conn_op": 2}}
+{"question": "你好，今年第1周全国电影票房排名前十中周票房大于2000万，或是票房占比大于10%，又或者是平均下来每场少于10人次的影片有几部你知道吗", "table": "4d2a0a543aaa11e99ec0f40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 2, "sel": [0], "conds": [[1, 0, "2000"], [2, 0, "10"], [3, 0, "10"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[1, 0, 2000], [2, 0, 10], [3, 1, 10]], "cond_conn_op": 2}}
+{"question": "2011年市盈率超过十倍的企业共有几家", "table": "69d06cfa334311e988c1542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [1], "conds": [[6, 0, "10"]]}}
+{"sql_pred": {"agg": [4], "sel": [1], "conds": [[6, 0, 10]], "cond_conn_op": 0}}
+{"question": "一共有多少个公司11年的本益比是高于十倍的", "table": "69d06cfa334311e988c1542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [1], "conds": [[6, 0, "10"]]}}
+{"sql_pred": {"agg": [4], "sel": [1], "conds": [[6, 0, 10]], "cond_conn_op": 0}}
+{"question": "我想问一下11年有几只股票的市价盈利比率是在十倍以上", "table": "69d06cfa334311e988c1542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [1], "conds": [[6, 0, "10"]]}}
+{"sql_pred": {"agg": [4], "sel": [1], "conds": [[6, 0, 10]], "cond_conn_op": 0}}
+{"question": "商品房周成交面积去年同比大于40的城市是哪个", "table": "2530c65e302e11e98f90542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[3, 0, "40"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[5, 0, 40]], "cond_conn_op": 0}}
+{"question": "请问哪个城市商品房的周成交面积去年同比超过四十", "table": "2530c65e302e11e98f90542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[3, 0, "40"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[5, 0, 40]], "cond_conn_op": 0}}
+{"question": "有没有哪个城市商品房这周成交面积去年同比高于40", "table": "2530c65e302e11e98f90542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[3, 0, "40"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[5, 0, 40]], "cond_conn_op": 0}}
+{"question": "你好，你知道目前有多少部好莱坞大片是一月十一号在北美上映的吗", "table": "4d280ca33aaa11e9b11af40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [1], "conds": [[0, 2, "2019-01-11"]]}}
+{"sql_pred": {"agg": [4], "sel": [1], "conds": [[1, 2, "一条狗的回家路"]], "cond_conn_op": 0}}
+{"question": "声入人心的网络点击率有多少？", "table": "4d29c00a3aaa11e990d5f40f24344a08"}
+{"sql_right": {"agg": [5], "cond_conn_op": 0, "sel": [2], "conds": [[3, 2, "芒果TV"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 2, "声入人心"]], "cond_conn_op": 0}}
+{"question": "你能告诉我快乐大本营在这些综艺中排第几吗？", "table": "4d29c00a3aaa11e990d5f40f24344a08"}
+{"sql_right": {"agg": [5], "cond_conn_op": 0, "sel": [2], "conds": [[3, 2, "芒果TV"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 2, "快乐大本营2019"]], "cond_conn_op": 0}}
+{"question": "2017年每股收益大于1元而且2017股票收益比率小于20%的股票市盈率相对盈利增长比率为多少", "table": "01564d28351311e9ada4542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [12], "conds": [[3, 1, "1"], [7, 1, "20"]]}}
+{"sql_pred": {"agg": [0], "sel": [7], "conds": [[3, 0, 1], [8, 1, 20]], "cond_conn_op": 1}}
+{"question": "我想通过2017每股的收益超过1元以及股票市盈率低于20%来查询它的股票市盈率相对盈利增长比率", "table": "01564d28351311e9ada4542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [12], "conds": [[3, 1, "1"], [7, 1, "20"]]}}
+{"sql_pred": {"agg": [0], "sel": [7], "conds": [[3, 0, 1], [8, 1, 20]], "cond_conn_op": 1}}
+{"question": "了解到在17年股票每股盈余高于1元并且本益比不超过20，想问一下PEG是多少", "table": "01564d28351311e9ada4542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [12], "conds": [[3, 1, "1"], [7, 1, "20"]]}}
+{"sql_pred": {"agg": [0], "sel": [12], "conds": [[3, 0, 1], [7, 1, 20]], "cond_conn_op": 1}}
+{"question": "新世界中国地产有限公司它的最新股价在5一下，你知道它的最新市值吗？", "table": "252caeca302e11e9b3ac542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[1, 2, "新世界中国地产有限公司"], [3, 1, "5"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 2, "新世界中国地产有限公司"], [2, 2, "315.0"]], "cond_conn_op": 1}}
+{"question": "降息前月还款额10年大于8000并且降息前月还款额20年大于8000的总房价是多少", "table": "5a4e9730312b11e98007542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[2, 0, "8000"], [3, 0, "8000"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[5, 0, 8000], [2, 0, 8000]], "cond_conn_op": 1}}
+{"question": "有多少总房价降息前月还款额10年大于8000并且降息前月还款额20年大于8000的？", "table": "5a4e9730312b11e98007542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[2, 0, "8000"], [3, 0, "8000"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[3, 0, 8000], [4, 0, 8000]], "cond_conn_op": 1}}
+{"question": "麻烦问一下总共有多少航空公司引进宽体机大于10并且引进窄体机大于50的？", "table": "c5adb61e34b411e984e7542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[2, 0, "10"], [3, 0, "50"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[4, 0, 50], [2, 0, 10]], "cond_conn_op": 1}}
+{"question": "请问在12年有哪些公司的股票本益比不足10个百分点以及每股的收益是低于2块的", "table": "69cf4763334311e99a84542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[4, 1, "2"], [8, 1, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[5, 1, 2], [9, 1, 10]], "cond_conn_op": 1}}
+{"question": "目前影院数量大于800或者单银幕票房大于100亿或者2018年票房大于50亿的2018年底银幕数量最小值为多少", "table": "4d2786593aaa11e9bd56f40f24344a08"}
+{"sql_right": {"agg": [3], "cond_conn_op": 2, "sel": [3], "conds": [[2, 0, "800"], [4, 0, "100"], [1, 0, "50"]]}}
+{"sql_pred": {"agg": [3], "sel": [3], "conds": [[1, 0, 50], [2, 0, 800], [4, 0, 1000000]], "cond_conn_op": 2}}
+{"question": "你知道像目前影院数量大于800或者单银幕票房大于100亿或者2018年票房大于50亿这样的院线，2018年底银幕数量最小可以小到多少吗", "table": "4d2786593aaa11e9bd56f40f24344a08"}
+{"sql_right": {"agg": [3], "cond_conn_op": 2, "sel": [3], "conds": [[2, 0, "800"], [4, 0, "100"], [1, 0, "50"]]}}
+{"sql_pred": {"agg": [3], "sel": [3], "conds": [[1, 0, 50], [2, 0, 800], [4, 0, 1000000]], "cond_conn_op": 2}}
+{"question": "当2018年底银幕数量最小值为多少时目前影院数量大于800或者单银幕票房大于100亿或者2018年票房大于50亿", "table": "4d2786593aaa11e9bd56f40f24344a08"}
+{"sql_right": {"agg": [3], "cond_conn_op": 2, "sel": [3], "conds": [[2, 0, "800"], [4, 0, "100"], [1, 0, "50"]]}}
+{"sql_pred": {"agg": [3], "sel": [3], "conds": [[1, 0, 50], [2, 0, 800], [4, 0, 1000000]], "cond_conn_op": 2}}
+{"question": "首付成数大于40或者每月还款额度减少额低于100的，在调整前月供为多少", "table": "c98c3e87332111e991c4542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[0, 0, "40"], [3, 0, "100"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[0, 0, 40], [3, 1, 100]], "cond_conn_op": 2}}
+{"question": "月供在调整前达到多少才能使首付成数大于40或者每月还款额度减少额低于100", "table": "c98c3e87332111e991c4542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[0, 0, "40"], [3, 0, "100"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[0, 0, 40], [3, 1, 100]], "cond_conn_op": 2}}
+{"question": "调息后，月供现在每月可少还额低于100的在调整前为多少或者首付成数大于40的调整前月供为多少", "table": "c98c3e87332111e991c4542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[0, 0, "40"], [3, 0, "100"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[0, 0, 40], [3, 1, 100]], "cond_conn_op": 2}}
+{"question": "请问哪些公司它2010年市净率是低于2同时2012年的市净率也是不超过23的", "table": "69cf4763334311e99a84542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[6, 1, "23"], [8, 1, "23"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[10, 1, 23], [6, 1, 2]], "cond_conn_op": 1}}
+{"question": "想要知道在10年和12年的时候股票市净率都低于23的都是哪些公司", "table": "69cf4763334311e99a84542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[6, 1, "23"], [8, 1, "23"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 1, 23], [7, 1, 23]], "cond_conn_op": 1}}
+{"question": "请问11年EPS大于1，还有12年EPS预估也会大于1的，或者是13年EPS估值大于1的一共有几家公司？", "table": "69d29a23334311e99c4d542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [1], "conds": [[3, 0, "1"], [4, 0, "1"], [5, 0, "1"]]}}
+{"sql_pred": {"agg": [4], "sel": [1], "conds": [[4, 0, 1], [3, 0, 1], [6, 0, 1]], "cond_conn_op": 2}}
+{"question": "EPS18E大于04，EPS19E也大于0.4而且EPS20E也超过了0.4的公司简称是什么", "table": "463e7307351411e9b12b542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[2, 0, "0.4"], [3, 0, "0.4"], [4, 0, "0.4"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[2, 0, 4], [3, 0, "0.4"], [4, 0, "0.4"]], "cond_conn_op": 1}}
+{"question": "香江控股和万通地产10年的PE总和是多少", "table": "e0adae75333a11e9a131542696d6e445"}
+{"sql_right": {"agg": [5], "cond_conn_op": 2, "sel": [5], "conds": [[0, 2, "香江控股"], [0, 2, "万通地产"]]}}
+{"sql_pred": {"agg": [5], "sel": [2], "conds": [[0, 2, "万通地产"], [0, 2, "香江控股"]], "cond_conn_op": 2}}
+{"question": "可不可帮我算算万通地产10年的本益比加上香江控股10年的本益比是多少", "table": "e0adae75333a11e9a131542696d6e445"}
+{"sql_right": {"agg": [5], "cond_conn_op": 2, "sel": [5], "conds": [[0, 2, "香江控股"], [0, 2, "万通地产"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[0, 2, "万通地产"], [0, 2, "香江控股"]], "cond_conn_op": 2}}
+{"question": "哪些城市前一日成交大于500万平或者日成交大于500万平", "table": "c98a335c332111e99ca4542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[1, 0, "500"], [2, 0, "500"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 0, 5000000], [2, 0, 5000000]], "cond_conn_op": 2}}
+{"question": "日成交大于500万平或者前一日成交大于500万平的城市有哪些", "table": "c98a335c332111e99ca4542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[1, 0, "500"], [2, 0, "500"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 0, 5000000], [2, 0, 5000000]], "cond_conn_op": 2}}
+{"question": "你知道日成交或者前一日成交超过500万平的城市吗", "table": "c98a335c332111e99ca4542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[1, 0, "500"], [2, 0, "500"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 0, 5000000], [2, 0, 5000000]], "cond_conn_op": 2}}
+{"question": "股票价格超10块而且滚动市盈率大于10%的股票总的流通市值为多少", "table": "4d28a13a3aaa11e98590f40f24344a08"}
+{"sql_right": {"agg": [5], "cond_conn_op": 1, "sel": [4], "conds": [[2, 0, "10"], [8, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[2, 0, 10], [8, 0, 10]], "cond_conn_op": 1}}
+{"question": "像股价大于10元钱而且滚动市盈率大于10%这样的股票，通市值总和达到多少", "table": "4d28a13a3aaa11e98590f40f24344a08"}
+{"sql_right": {"agg": [5], "cond_conn_op": 1, "sel": [4], "conds": [[2, 0, "10"], [8, 0, "10"]]}}
+{"sql_pred": {"agg": [5, 5], "sel": [3, 4], "conds": [[2, 0, 10], [8, 0, 10]], "cond_conn_op": 1}}
+{"question": "卧龙地产11EPE超过了10，12EPE 是多少？", "table": "e0ae7bee333a11e99031542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [7], "conds": [[0, 2, "卧龙地产"], [6, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[0, 2, "卧龙地产"], [5, 0, 10]], "cond_conn_op": 1}}
+{"question": "我发现卧龙地产的11EPE以在10以上，你知道12年EPE是多少吗？", "table": "e0ae7bee333a11e99031542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [7], "conds": [[0, 2, "卧龙地产"], [6, 0, "10"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [4, 7], "conds": [[0, 2, "卧龙地产"], [5, 0, 10]], "cond_conn_op": 1}}
+{"question": "能给我就是说说都有哪些被动元器件制造公司其业务主要是电容啊，还有17年营收也超过了20亿的呀", "table": "0de5c761351311e989dc542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[5, 2, "电容"], [6, 0, "20"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[7, 0, 20], [5, 2, "电容"]], "cond_conn_op": 1}}
+{"question": "那个就是营收同比增长率在50以上的，或者是归母利润大于30的都是哪些证券啊", "table": "0de680cf351311e9bde3542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [2], "conds": [[4, 0, "50"], [6, 0, "30"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[4, 0, 50], [5, 0, 30]], "cond_conn_op": 2}}
+{"question": "能就是帮我查查看都是哪些证券其归母利润大于30，或者营收同比增长率大于50的呀", "table": "0de680cf351311e9bde3542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [2], "conds": [[4, 0, "50"], [6, 0, "30"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[4, 0, 50], [5, 0, 30]], "cond_conn_op": 2}}
+{"question": "2016A每股收益大于1块的股票，同年市盈率为多少，最新的每股净资产是多少", "table": "69ce5f78334311e9813f542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [7, 9], "conds": [[5, 0, "1"]]}}
+{"sql_pred": {"agg": [0], "sel": [9], "conds": [[5, 0, 1]], "cond_conn_op": 0}}
+{"question": "你好，帮我查询一下2016A每股收益高于1块钱的股票市盈率以及它的最新每股净资产，可以吗", "table": "69ce5f78334311e9813f542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [7, 9], "conds": [[5, 0, "1"]]}}
+{"sql_pred": {"agg": [0], "sel": [9], "conds": [[5, 0, 1]], "cond_conn_op": 0}}
+{"question": "你好，可不可以帮我查一下满足市值超过300亿港币或者收益大于0.8的股票，这些股票都是哪些行业的", "table": "733d80fd34c611e98d98542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [3], "conds": [[8, 0, "300"], [11, 0, "0.8"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [2, 3], "conds": [[11, 0, "0.8"], [8, 0, 300]], "cond_conn_op": 2}}
+{"question": "一共有几家公司估计18年和19年的市盈率都会超过百分之二十的呀", "table": "43b3612e1d7111e9a29bf40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [1], "conds": [[6, 1, "20"], [7, 1, "20"]]}}
+{"sql_pred": {"agg": [4], "sel": [1], "conds": [[7, 0, 20], [6, 0, 20]], "cond_conn_op": 2}}
+{"question": "你好，你知道预计2018年，还有2019年的本益比都在百分之二十以上的公司有多少家吗", "table": "43b3612e1d7111e9a29bf40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [1], "conds": [[6, 1, "20"], [7, 1, "20"]]}}
+{"sql_pred": {"agg": [4], "sel": [1], "conds": [[7, 0, 20], [6, 0, 20]], "cond_conn_op": 1}}
+{"question": "你帮我算一下18年，19年的股价收益比率估值都高于百分之二十的公司数量吧", "table": "43b3612e1d7111e9a29bf40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [1], "conds": [[6, 1, "20"], [7, 1, "20"]]}}
+{"sql_pred": {"agg": [4], "sel": [1], "conds": [[7, 0, 20], [6, 0, 20]], "cond_conn_op": 1}}
+{"question": "2011年到2017年中春运铁路客运与春运客运量增速对比大于10%的，或者是春运民航客运与春运客运量增速对比大于10%的是哪几年", "table": "733c1f5934c611e98e23542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[4, 0, "10"], [2, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[5, 0, 10], [6, 0, 10]], "cond_conn_op": 2}}
+{"question": "哪几年的春运铁路客运或者春运民航客运与春运客运量增速对比都超过了10%的呀", "table": "733c1f5934c611e98e23542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[4, 0, "10"], [2, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 0, 10], [5, 0, 10]], "cond_conn_op": 2}}
+{"question": "春运期间，铁路或是民航的客运与客运量增速的对比都在10%以上的是11年到17年中的哪些年啊", "table": "733c1f5934c611e98e23542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[4, 0, "10"], [2, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 0, 10], [5, 0, 10]], "cond_conn_op": 2}}
+{"question": "我想知道那个18年第三季度到第四季度有哪些快递公司业务量达到30亿件以上的呀，还有份额大于10的呢", "table": "c5acf7e334b411e986d5542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[1, 0, "30"], [2, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[4, 0, 30], [5, 0, 10]], "cond_conn_op": 1}}
+{"question": "滚动市盈率超120而且平均市净率超1.5的股票代码是什么", "table": "43b2932b1d7111e9a434f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[3, 0, "120"], [4, 0, "1.5"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[4, 0, "1.5"], [4, 0, 120]], "cond_conn_op": 1}}
+{"question": "请问哪个股票的滚动的市盈率大于120，还有他的平均的市净率还大于1.5，他的代码是什么", "table": "43b2932b1d7111e9a434f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[3, 0, "120"], [4, 0, "1.5"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[4, 0, "1.5"], [4, 0, 120]], "cond_conn_op": 1}}
+{"question": "福州住宅期房三月成交面积超过20万平或者四月超过20万平，那么五月份的成交均值为多少", "table": "5a52262b312b11e9b0da542696d6e445"}
+{"sql_right": {"agg": [1], "cond_conn_op": 2, "sel": [5], "conds": [[3, 0, "20"], [4, 0, "20"]]}}
+{"sql_pred": {"agg": [1, 1], "sel": [1, 2], "conds": [[5, 0, 20], [3, 0, 20]], "cond_conn_op": 2}}
+{"question": "福州住宅期房五月成交均值为多少啊，已知三月或者四月的成交面积都是大于20万平的", "table": "5a52262b312b11e9b0da542696d6e445"}
+{"sql_right": {"agg": [1], "cond_conn_op": 2, "sel": [5], "conds": [[3, 0, "20"], [4, 0, "20"]]}}
+{"sql_pred": {"agg": [1, 1, 1], "sel": [1, 2, 5], "conds": [[2, 0, 20], [6, 0, 20]], "cond_conn_op": 2}}
+{"question": "你知道三月或者四月的成交面积都大于20万平所对应的五月住宅期房成交均值吗", "table": "5a52262b312b11e9b0da542696d6e445"}
+{"sql_right": {"agg": [1], "cond_conn_op": 2, "sel": [5], "conds": [[3, 0, "20"], [4, 0, "20"]]}}
+{"sql_pred": {"agg": [1], "sel": [4], "conds": [[5, 0, 20], [1, 0, 20]], "cond_conn_op": 2}}
+{"question": "四线城市一手房成交本周环比大于0而且本周同比也大于0的城市有几个", "table": "c98cba33332111e99841542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "0"], [2, 0, "0"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[1, 0, 0], [2, 0, 0]], "cond_conn_op": 1}}
+{"question": "有几个城市的一手房成交本周环比和本周同比都是大于0的", "table": "c98cba33332111e99841542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "0"], [2, 0, "0"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[1, 0, 0], [2, 0, 0]], "cond_conn_op": 1}}
+{"question": "你好，是这样，一手房成交本周环比和本周同比都大于0的四线城市有几个啊", "table": "c98cba33332111e99841542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "0"], [2, 0, "0"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[1, 0, 0], [2, 0, 0]], "cond_conn_op": 1}}
+{"question": "收盘价格超过10的航空公司一共有几家", "table": "01562780351311e995f2542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [1], "conds": [[2, 0, "10"]]}}
+{"sql_pred": {"agg": [4, 4], "sel": [0, 1], "conds": [[2, 0, 10]], "cond_conn_op": 0}}
+{"question": "诶，你知道就是我国哪些特高压建设项目说是要投资100亿的吗，还有啊这些项目有说什么时候开工吗", "table": "0151f30c351311e9ba68542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 3], "conds": [[2, 0, "100"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 3], "conds": [[0, 2, "晋南东-南阳-荆门交流1000千伏"]], "cond_conn_op": 0}}
+{"question": "你好，你给我查一下就是哪几个机场17年的旅客吞吐量已经在8000万人次以上的呀，还有他们那个基地航空公司是哪家呀", "table": "733d128234c611e9a0fa542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 2], "conds": [[1, 0, "8000"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 0, 8000]], "cond_conn_op": 0}}
+{"question": "哪些机场在18年冬春的航班数量不超过20000次", "table": "c5ac847534b411e9bd09542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [6], "conds": [[4, 1, "20000"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[4, 1, 20000]], "cond_conn_op": 0}}
+{"question": "你帮我算一下12年福州一月和三月住房成交面积的平均数吧", "table": "5a4edf57312b11e9b253542696d6e445"}
+{"sql_right": {"agg": [1], "cond_conn_op": 2, "sel": [2], "conds": [[0, 2, "2012年3月"], [0, 2, "2012年1月"]]}}
+{"sql_pred": {"agg": [1], "sel": [2], "conds": [[0, 2, "2012年3月"], [0, 2, "2011年3月"]], "cond_conn_op": 2}}
+{"question": "股票总价值不足一百亿美元的证券有哪些，方便把代码也告诉我吗", "table": "733d74f334c611e9b31d542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [2, 1], "conds": [[8, 1, "100"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 2], "conds": [[11, 1, 100]], "cond_conn_op": 0}}
+{"question": "帮我查询一下华夏幸福的2013年每股盈余是多少谢谢，我只查到它的2012年每股盈余已高于1.", "table": "69d35214334311e9be23542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [7], "conds": [[0, 2, "华夏幸福"], [6, 0, "1"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [6, 7], "conds": [[6, 0, "1."], [0, 2, "华夏幸福"]], "cond_conn_op": 1}}
+{"question": "2010年一线城市的土地供应达到4526万平，那么2011年的供应面积是多少", "table": "69d56130334311e981e2542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[0, 2, "一线城市"], [1, 2, "4526"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[0, 2, "一线城市"], [2, 2, "4526.0"]], "cond_conn_op": 1}}
+{"question": "2016年ROE大于10并且2017年ROE也大于10的证券有哪些?", "table": "4d2844613aaa11e9895cf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[7, 0, "10"], [8, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[9, 0, "10"], [7, 0, 10]], "cond_conn_op": 1}}
+{"question": "请问一下16年和17年的净资产收益率都超过10的是什么证券？", "table": "4d2844613aaa11e9895cf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[7, 0, "10"], [8, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[8, 0, 10], [6, 0, 10]], "cond_conn_op": 1}}
+{"question": "诶，你知道有哪些股17年的PE大于10，PB也大于2的呀，那那这些股代码是什么啊", "table": "6e616aa834ce11e9a75a542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 1, "sel": [0, 1], "conds": [[5, 0, "10"], [8, 0, "2"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[8, 0, 2], [8, 0, 10]], "cond_conn_op": 1}}
+{"question": "你好啊，我想问问就是17年PB大于2的，PE也大于10的都是什么股啊，代码是啥啊", "table": "6e616aa834ce11e9a75a542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 1, "sel": [0, 1], "conds": [[5, 0, "10"], [8, 0, "2"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[8, 0, 10], [8, 0, 2]], "cond_conn_op": 1}}
+{"question": "那个17年PE高于10，PB大于2的都是哪些股，代码咋写啊", "table": "6e616aa834ce11e9a75a542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 1, "sel": [0, 1], "conds": [[5, 0, "10"], [8, 0, "2"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[8, 0, 2], [8, 0, 10]], "cond_conn_op": 1}}
+{"question": "你好，方便跟我说一下哪些股它的总市值在20亿以上，还有PETTM也超过10的吗", "table": "4d26e6303aaa11e9932df40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[2, 0, "20"], [3, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 0, 20], [4, 0, 10]], "cond_conn_op": 1}}
+{"question": "杭州近4周周均成交已超过了10，那他的环比是多少呢？", "table": "c98a4e45332111e9bc29542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[0, 2, "杭州"], [4, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[0, 2, "杭州"], [4, 0, 10]], "cond_conn_op": 1}}
+{"question": "你好，方便告诉我杭州6月的环比是多少么？已知近4周周均成交已超过10了。", "table": "c98a4e45332111e9bc29542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[0, 2, "杭州"], [4, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[0, 2, "杭州"], [4, 0, 10]], "cond_conn_op": 1}}
+{"question": "12年6月杭州近4周周均成交已高于10，那环比大概在怎么样一个数值呢？", "table": "c98a4e45332111e9bc29542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[0, 2, "杭州"], [4, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[0, 2, "杭州"], [4, 0, 10]], "cond_conn_op": 1}}
+{"question": "麻烦跟我说一下制造空气净化机器的企业名字谢谢，我想做点投资", "table": "a7b5f29c3b0611e9908bf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [1], "conds": [[3, 2, "空气净化器"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[3, 2, "空气净化机"]], "cond_conn_op": 0}}
+{"question": "请问一下啊电子信息工程专业的学科类别是什么还有通信工程专业的学科类别", "table": "f1eeb43d453d11e98a6ff40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [5], "conds": [[2, 2, "电子信息工程"], [2, 2, "通信工程"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [5, 6], "conds": [[2, 2, "通信工程"], [2, 2, "电子信息工程"]], "cond_conn_op": 2}}
+{"question": "美学专业或者年龄不足35岁的可以应聘哪些职位", "table": "f0a00fb0453d11e9accaf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [2], "conds": [[1, 2, "美学专业"], [3, 2, "35以下"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 2, "美学专业"], [3, 1, 35]], "cond_conn_op": 2}}
+{"question": "哪些岗位要求美学专业或者年龄35岁以下", "table": "f0a00fb0453d11e9accaf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [2], "conds": [[1, 2, "美学专业"], [3, 2, "35以下"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[3, 2, "35岁以下"], [1, 2, "美学专业"]], "cond_conn_op": 2}}
+{"question": "我想找工作，你帮我查一下美学专业或者35岁以下可以做的工作呗", "table": "f0a00fb0453d11e9accaf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [2], "conds": [[1, 2, "美学专业"], [3, 2, "35以下"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[3, 2, "35岁以下"], [1, 2, "美学专业"]], "cond_conn_op": 2}}
+{"question": "你帮我看一下由石油工业出版的都是什么书呀，这些书又分别撰写了多少个字呀", "table": "efd35aeb453d11e9a88cf40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 11], "conds": [[3, 2, "石油工业出版社"]]}}
+{"sql_pred": {"agg": [0, 0, 0], "sel": [0, 9, 11], "conds": [[3, 2, "石油工业出版"]], "cond_conn_op": 0}}
+{"question": "我想知道哪些著作是石油工业出版的，还有这些著作撰写的具体字数也麻烦告诉我一下", "table": "efd35aeb453d11e9a88cf40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 11], "conds": [[3, 2, "石油工业出版社"]]}}
+{"sql_pred": {"agg": [0, 0, 0], "sel": [0, 9, 11], "conds": [[3, 2, "石油工业出版"]], "cond_conn_op": 0}}
+{"question": "学历为本科要求的岗位中，哪些招20多人？", "table": "abbf13ab3b0611e9a6d1f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[3, 2, "本科"], [5, 0, "20"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[3, 2, "本科"], [5, 2, "20.0"]], "cond_conn_op": 1}}
+{"question": "什么岗位要本科次啊可以报且招聘人数大于20？", "table": "abbf13ab3b0611e9a6d1f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[3, 2, "本科"], [5, 0, "20"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[3, 2, "本科 "], [5, 0, 20]], "cond_conn_op": 1}}
+{"question": "哪些书估价超过50元的，这些书都是什么类的书", "table": "a80607c73b0611e9a7e6f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [3, 4], "conds": [[11, 0, "50"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [3, 4], "conds": [[10, 0, 50]], "cond_conn_op": 0}}
+{"question": "我想知道什么类的书估定价超过50元，这些书的书名给我一下", "table": "a80607c73b0611e9a7e6f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [3, 4], "conds": [[11, 0, "50"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [3, 4], "conds": [[10, 0, 50]], "cond_conn_op": 0}}
+{"question": "你知道什么类型的书估计售价超过50元的吗，这些书的书名能不能帮我查一下", "table": "a80607c73b0611e9a7e6f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [3, 4], "conds": [[11, 0, "50"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[10, 0, 50]], "cond_conn_op": 0}}
+{"question": "哪些专业的学分大于2分而且理论学时超过32以及计划学期大于5的", "table": "a812e5873b0611e98060f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[4, 0, "2"], [5, 0, "32"], [6, 0, "5"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[4, 0, 2], [5, 0, 32], [5, 0, 5]], "cond_conn_op": 1}}
+{"question": "批复经费超过500万的项目有哪些？", "table": "aaf3b4ee3b0611e9a74cf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [1], "conds": [[4, 0, "500"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[4, 0, 5000000]], "cond_conn_op": 0}}
+{"question": "麻烦问下有哪些项目的批复经费超过500万的？", "table": "aaf3b4ee3b0611e9a74cf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [1], "conds": [[4, 0, "500"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[4, 0, 5000000]], "cond_conn_op": 0}}
+{"question": "请问一下批复经费超过500万的项目有哪些？", "table": "aaf3b4ee3b0611e9a74cf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [1], "conds": [[4, 0, "500"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[4, 0, 5000000]], "cond_conn_op": 0}}
+{"question": "诶那个中央办公厅目前有几个岗是要求专业考试的呀", "table": "f1d81b14453d11e980ebf40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [2], "conds": [[12, 2, "是"], [0, 2, "中央办公厅"]]}}
+{"sql_pred": {"agg": [4], "sel": [2], "conds": [[0, 2, "中央办公厅"], [7, 2, "工业与民用建设"]], "cond_conn_op": 1}}
+{"question": "哪些路的长度是比5000米长的？", "table": "aa2487003b0611e99beff40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [1], "conds": [[7, 0, "5000"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[6, 0, 5000]], "cond_conn_op": 0}}
+{"question": "长度超过5公里的路有哪些？", "table": "aa2487003b0611e99beff40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [1], "conds": [[7, 0, "5000"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[7, 0, 5]], "cond_conn_op": 0}}
+{"question": "你好，你帮我查一下安职院在什么地方", "table": "aa95d2333b0611e980a6f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [2], "conds": [[3, 2, "安徽职业技术学院"]]}}
+{"sql_pred": {"agg": [], "sel": [], "conds": [[3, 2, "安徽工商职业学院"]], "cond_conn_op": 0}}
+{"question": "平峰期发车间隔不高于10分钟且高峰期发车间隔低于5分钟的有哪些公交线路呢", "table": "aa2d04213b0611e9b9f2f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[8, 2, "不高于10分钟"], [7, 2, "低于5分钟"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[8, 1, 5], [11, 1, 10]], "cond_conn_op": 1}}
+{"question": "那你说都有哪些公交路线的平峰期发车间隔不超过10分钟的和高峰期发车间隔低于5分钟的", "table": "aa2d04213b0611e9b9f2f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[8, 2, "不高于10分钟"], [7, 2, "低于5分钟"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[8, 0, 5], [7, 1, 10]], "cond_conn_op": 1}}
+{"question": "帮我找找有哪些路线的公交平峰期不超过10分钟一趟还有高峰期低于5分钟一趟的", "table": "aa2d04213b0611e9b9f2f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[8, 2, "不高于10分钟"], [7, 2, "低于5分钟"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[8, 1, 5], [9, 1, 10]], "cond_conn_op": 1}}
+{"question": "你们那个科研岗位1需要什么学历，什么专业的吗", "table": "aa9713193b0611e9bf8ff40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [4, 5], "conds": [[1, 2, "科研岗位01"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [4, 5], "conds": [[1, 2, "科研岗位12"]], "cond_conn_op": 0}}
+{"question": "我想知道那个科研岗位1有要求说要什么学历以上，什么专业之类的吗", "table": "aa9713193b0611e9bf8ff40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [4, 5], "conds": [[1, 2, "科研岗位01"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [4, 5], "conds": [[1, 2, "科研岗位12"]], "cond_conn_op": 0}}
+{"question": "你好啊，那个科研岗位1要啥专业的呀，对学历有要求吗", "table": "aa9713193b0611e9bf8ff40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [4, 5], "conds": [[1, 2, "科研岗位01"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [4, 5], "conds": [[1, 2, "科研岗位12"]], "cond_conn_op": 0}}
+{"question": "所有招10人以上的岗位中，哪些是招学生助理的？", "table": "a8bdfaae3b0611e9ac87f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[2, 2, "学生助理"], [3, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[3, 0, 10], [2, 2, "学生助理"]], "cond_conn_op": 1}}
+{"question": "听说九台一中在招聘语文老师，那要招多少人啊", "table": "a987b41e3b0611e9b318f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[1, 2, "九台区第一中学"], [2, 2, "语文"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[2, 2, "语文"], [1, 2, "九台三十一中"]], "cond_conn_op": 1}}
+{"question": "我想知道九台一中语文老师这个岗位的招聘人数", "table": "a987b41e3b0611e9b318f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[1, 2, "九台区第一中学"], [2, 2, "语文"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[2, 2, "语文"], [1, 2, "九台三十一中"]], "cond_conn_op": 1}}
+{"question": "你好，你知道那个市中医院招几个人吗", "table": "ed4959ab453d11e9a2b4f40f24344a08"}
+{"sql_right": {"agg": [5], "cond_conn_op": 0, "sel": [4], "conds": [[0, 2, "市中心医院"]]}}
+{"sql_pred": {"agg": [5], "sel": [4], "conds": [[0, 2, "市中医医院"]], "cond_conn_op": 0}}
+{"question": "开盘价小于2000或者收盘价小于2000的涨跌幅是多少", "table": "a991b95c3b0611e9911cf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [11], "conds": [[6, 1, "2000"], [9, 1, "2000"]]}}
+{"sql_pred": {"agg": [], "sel": [], "conds": [[2, 1, 2000], [5, 1, 2000]], "cond_conn_op": 2}}
+{"question": "已知开盘价小于2000或者收盘价小于2000，那么涨跌幅是多少", "table": "a991b95c3b0611e9911cf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [11], "conds": [[6, 1, "2000"], [9, 1, "2000"]]}}
+{"sql_pred": {"agg": [0], "sel": [11], "conds": [[3, 1, 2000], [2, 1, 2000]], "cond_conn_op": 2}}
+{"question": "你知道开盘价小于2000或者收盘价小于2000的涨跌幅吗", "table": "a991b95c3b0611e9911cf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [11], "conds": [[6, 1, "2000"], [9, 1, "2000"]]}}
+{"sql_pred": {"agg": [3], "sel": [11], "conds": [[8, 1, 2000], [2, 1, 2000]], "cond_conn_op": 2}}
+{"question": "请问都有哪些公司是入围实力20强的呢，分别奖励多少呀", "table": "f1250147453d11e9895cf40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [1, 4], "conds": [[3, 2, "实力20强"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 4], "conds": [[0, 2, "20.0"]], "cond_conn_op": 0}}
+{"question": "音乐教师这个职位或者招考1人的部门有多少个", "table": "a9508b593b0611e98b51f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[1, 2, "音乐教师"], [2, 2, "1"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[2, 2, "1.0"], [1, 2, "音乐教师"]], "cond_conn_op": 2}}
+{"question": "有几个部门的招考人数为1人或者职位为音乐教师", "table": "a9508b593b0611e98b51f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[1, 2, "音乐教师"], [2, 2, "1"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[2, 2, "1.0"], [1, 2, "音乐教师"]], "cond_conn_op": 2}}
+{"question": "你好i，请你帮我查一下音乐教师这个职位或者招考1人的部门名称有多少个", "table": "a9508b593b0611e98b51f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[1, 2, "音乐教师"], [2, 2, "1"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[2, 2, "1.0"], [1, 2, "音乐教师"]], "cond_conn_op": 2}}
+{"question": "页码为369页或者大家都可以阅读的书是什么", "table": "a8fac7fd3b0611e99cdcf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [3], "conds": [[11, 2, "本书适用于大众读者"], [8, 2, "369页"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[6, 2, "苏州大学出版社"], [8, 2, "369页"]], "cond_conn_op": 2}}
+{"question": "诶你知道那个新浜小学和九亭小学平均下来有多少辆小车吗", "table": "f134dc30453d11e992aaf40f24344a08"}
+{"sql_right": {"agg": [1], "cond_conn_op": 2, "sel": [3], "conds": [[2, 2, "新浜小学"], [2, 2, "九亭小学"]]}}
+{"sql_pred": {"agg": [1], "sel": [3], "conds": [[2, 2, "九亭小学"], [2, 2, "新浜小学"]], "cond_conn_op": 1}}
+{"question": "呃呃新浜小学和九亭小学校车平均是几辆你知道吗", "table": "f134dc30453d11e992aaf40f24344a08"}
+{"sql_right": {"agg": [1], "cond_conn_op": 2, "sel": [3], "conds": [[2, 2, "新浜小学"], [2, 2, "九亭小学"]]}}
+{"sql_pred": {"agg": [1], "sel": [3], "conds": [[2, 2, "九亭小学"], [2, 2, "新浜小学"]], "cond_conn_op": 1}}
+{"question": "如果去管理教研室应聘教师那得需要什么专业才可以", "table": "aacb31543b0611e996c7f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[2, 2, "管理学院"], [3, 2, "教师"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[2, 2, "生理教研室"], [3, 2, "教师"]], "cond_conn_op": 1}}
+{"question": "那个我想要找两本书就是你可以帮我查查ISBN吗，一本是《农民维权宝典》还有一本是《农民学习宝典》", "table": "a95e4e303b0611e98a82f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [5], "conds": [[1, 2, "农民学习宝典"], [1, 2, "农民维权宝典"]]}}
+{"sql_pred": {"agg": [], "sel": [], "conds": [[1, 2, "农民维权宝典"], [1, 2, "农民学习宝典"]], "cond_conn_op": 2}}
+{"question": "郑先炳作者写的解读花旗银行定价是多少", "table": "f398419c453d11e9a4d7f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[1, 2, "解读花旗银行"], [2, 2, "郑先炳著"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[1, 2, "解读花旗银行"], [2, 2, "郑先炳"]], "cond_conn_op": 1}}
+{"question": "请告诉我郑先炳的解读花旗银行这本书价格谢谢", "table": "f398419c453d11e9a4d7f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[1, 2, "解读花旗银行"], [2, 2, "郑先炳著"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[1, 2, "解读花旗银行"], [2, 2, "郑先炳"]], "cond_conn_op": 1}}
+{"question": "我想问一下啊解读花旗银行这书籍定的价格多少啊，就郑先炳写的那本", "table": "f398419c453d11e9a4d7f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[1, 2, "解读花旗银行"], [2, 2, "郑先炳著"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[1, 2, "解读花旗银行"], [2, 2, "郑先炳"]], "cond_conn_op": 1}}
+{"question": "在2016年开工，2017年就完工的项目有几个", "table": "f59e7561453d11e9acf9f40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[2, 2, "2016"], [3, 2, "2017"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[2, 2, "2016.0"], [2, 2, "2017.0"]], "cond_conn_op": 1}}
+{"question": "用地面积大于3000万平的建设项目有哪些，用地地点在哪儿", "table": "abb1144f3b0611e986b3f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [6, 4], "conds": [[5, 0, "3000"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [4, 6], "conds": [[5, 0, 30000000]], "cond_conn_op": 0}}
+{"question": "哪些建设项目的用地面积大于3000万平，它的用地地点在哪儿", "table": "abb1144f3b0611e986b3f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [6, 4], "conds": [[5, 0, "3000"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [4, 6], "conds": [[5, 0, 30000000]], "cond_conn_op": 0}}
+{"question": "你知道用地面积大于3000万平的建设项目和用地地点吗", "table": "abb1144f3b0611e986b3f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [6, 4], "conds": [[5, 0, "3000"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [4, 6], "conds": [[5, 0, 30000000]], "cond_conn_op": 0}}
+{"question": "请问污染防治科招的这个管理岗位是需要什么学历的", "table": "a8afc74a3b0611e99996f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [8], "conds": [[2, 2, "污染防治科"], [3, 2, "污染防治管理岗位"]]}}
+{"sql_pred": {"agg": [0], "sel": [8], "conds": [[2, 2, "污染防治科"], [3, 2, "综合管理岗位"]], "cond_conn_op": 1}}
+{"question": "你好，你知道这次抽查的420毫升一瓶的厨邦纯米醋是在哪生产的吗", "table": "aabcd0303b0611e9b1caf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[6, 2, "420ml/瓶"], [5, 2, "厨邦纯米醋"]]}}
+{"sql_pred": {"agg": [], "sel": [], "conds": [[5, 2, "厨邦纯米醋"], [6, 2, "500毫升/瓶"]], "cond_conn_op": 1}}
+{"question": "有哪些书估定价超过50元，这些书的作者是谁你知道吗", "table": "a81232f03b0611e99f09f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [5, 3], "conds": [[9, 0, "50"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [3, 5], "conds": [[10, 0, 50]], "cond_conn_op": 0}}
+{"question": "诶你说谁写的什么书估计能卖50元以上的呀", "table": "a81232f03b0611e99f09f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [5, 3], "conds": [[9, 0, "50"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [3, 5], "conds": [[10, 0, 50]], "cond_conn_op": 0}}
+{"question": "我想知道估计能卖超过50元的是什么书来着，这些书的作者叫啥名呀", "table": "a81232f03b0611e99f09f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [5, 3], "conds": [[9, 0, "50"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [3, 5], "conds": [[10, 0, 50]], "cond_conn_op": 0}}
+{"question": "海洋油气工程专业的学硕总录取人数是多少？", "table": "a9bb55143b0611e9aaeaf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[3, 2, "海洋油气工程"], [1, 2, "学术"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[3, 2, "海洋油气工程"], [1, 2, "专硕"]], "cond_conn_op": 1}}
+{"question": "你知道教育学院都有哪些专业吗", "table": "a905f3eb3b0611e9896bf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [3], "conds": [[1, 2, "教育学部"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[1, 2, "体育学院"]], "cond_conn_op": 0}}
+{"question": "想了解教育学院部有什么专业可以选择", "table": "a905f3eb3b0611e9896bf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [3], "conds": [[1, 2, "教育学部"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[1, 2, "体育学院"]], "cond_conn_op": 0}}
+{"question": "哈克·费恩历险记这部剧是CGTN引进的，请问一共有多少集", "table": "aa6e7e6e3b0611e993fbf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[2, 2, "中国国际电视总公司"], [1, 2, "哈克·费恩历险记"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[1, 2, "哈克·费恩历险记"], [3, 2, "电视剧"]], "cond_conn_op": 1}}
+{"question": "是哪个机构检查了这批VS16463型号的液晶显示屏", "table": "f08ebb2b453d11e99795f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [8], "conds": [[3, 2, "液晶显示器"], [4, 2, "VS16463"]]}}
+{"sql_pred": {"agg": [0], "sel": [8], "conds": [[4, 2, "VS16463"], [3, 2, "宽屏液晶显示器"]], "cond_conn_op": 1}}
+{"question": "VS16463型液晶显示屏是什么承检机构负责抽查的", "table": "f08ebb2b453d11e99795f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [8], "conds": [[3, 2, "液晶显示器"], [4, 2, "VS16463"]]}}
+{"sql_pred": {"agg": [0], "sel": [8], "conds": [[4, 2, "VS16463"], [3, 2, "宽屏液晶显示器"]], "cond_conn_op": 1}}
+{"question": "用奋斗开创幸福未来这篇文章登上了头版，文章的作者是谁啊", "table": "aa468ae33b0611e9a592f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[2, 2, "头版"], [3, 2, "用奋斗开创幸福未来"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[2, 2, "3版"], [3, 2, "用奋斗开创幸福未来"]], "cond_conn_op": 1}}
+{"question": "审核通过的3A俱乐部都有哪些？", "table": "ee6850e8453d11e9ad86f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[3, 2, "通过"], [2, 2, "AAA"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[3, 2, "通过"], [2, 2, "A"]], "cond_conn_op": 1}}
+{"question": "东南大学出版社在2013年出版了哪些书呀？", "table": "aa5507053b0611e9bda8f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[3, 2, "东南大学出版社"], [4, 2, "2013"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[4, 2, "2013.8"], [3, 2, "东南大学出版社"]], "cond_conn_op": 1}}
+{"question": "13年出版的所有书中，什么书的出版社叫东南大学？", "table": "aa5507053b0611e9bda8f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[3, 2, "东南大学出版社"], [4, 2, "2013"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[4, 2, "2013.8"], [3, 2, "东南大学出版社"]], "cond_conn_op": 1}}
+{"question": "你知道一三年出版的，出版单位还是东南大学出版社的书名吗？", "table": "aa5507053b0611e9bda8f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[3, 2, "东南大学出版社"], [4, 2, "2013"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[4, 2, "2013.8"], [3, 2, "东南大学出版社"]], "cond_conn_op": 1}}
+{"question": "我想知道你们科研岗位1，2一起的话要招几个人啊", "table": "aa9713193b0611e9bf8ff40f24344a08"}
+{"sql_right": {"agg": [5], "cond_conn_op": 2, "sel": [3], "conds": [[1, 2, "科研岗位01"], [1, 2, "科研岗位02"]]}}
+{"sql_pred": {"agg": [5], "sel": [3], "conds": [[1, 2, "科研岗位12"], [0, 2, "2.0"]], "cond_conn_op": 1}}
+{"question": "这个川香麻辣味黄氏薯片每袋400个，这是什么公司的产品啊", "table": "aa1283783b0611e9b5c6f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[7, 2, "400g/袋"], [6, 2, "黄氏薯片（川香麻辣味）"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[6, 2, "黄氏薯片（川香麻辣味）"], [1, 2, "4.0"]], "cond_conn_op": 1}}
+{"question": "哪些入驻部门的事项数量低于5或者人员小于10", "table": "ab1c50ab3b0611e9bc5df40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[4, 1, "5"], [2, 1, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[3, 1, 5], [2, 1, 10]], "cond_conn_op": 2}}
+{"question": "每片80毫克的阿利沙坦酯多少钱啊", "table": "a7e258473b0611e98979f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[4, 2, "80mg"], [2, 2, "阿利沙坦酯"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[5, 2, "5780元"], [2, 2, "阿利沙坦酯"]], "cond_conn_op": 1}}
+{"question": "有多少个企业的生产线不止一条或者站点在龙岗区龙港镇龙西村", "table": "ab8abc683b0611e99d0af40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 2, "sel": [1], "conds": [[6, 0, "1"], [2, 2, "龙岗区龙港镇龙西村"]]}}
+{"sql_pred": {"agg": [4], "sel": [1], "conds": [[2, 2, "龙岗区同乐社区浪背村工业区一路2号"], [2, 2, "龙岗区龙港镇龙西村"]], "cond_conn_op": 2}}
+{"question": "有多少个场馆的座位超过了5000个或者收入超过了500万", "table": "ab6265403b0611e9b937f40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 2, "sel": [5], "conds": [[6, 0, "5000"], [7, 0, "500"]]}}
+{"sql_pred": {"agg": [4], "sel": [5], "conds": [[6, 0, 5000], [6, 0, 5000000]], "cond_conn_op": 2}}
+{"question": "你知道一箱408g的可爱多甜筒香芋牛奶口味冰淇淋价格是多少吗", "table": "aa44830c3b0611e98556f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[2, 2, "可爱多甜筒香芋牛奶口味冰淇淋多支装"], [3, 2, "408g"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[2, 2, "可爱多甜筒香芋牛奶口味冰淇淋"], [3, 2, "408g"]], "cond_conn_op": 1}}
+{"question": "我想问一下啊那个可爱多香芋牛奶口味的冰淇淋408克一箱的价格是多少", "table": "aa44830c3b0611e98556f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[2, 2, "可爱多甜筒香芋牛奶口味冰淇淋多支装"], [3, 2, "408g"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[2, 2, "可爱多甜筒香芋牛奶口味冰淇淋"], [3, 2, "408g"]], "cond_conn_op": 1}}
+{"question": "现在市场上408克的可爱多香芋牛奶口味冰淇淋甜筒一箱的话需要多少钱哦", "table": "aa44830c3b0611e98556f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[2, 2, "可爱多甜筒香芋牛奶口味冰淇淋多支装"], [3, 2, "408g"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[2, 2, "可爱多甜筒香芋牛奶口味冰淇淋"], [3, 2, "408g"]], "cond_conn_op": 1}}
+{"question": "青春发育学和卫生法学分别要上多少周啊", "table": "ab3fa62e3b0611e99385f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [4], "conds": [[2, 2, "青春发育学"], [2, 2, "卫生法学"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[2, 2, "卫生法学"], [2, 2, "青春发育学"]], "cond_conn_op": 2}}
+{"question": "我想要了解的是卫生法学课程的周数是多少还有青春发育学课程的周数", "table": "ab3fa62e3b0611e99385f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [4], "conds": [[2, 2, "青春发育学"], [2, 2, "卫生法学"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[2, 2, "卫生法学"], [2, 2, "青春发育学"]], "cond_conn_op": 2}}
+{"question": "属于材料学院且价值35万的设备是哪个？", "table": "aaa3428c3b0611e98081f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[10, 2, "材料学院"], [4, 2, "350000"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[0, 2, "35.0"], [10, 2, "材料学院"]], "cond_conn_op": 1}}
+{"question": "所有材料学院的设备中，哪些价值是35万？", "table": "aaa3428c3b0611e98081f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[10, 2, "材料学院"], [4, 2, "350000"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[0, 2, "35.0"], [10, 2, "材料学院"]], "cond_conn_op": 1}}
+{"question": "请问什么35万的设备的使用单位是材料学院？", "table": "aaa3428c3b0611e98081f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[10, 2, "材料学院"], [4, 2, "350000"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[0, 2, "35.0"], [10, 2, "材料学院"]], "cond_conn_op": 1}}
+{"question": "预计在2016年1月1号到12月31号执行的项目门户网站内容更新保障和专题专栏建设服务的实施单位是哪一个", "table": "f25db4ee453d11e988a4f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[5, 2, "2016.01.01-2016.12.31"], [2, 2, "门户网站内容更新保障和专题专栏建设服务"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 2, "2016年道路设施养护管理"], [2, 2, "门户网站内容更新保障和专题专栏建设服务"]], "cond_conn_op": 2}}
+{"question": "门户网站内容的更新保障和专题专栏的建设服务这个项目预计在2016年1月1号到12月31号这段期间执行，那么由哪个单位来实行呢", "table": "f25db4ee453d11e988a4f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[5, 2, "2016.01.01-2016.12.31"], [2, 2, "门户网站内容更新保障和专题专栏建设服务"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 2, "2016年道路设施养护管理"], [2, 2, "门户网站内容更新保障和专题专栏建设服务"]], "cond_conn_op": 2}}
+{"question": "什么单位实施的项目是门户网站内容更新保障和专题专栏建设服务并且预计在2016年1月1号到12月31号执行", "table": "f25db4ee453d11e988a4f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[5, 2, "2016.01.01-2016.12.31"], [2, 2, "门户网站内容更新保障和专题专栏建设服务"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 2, "2016年道路设施养护管理"], [2, 2, "门户网站内容更新保障和专题专栏建设服务"]], "cond_conn_op": 1}}
+{"question": "学历要求为博士学历且只招2个人的岗位是什么？", "table": "abf387023b0611e9b696f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[4, 2, "博士"], [3, 2, "2.0"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[4, 2, "博士"], [3, 2, "1-2"]], "cond_conn_op": 1}}
+{"question": "请问哪个是只要博士学历的岗位只招2个人？", "table": "abf387023b0611e9b696f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[4, 2, "博士"], [3, 2, "2.0"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[4, 2, "博士"], [3, 2, "1-2"]], "cond_conn_op": 1}}
+{"question": "你好，你知道目前被抽检的产品中有哪些是达标的吗，还有这些达标的产品都是什么公司生产的你知道吗", "table": "ab4d149e3b0611e98a58f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [2, 1], "conds": [[4, 2, "合格"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 2], "conds": [[1, 2, "防城港市港口区兴达水泥制品有限公司"]], "cond_conn_op": 0}}
+{"question": "佛山风行家电的吊扇是由哪家机构负责检测的呀", "table": "a8958dc73b0611e99f24f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[1, 2, "佛山市风行家电有限公司"], [2, 2, "风行牌吊扇"]]}}
+{"sql_pred": {"agg": [0], "sel": [6], "conds": [[2, 2, "吊扇"], [1, 2, "佛山市风行家电有限公司"]], "cond_conn_op": 1}}
+{"question": "诶你知道佛山风行牌的吊扇是哪个机构检验的吗", "table": "a8958dc73b0611e99f24f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[1, 2, "佛山市风行家电有限公司"], [2, 2, "风行牌吊扇"]]}}
+{"sql_pred": {"agg": [0], "sel": [6], "conds": [[2, 2, "吊扇"], [1, 2, "佛山市风行家电有限公司"]], "cond_conn_op": 1}}
+{"question": "这种宁昊长香米每袋有10千克，请问是什么公司生产的", "table": "a93817943b0611e9ae3ef40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[7, 2, "10kg/袋"], [6, 2, "宁昊长香米"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 2, "10.0"], [6, 2, "宁昊长香米"]], "cond_conn_op": 1}}
+{"question": "哪个公司生产的宁昊长香米一袋有10千克", "table": "a93817943b0611e9ae3ef40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[7, 2, "10kg/袋"], [6, 2, "宁昊长香米"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 2, "10.0"], [6, 2, "宁昊长香米"]], "cond_conn_op": 1}}
+{"question": "这种每袋300克的豆皮是什么公司生产的", "table": "ab0c66073b0611e9a067f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[7, 2, "300g/袋"], [6, 2, "豆皮"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[7, 2, "300克/袋"], [6, 2, "豆皮"]], "cond_conn_op": 1}}
+{"question": "哪个公司生产的豆皮一袋是300克", "table": "ab0c66073b0611e9a067f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[7, 2, "300g/袋"], [6, 2, "豆皮"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[7, 2, "300克/袋"], [6, 2, "豆皮"]], "cond_conn_op": 1}}
+{"question": "能不能告诉我一袋300克的豆皮的生产厂家", "table": "ab0c66073b0611e9a067f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[7, 2, "300g/袋"], [6, 2, "豆皮"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[7, 2, "300克/袋"], [6, 2, "豆皮"]], "cond_conn_op": 1}}
+{"question": "法学院中立项经费为12的项目有哪些？", "table": "ef184cab453d11e9b0a5f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[9, 2, "12"], [5, 2, "法学院"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[11, 2, "12.0"], [5, 2, "法学院"]], "cond_conn_op": 1}}
+{"question": "法学院的项目中，立项的经费就需要12的有哪几个？", "table": "ef184cab453d11e9b0a5f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[9, 2, "12"], [5, 2, "法学院"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[0, 2, "12.0"], [5, 2, "法学院"]], "cond_conn_op": 1}}
+{"question": "请问都有什么职位的要求得是硕士学位，专业得是大气科学类的，都有哪些单位呢", "table": "a868b5613b0611e9a5e8f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 1, "sel": [2, 1], "conds": [[6, 2, "硕士"], [4, 2, "大气科学"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 2], "conds": [[6, 2, "硕士"], [4, 2, "大气科学类"]], "cond_conn_op": 1}}
+{"question": "哪些期刊的投稿很难（命中率约20%）或者审稿较慢,6-12周", "table": "aad6c1a33b0611e99b65f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[7, 2, "很难（命中率约20%）"], [8, 2, "较慢,6-12周"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[8, 1, 12], [7, 2, "很难（命中率约20%）"]], "cond_conn_op": 2}}
+{"question": "平装书中估定价比35贵的书有哪些？", "table": "aa2e9e213b0611e9ba5bf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[7, 2, "平装"], [9, 0, "35"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[7, 2, "平装"], [8, 0, 35]], "cond_conn_op": 1}}
+{"question": "想知道郑先炳写的这本解读花旗银行定价是多少", "table": "ee840f91453d11e98a30f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[2, 2, "郑先炳著"], [1, 2, "解读花旗银行"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[1, 2, "解读花旗银行"], [2, 2, "郑先炳"]], "cond_conn_op": 1}}
+{"question": "郑先炳的解读花旗银行定了多少钱一本啊", "table": "ee840f91453d11e98a30f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[2, 2, "郑先炳著"], [1, 2, "解读花旗银行"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[1, 2, "解读花旗银行"], [2, 2, "郑先炳"]], "cond_conn_op": 1}}
+{"question": "我想知道解读花旗银行这本书所定的统一价格是多少，就作者是郑先炳的那本", "table": "ee840f91453d11e98a30f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[2, 2, "郑先炳著"], [1, 2, "解读花旗银行"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[1, 2, "解读花旗银行"], [2, 2, "郑先炳"]], "cond_conn_op": 1}}
+{"question": "请问鲁迅美术学院设计史论专业筹备组专任教师计划招聘多少人？", "table": "aac55fc23b0611e98bb6f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[1, 2, "鲁迅美术学院"], [2, 2, "设计史论专业筹备组专任教师一"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[2, 2, "设计史论专业筹备组专任教师二"], [1, 2, "鲁迅美术学院"]], "cond_conn_op": 1}}
+{"question": "你知道鲁迅美术学院的设计史论专业筹备组专任教师这个岗位的招聘人数是多少吗？", "table": "aac55fc23b0611e98bb6f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[1, 2, "鲁迅美术学院"], [2, 2, "设计史论专业筹备组专任教师一"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[2, 2, "设计史论专业筹备组专任教师二"], [1, 2, "鲁迅美术学院"]], "cond_conn_op": 1}}
+{"question": "帮我问一下鲁迅美术学院招的设计史论专业筹备组专任教师需要招多少人？", "table": "aac55fc23b0611e98bb6f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[1, 2, "鲁迅美术学院"], [2, 2, "设计史论专业筹备组专任教师一"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[2, 2, "设计史论专业筹备组专任教师二"], [1, 2, "鲁迅美术学院"]], "cond_conn_op": 1}}
+{"question": "初一的欢乐寒假定价是多少啊？", "table": "abac4db03b0611e99a64f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[0, 2, "七年级"], [3, 2, "欢乐寒假"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[3, 2, "初中升学考试复习方略"], [3, 2, "欢乐寒假"]], "cond_conn_op": 1}}
+{"question": "买一本初一的欢乐寒假要花多少钱？", "table": "abac4db03b0611e99a64f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[0, 2, "七年级"], [3, 2, "欢乐寒假"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[3, 2, "初中升学考试复习方略"], [3, 2, "欢乐寒假"]], "cond_conn_op": 1}}
+{"question": "高级企业管理培训不是要培训三周吗，那有多少人要参加培训呢", "table": "a95fd8573b0611e98ba2f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[2, 2, "高级企业管理"], [4, 2, "3周"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[2, 2, "企业高级管理人员培训项目"], [4, 2, "2周"]], "cond_conn_op": 1}}
+{"question": "我想知道目前这个需要培训三周的高级企业管理项目有多少人参加来着", "table": "a95fd8573b0611e98ba2f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[2, 2, "高级企业管理"], [4, 2, "3周"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[2, 2, "企业高级管理人员培训项目"], [4, 2, "2周"]], "cond_conn_op": 1}}
+{"question": "请问一下哈，在平度市辖区这边招长期在乡镇工作的学历跟专业要求有哪些呢？", "table": "f2425c91453d11e9891df40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 1, "sel": [9, 8], "conds": [[0, 2, "平度市辖区乡镇"], [11, 2, "面向长期在乡镇（街道）工作人员"]]}}
+{"sql_pred": {"agg": [0], "sel": [8], "conds": [[0, 2, "平度市辖区街道"], [11, 2, "面向长期在乡镇（街道）工作人员"]], "cond_conn_op": 1}}
+{"question": "你好啊我想查查两本书是谁写的，用ISBN查可以吧一个是978-7-307-20641-0，还有一个是978-7-307-20547-5", "table": "a90dca7a3b0611e9b94af40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [3], "conds": [[0, 2, "978-7-307-20641-0"], [0, 2, "978-7-307-20547-5"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [3, 4], "conds": [[0, 2, "978-7-307-20547-5"], [0, 2, "978-7-307-20641-0"]], "cond_conn_op": 2}}
+{"question": "2015年10月30号生产的智能马桶盖是什么型号的", "table": "aa9866173b0611e99656f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[7, 2, "2015-10-30"], [4, 2, "智能马桶盖（智能温水洗净便座）"]]}}
+{"sql_pred": {"agg": [0], "sel": [6], "conds": [[7, 2, "2015-10-30"], [4, 2, "智能马桶盖（洁身器）"]], "cond_conn_op": 1}}
+{"question": "哪种规格的智能马桶盖是在2015年10月30号生产的", "table": "aa9866173b0611e99656f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[7, 2, "2015-10-30"], [4, 2, "智能马桶盖（智能温水洗净便座）"]]}}
+{"sql_pred": {"agg": [0], "sel": [6], "conds": [[7, 2, "2015-10-30"], [4, 2, "智能马桶盖（洁身器）"]], "cond_conn_op": 1}}
+{"question": "2015年10月30号生产了什么型号的智能型马桶盖", "table": "aa9866173b0611e99656f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[7, 2, "2015-10-30"], [4, 2, "智能马桶盖（智能温水洗净便座）"]]}}
+{"sql_pred": {"agg": [0], "sel": [6], "conds": [[7, 2, "2015-10-30"], [4, 2, "智能马桶盖（洁身器）"]], "cond_conn_op": 1}}
+{"question": "要招2人都是什么岗啊，研究啥方向的呀", "table": "aa9713193b0611e9bf8ff40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [1, 2], "conds": [[3, 2, "2"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 4], "conds": [[3, 2, "2.0"]], "cond_conn_op": 0}}
+{"question": "估定价格高于50块或者国际标准书号为978-7-111-58427-8的书有哪些", "table": "aa4fbab03b0611e999fef40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [3], "conds": [[9, 0, "50"], [10, 2, "978-7-111-58427-8"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[10, 0, 50], [10, 2, "978-7-111-58427-8"]], "cond_conn_op": 2}}
+{"question": "哪些书的估价是超过50块的或者国际标准书号是978-7-111-58427-8", "table": "aa4fbab03b0611e999fef40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [3], "conds": [[9, 0, "50"], [10, 2, "978-7-111-58427-8"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[10, 0, 50], [10, 2, "978-7-111-58427-8"]], "cond_conn_op": 2}}

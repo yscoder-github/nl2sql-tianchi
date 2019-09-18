@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-python nl2sql_main.py --mode='test'
+PYTHONHASHSEED=0 python nl2sql_main.py --mode='test'
