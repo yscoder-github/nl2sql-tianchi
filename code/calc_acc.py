@@ -128,9 +128,6 @@ def check_part_acc(pred_queries, gt_queries, tables_list, valid_data):
                    cond_num_err / q_len, cond_col_err / q_len, cond_op_err / q_len,
                    cond_val_err / q_len, cond_rela_err / q_len, tot_err / q_len))
     return np.array((sel_num_err, sel_err, agg_err, cond_num_err, cond_col_err, cond_op_err, cond_val_err, cond_rela_err)), tot_err, tot_err/q_len  # 这里返回的都是总数哦，需要特殊处理成占比
-# res =  check_part_acc(pred_queries, gt_queries)
-# print(res)
-
 
 if __name__ == "__main__":
 

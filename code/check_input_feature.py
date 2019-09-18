@@ -5,7 +5,6 @@ import jieba
 import editdistance
 import re
 import os
-import sys
 import numpy as np 
 import cn2an
 from  question_prepro import *
@@ -19,12 +18,6 @@ upper_to_num_dict = {}
 for key, val in enumerate(num_to_upper_dict):
     upper_to_num_dict[val] = key 
 
-'''
-re_expre_type_num = r"([零|一|两|三|四|五|六|七|八|九|十])([名|个|位|只|种|两|米|首|回|对|座])"
-re_date_list = [r"(\d{2,4})年(\d{1,2})月(\d{1,2})[号|日|][到|至|与](\d{1,2})[号|日]", # 
-                r"(\d{2,4})年(\d{1,2})月(\d{1,2})[号|日]",
-                r"(\d{2,4})-(\d{1,2})-(\d{1,2})"]
-'''
 
 
 def most_similar(source, target_list):
@@ -94,7 +87,6 @@ def most_similar_new(source, target_list):
     else: 
         # if source + '.0'  in target_list: return source + '.0' # 针对于val.db数据中有的将数量存在text,而且还加了个.0, 莫名其妙  特殊新增的，其他都没有，，，只是为了测试
         new_target_list = [target for target in target_list if check_num_exactly_match(source, target)[0] >= 1]
-        print('new target list is'.format(new_target_list))
         if len(new_target_list) == 0: return None  
         return new_target_list[0] if len(new_target_list) == 1 else most_similar_out(source, new_target_list)
 
@@ -162,7 +154,7 @@ def most_similar_2(w, s, mode='input'):
     else:
         raise ValueError('Unsupported mode! ')
     return most_similar(w, sl) # delte in 08-19
-    #return most_similar_out(w, sl) # modify in 08-19
+    # return most_similar_out(w, sl) # modify in 08-19
 
 
 def alap_an_cn_mark(question, col_name, val):
@@ -181,27 +173,15 @@ def alap_an_cn_mark(question, col_name, val):
     """
     # col_name中的括号去掉
     col_name = re.sub(re_brack, "", col_name)
-
-
     question = trans_question_acc(question)
-
     col_in_question = most_similar_2(col_name, question)
-
     start_idx = 0 
-    # 如果这个标题在question里面,好说
-
     if  col_in_question is not None and  col_in_question in question:
         start_idx = question.index(col_in_question) + len(col_in_question)
     elif col_in_question is not None:# 标题不在question里面,分散在里面
         pass 
-        # raise ValueError('value uncorrect')
-        # # 裁剪
-        # # col_in_question分割词语,找出最右侧的
-        # col_in_question = list(jieba.cut(col_in_question))[-1]
-        # print("col find in q after cut is  {}".format(col_in_question))
     else:
         return None, None, None
-    # pattern = re.compile(r'-\d+|\d+\.\d+|\d+') 
     pattern = re.compile(r'-\d+\.\d+|-\d+|\d+\.\d+|\d+') 
     num_find = pattern.findall(question, start_idx) # 匹配到标题后的第一个数字
     if num_find is None:

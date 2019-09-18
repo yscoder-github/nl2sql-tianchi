@@ -6,7 +6,6 @@ from check_input_feature import *
 from utils import * 
 
 
-# 新的
 q_correct_path = os.path.join(prepare_data_path, 'new_q_correct') # 不区分类型的 正确匹配
 q_no_num_similar_path = os.path.join(prepare_data_path, 'new_q_no_num_similar') # 非数字的，通过相似函数可以匹配正确的
 q_num_double_more_path = os.path.join(prepare_data_path, 'q_num_double_more')
@@ -31,25 +30,7 @@ for d in train_tables:
 
     table_headers[d] = train_tables[d]['headers']
     
-
-
-'''
-
-## 人工修正训练集中的异常标注
-for idx, d in enumerate(train_data):
-    question = trans_question_acc(d['question'])
-    if question == '新房上周成交量大于100万平而且当月累计成交量也大于100万平的城市有哪些':
-        train_data[idx]['sql']['conds'] = [[1, 0, '0.9'], [2, 0, '0.9']]
-
-    print(idx)
-    print(question)
-    print(train_data[idx][''])
-
-
-sys.exit(0)
-
-'''
-
+# 经过简单匹配，可以找出那些官方标注中有明显问题的样本
 wrong_mark_official = set([ 
 '你知道新房上周成交量和当月累计成交量都大于100万平的是哪些城市吗',
 '成交面积在本周或者上周都大于14万平的城市有哪些',
@@ -73,31 +54,9 @@ wrong_mark_official = set([
 '可以查查有没有哪个城市2010成交面积高于200的',
 '请问一下2012年6月17日A股房地产股最新股票价格大于50块而且最新市值超过450亿的证券代码是哪个',
 '111111111111'
-
-
-
-
-
-
 ])
 
-other_need_trans = set([
-    '你帮我查一下股价在12块五毛以上的公司叫啥名',
-    '我想了解一下什么公司的股票交易价格是高于12块五毛的呀',
-    '我想知道三大航的总市场份额超过0.7的机场有多少？',
-    '你好啊请问一下上海哪些楼盘的价格在2012年的5月份超过了一万五一平',
-    '请问哪个香港市场重点房地产公司的股票现价低于2块四的',
-    '想要了解香港市场重点房地产公司有哪个的股票现价是小于2块四的吗',
-    'A股价格大于9块四的公司简称是什么',
-    '哪些股最后一笔交易的成交价多于1块五八的啊，那代码是多少',
-    '那些收市价超过1块五八的股票叫什么并且所对应的股票代码又是什么呢',
-    '2011年每股盈余在两毛以上的公司共有多少家',
-    '上周的住房成交面积大概多少啊'
-
-])
-
-
-
+# 经过简单匹配，可以找出那些官方标注中有明显问题的样本
 bad_question = set([
     '听说产线被关停了，为什么啊，具体原因呢',
     '产线关停，大新闻啊，什么时候，为什么，以后还能不能恢复',
@@ -117,12 +76,7 @@ bad_question = set([
     '我想知道上周收盘价最高达到了多少？',
     '你能帮我算一下这几只股票的平均股价吗？',
     '我想调查一下日成交环比，但是目前我只知道最近7天的一个成交量'
-
-    
-
-
 ])
-
 
 
 def get_correct_q(file_path, mode='write', unwanted=set([])):
@@ -146,7 +100,6 @@ def get_correct_q(file_path, mode='write', unwanted=set([])):
             con_val_list = [cond[2] for cond in conds]
             q_op_mark = [0] * len(question)
             for cond in conds:
-                print(con_val_list.count(cond[2]))
                 if cond[2] in question and con_val_list.count(cond[2]) == 1:
                     if (types[cond[0]] == 'real' and check_num_exactly_match(cond[2], question)[0] !=1) or\
                       (types[cond[0]] == 'text' and  question.count(cond[2]) != 1 ):
@@ -579,13 +532,5 @@ def check_other():
         print(conds)
     print(cnt)
 
-
-
-check_other()
-
-
-# 影射
-val_mapping = {
-    '无': ['没有'],
-
-}
+if __name__ == "__main__":
+    check_other()

@@ -2,15 +2,7 @@
 import json
 import records
 import re
-
-agg_dict = {0:"", 1:"AVG", 2:"MAX", 3:"MIN", 4:"COUNT", 5:"SUM"}
-cond_op_dict = {0:">", 1:"<", 2:"==", 3:"!="}
-rela_dict = {0:'', 1:' AND ', 2:' OR '}
-import sys 
-
-PY2 = sys.version_info[0] == 2
-PY3 = sys.version_info[0] == 3
-
+from config import * 
 
 class DBEngine:
     def __init__(self, fdb):

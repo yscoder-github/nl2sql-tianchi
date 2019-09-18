@@ -1,36 +1,30 @@
 #! -*- coding: utf-8 -*-
-
 import json
 import os
-# os.environ['PYTHONHASHSEED'] = '0'
+import sys
+os.environ['PYTHONHASHSEED'] = '0'
 import numpy as np
 import tensorflow as tf
-# import random as rn
-# np.random.seed(42)
-# rn.seed(12345)
-# tf.set_random_seed(1234)
 
 from keras_bert import load_trained_model_from_checkpoint, Tokenizer
-import codecs
 from keras.layers import *
 from keras.models import Model
 import keras.backend as K
-import time 
 from keras.optimizers import Adam
 from keras.callbacks import Callback
 from tqdm import tqdm
+import codecs
 import jieba
 import editdistance
 import re
 import numpy as np 
-import sys
 from dbengine import DBEngine
-from  calc_acc import * 
+from calc_acc import * 
 from check_input_feature import * 
 from post_treat import * 
 from new_mark_acc_ensure import * 
 from question_prepro import * 
-from data_generator import read_data
+from utils import read_data
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--mode', type=str, default='', help='execute mode, eg: train/test/evaluate')
@@ -49,14 +43,10 @@ csel_num = 20 # col cnt 最大为20
 learning_rate = 15e-5 # from 15 to 8 
 min_learning_rate = 1e-5
 
-except_cnt = 0 
-
 config_path = os.path.join(model_bert_wwm_path, 'chinese-bert_chinese_wwm_L-12_H-768_A-12/bert_config.json')
 checkpoint_path = os.path.join(model_bert_wwm_path, 'chinese-bert_chinese_wwm_L-12_H-768_A-12/bert_model.ckpt')
 dict_path = os.path.join(model_bert_wwm_path, 'chinese-bert_chinese_wwm_L-12_H-768_A-12/vocab.txt')
 weight_save_path = os.path.join(model_path, 'weights/nl2sql_finetune_add_div2.weights')
-
-# weight_save_path = os.path.join(model_path, 'weights/nl2sql_finetune_add_div_goodest_0.804.weights')
 
 if mode != 'test':
     train_data, train_tables = read_data(
@@ -74,14 +64,11 @@ test_data, test_tables = read_data(
                  os.path.join(test_file_path, 'final_test.tables.json')
 )
 
-
 token_dict = {}
-
 with codecs.open(dict_path, 'r', 'utf8') as reader:
     for line in reader:
         token = line.strip()
         token_dict[token] = len(token_dict)
-
 
 class OurTokenizer(Tokenizer):
     def _tokenize(self, text):
@@ -166,27 +153,18 @@ class data_generator:
                         sel.append(d['sql']['agg'][j])
                     else:
                         sel.append(num_agg - 1) 
-
                 conn = [d['sql']['cond_conn_op']]
                 csel0 = np.zeros(len(d['question']) + 2, dtype='int32') # 这里的0既表示padding,表示当前位置不对应任何表中的列
                 csel1 = np.zeros(len(d['question']) + 2, dtype='int32')
                 csel2 = np.zeros(len(d['question']) + 2, dtype='int32')
-
                 cop = np.zeros(len(d['question']) + 2, dtype='int32') + num_op - 1 
-
-
                 cdiv = np.zeros(len(d['question']) + 2, dtype='int32')
-
                 is_wrong_q = False 
-
                 for cond in d['sql']['conds']:
-                    # 重新在这里面弄
                     if d['question'] in correct_q_set:
-                        # print(d['question'])
                         if dtypes[cond[0]] == 'real':
                             _, start_pos, end_pos = check_num_exactly_match(cond[2], d['question'])
 
-                            # print(start_pos, end_pos, d['question'][start_pos: end_pos + 1])
                             csel0[start_pos + 1: end_pos + 1 + 1] = cond[0] + 1 
                             cop[start_pos + 1: end_pos + 1 + 1] = cond[1] 
                         else:
@@ -248,7 +226,6 @@ class data_generator:
                                 # print(start_pos, end_pos, d['question'][start_pos: end_pos + 1])
                                 csel0[start_pos + 1: end_pos + 1 + 1] = cond[0] + 1 
                                 cop[start_pos + 1: end_pos + 1 + 1] = cond[1] 
-                            
                             elif find_cnt == 0: 
                                 val = most_similar_2(cond[2], d['question'])
                                 start_pos = d['question'].index(val)
@@ -268,12 +245,8 @@ class data_generator:
                         start_pos, end_pos, match_val = alap_an_cn_mark(d['question'], header_name, cond[2])
                         csel0[start_pos + 1: end_pos + 1] = cond[0] + 1 
                         cop[start_pos + 1: end_pos + 1] = cond[1] 
-
-                        # print(d['question'])
-                        # print(start_pos, end_pos, d['question'][start_pos: end_pos])
                     else:
                         is_wrong_q = True 
-
                     ab = True  
                     if ab:
                         for idx in range(1, len(csel0) - 1):
@@ -332,13 +305,10 @@ def seq_gather(x):
 train_D = data_generator(train_data, train_tables)  #get Train data 
 #valid_D = data_generator(valid_data, valid_tables)  #get Train data 
 
-
-
 bert_model = load_trained_model_from_checkpoint(config_path, checkpoint_path,  seq_len=None)
 
 for l in bert_model.layers:
     l.trainable = True
-
 
 x1_in = Input(shape=(None,), dtype='int32')
 x2_in = Input(shape=(None,))
@@ -369,26 +339,19 @@ psel = Dense(num_agg, activation='softmax')(x4h) # [bs, header_step, num_agg]
 
 pcop = Dense(num_op, activation='softmax')(x) # [bs, q_step, num_op]
 
-
 x_ori = x
 x = Lambda(lambda x: K.expand_dims(x, 2))(x) # shape [batch_size, n_step, 1, hidden_size]
 x4h_ori  = x4h
 x4h = Lambda(lambda x: K.expand_dims(x, 1))(x4h) # header cls selected in x4h  [None, 1, header_n_step, hidden_size ]
 
-
 pcsel_1 = Dense(1)(x) # [None, q_n_step, 1 ,1]
 pcsel_2 = Dense(1)(x4h) # [None, 1, h_n_step, 1 ]
 pcsel_att = Lambda(lambda x: x[0] * x[1])([pcsel_1, pcsel_2]) # [None, q_n_step, h_n_step,1]
-
 pcsel_att = Lambda(lambda x: x[..., 0])(pcsel_att) # [None,q_n_step，h_n_step]
-
 #x4h_ori  [None, h_n_step，hidden_size】
 pcsel_h_part = Lambda(lambda x: K.batch_dot(x[0], x[1]))([pcsel_att, x4h_ori]) # [None, q_n_step, hidden_siz]    
-
-
 pcsel = concatenate([x_ori, pcsel_h_part], axis=-1) 
 
-# new add 
 pcsel = Dense(1200, activation='relu')(pcsel) #[None, q_n_step, 1200]  relu 缓解梯度爆炸
 pcdiv = Dense(2, activation='softmax')(pcsel)
 
@@ -401,8 +364,6 @@ model = Model(
     [x1_in, x2_in, h_in, hm_in], # inputs 
     [psel, pconn, pcop, pcsel0, pcsel1, pcsel2, pcdiv]  # outputs 
 )
-
-# shuai 这里看看是不是要加载一个已经训练出来的模型？？
 
 train_model = Model(
     [x1_in, x2_in, xm_in, h_in, hm_in, sel_in, conn_in, csel0_in, csel1_in, csel2_in, cop_in, cdiv_in],
@@ -456,15 +417,12 @@ pcsel2_loss = K.sum(pcsel2_loss * xm * cm) / K.sum(xm * cm)
 pcdiv_loss = K.sparse_categorical_crossentropy(cdiv_in, pcdiv)
 pcdiv_loss = K.sum(pcdiv_loss * xm * cm) / K.sum(xm * cm)
 
-
 loss = psel_loss + pconn_loss + pcop_loss + pcsel0_loss + pcsel1_loss + pcsel2_loss + pcdiv_loss
 
 train_model.add_loss(loss)
 train_model.compile(optimizer=Adam(learning_rate))
 train_model.summary()
-
 model.load_weights(weight_save_path) # 
-
 except_tr_cnt = 0 
 
 
@@ -484,7 +442,6 @@ def nl2sql(question, table):
         question = question.replace('没要求', '不限')
     except: 
         pass 
-        #raise ValueErr
     x1, x2 = tokenizer.encode(question)
     h = []
     for i in table['headers']:
@@ -537,7 +494,6 @@ def nl2sql(question, table):
                     # 添加div中的信息
                     # print(max(pcdiv[0][v_start: v_end].argmax(1)))
                     if max(pcdiv[0][v_start: v_end].argmax(1)) > 0:# 0 
-                        print(smooth_val)
                         if 1 in pcdiv[0][v_start: v_end].argmax(1):
 
                             entity_start_pos_list = [v_start + 1 + idx  for idx, mark in enumerate(pcdiv[0][v_start + 1: v_end].argmax(1)) if mark == 1]
@@ -593,7 +549,6 @@ def nl2sql(question, table):
                 # 添加div中的信息
                 # print(max(pcdiv[0][v_start: v_end].argmax(1)))
                 if max(pcdiv[0][v_start: v_end].argmax(1)) > 0:# 0 
-                    print(smooth_val)
                     if 1 in pcdiv[0][v_start: v_end].argmax(1):
 
                         entity_start_pos_list = [v_start + 1 + idx  for idx, mark in enumerate(pcdiv[0][v_start + 1: v_end].argmax(1)) if mark == 1]
@@ -605,8 +560,6 @@ def nl2sql(question, table):
                         for idx in range(len(entity_start_pos_list) - 1):
                             new_s = entity_start_pos_list[idx]
                             new_e = entity_start_pos_list[idx + 1]
-                            print(question[new_s - 1: new_e - 1])
-
                             csel = pcsel0[0][new_s: new_e].mean(0).argmax() - 1 
                             v_str1 = question[new_s - 1: new_e - 1] 
 
@@ -651,7 +604,6 @@ def nl2sql(question, table):
                 if 1 in pcdiv[0][v_start: v_end].argmax(1) and pcdiv[0][v_start].argmax() != 1 :
 
                     entity_start_pos_list = [v_start + 1 + idx  for idx, mark in enumerate(pcdiv[0][v_start + 1: v_end].argmax(1)) if mark == 1]
-                    print(entity_start_pos_list)
                     if entity_start_pos_list[0] != v_start:
                         entity_start_pos_list.insert(0, v_start)
                     if entity_start_pos_list[-1] != v_end:
@@ -672,12 +624,10 @@ def nl2sql(question, table):
             else:
 
                 csel = pcsel0[0][v_start: v_end].mean(0).argmax() - 1 
-                # 做一些处理
                 v_e = v_end - 1 
                 untreat_unit = ''
                 if v_e < len(question) and len(re.findall(regex_tail, question[v_e])) > 0:
                     untreat_unit = re.findall(regex_tail, question[v_e])[0]
-                    # print('unit is{}, first{}'.format(untreat_unit))
                     if v_e + 1 < len(question) and len(re.findall(regex_tail, question[v_e + 1])) > 0:
                         untreat_unit += re.findall(regex_tail, question[v_e + 1])[0]
                 if v_str is not None:
@@ -717,9 +667,6 @@ def nl2sql(question, table):
             try:
                 h = table['headers'][i]
             except:
-                global except_cnt
-                except_cnt += 1 
-                idx_except = True 
                 h = table['headers'][0]
             # 然后检查值对应的列是否正确，如果不正确，直接修正列名
             if k not in table['content'][h]:  # 发现标记出来的值不在预测出来所属的列不一致。 
@@ -858,7 +805,6 @@ class Evaluate(Callback):
         print('acc: %.5f, best acc: %.5f\n' % (acc, self.best))
     def evaluate(self):
         return evaluate(valid_data, valid_tables)
-
 
 
 evaluator = Evaluate()

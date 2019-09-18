@@ -8,7 +8,8 @@ import numpy as np
 import re 
 import json
 from config import *
-from data_generator import read_data
+from utils import read_data
+
 # 正则匹配区
 ## 用于匹配数量前后常用词汇
 regex  = r'([^零一二两三四五六七八九十百千万亿]{0,2})([零|一|二|两|三|四|五|六|七|八|九|十|百|千|万]+)([^零一二两三四五六七八九十百千万]{0,3})'
@@ -59,9 +60,6 @@ digit_dict ={'零':0, '一':1, '二':2, '三':3, '四':4, '五':5, '六':6, '七
                 '壹':1, '贰':2, '叁':3, '肆':4, '伍':5, '陆':6, '柒':7, '捌':8, '玖':9, '拾':10, '佰':100, '仟':1000, '萬':10000,
        '亿':100000000}
 bad_q = set(['十二五'])
-
-# 被替换错了的 实体
-special_word = set(['八月桂花', '一个社会的悲伤与勇气', '三月书窗'])
 
 
 def get_data_and_table():
@@ -139,13 +137,11 @@ def find_upper_and_replace(question):
         if left_part == '': left_part = ' ' 
         if ret.group(3) == '': right_part = '   '
 
-
         if (left_part[-1].strip() + ret.group(3).strip()[0:1] not in good_set)  and\
            (left_part not in  good_set_2_char) and \
             right_part[-3:-1].strip() not in  good_set_tail_2_char and \
                 right_part[-3:].strip() not in good_set_tail_3_char:
                 continue 
-
         try:
             match_trans = cn2an.cn2an(match_val, "normal")
             if match_trans == int(match_trans): match_trans = int(match_trans)
@@ -269,7 +265,6 @@ def trans_question_acc(question):
                     except: 
                         except_unwant = True 
                         match_val_trans = match_val 
-                        #print(match_val)
                 if not except_unwant: 
                     if '点' not in match_val and '块' not in match_val: match_val_trans = int(match_val_trans)
                     match_val_trans = str(match_val_trans) + append_part 
@@ -319,7 +314,6 @@ def get_all_vals_contains_num():
                 ret_iter = re_rule_upper.finditer(val)
                 if ret_iter is None: continue 
                 for ret in ret_iter: 
-                    # print(ret.group(1) + ret.group(3))
                     if ret.group(1) + ret.group(3) not in good_set: continue
                     val_trans = ret.group(1) + ret.group(2)  + ret.group(3) 
                 
@@ -334,39 +328,6 @@ def get_all_vals_contains_num():
 if __name__ == "__main__":
     trans_question_acc_test()
 
-
-    import sys 
-    sys.exit(0)
-    coup_list = []
-    import collections
-    for d in train_data:
-
-
-        question = d['question']
-        print(trans_question_acc(question))
-        continue 
-        find_upper_and_replace(question)
-        continue
-        ret = re_rule_upper.findall(question)
-
-        continue
-        
-        # 匹配对
-        ret_coup = [val[0] + val[1]+  val[2]  for val in ret  if (val[0] + val[2]).strip() not in bad_set | good_set ]
-        
-        coup_list.extend(ret_coup)
-        # print(trans_question(question))
-        try:
-            print(trans_question(question))
-
-        except:
-            print(question)
-
-    cnter  = collections.Counter(coup_list)
-    print(cnter.most_common(300))
-    for val, cnt in cnter.most_common(300):
-        if cnt ==1: continue
-        print(val)
 
 
 
