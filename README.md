@@ -46,7 +46,7 @@ sh start_test.sh
 #### 3.  模型与训练文件信息
   - Bert中文预训练模型(哈工大版) ,该模型存储位置:  ./submit/chinese-bert_chinese_wwm_L-12_H-768_A-12   [下载地址](https://github.com/ymcui/Chinese-BERT-wwm)
 
-  - Bert-finetune模型,该模型为经过finetune之后的，适配于当前nl2sql任务的训练模型, 该模型存储路径 ./submit/nl2sql_finetune.weights
+  - Bert-finetune模型,该模型为经过finetune之后的，适配于当前nl2sql任务的训练模型, 该模型存储路径         ./data/weights/nl2sql_finetune.weights
   训练好的模型链接: https://pan.baidu.com/s/11tQVSZl9e6VBLPp85c9JRQ 提取码: 4ceg 
 
   - 数据集位置 
