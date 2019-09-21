@@ -17,7 +17,8 @@
 - 显卡: 1080ti
 - OS: Ubuntu
 - Driver Version: 418.56       
-- CUDA Version: 10.1    
+- CUDA Version: 10.1   
+- cudnn version 
 
 
 
@@ -76,7 +77,7 @@ sh start_test.sh
 --- 
 
 ## Part3:模型介绍
-Todo 
+Todo (这两天把图做好　)
 
 > 注意，如果执行此代码报错，需要修改一下Keras的backend/tensorflow_backend.py，将sparse_categorical_crossentropy函数中原本是  
 
