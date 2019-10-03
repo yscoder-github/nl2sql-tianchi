@@ -20,8 +20,6 @@
 - CUDA Version: 10.1   
 - cudnn version 
 
-
-
 ---
 #### 2. Python相关环境
 
@@ -73,7 +71,6 @@ sh start_test.sh
 
    具体代码文件:  new_mark_acc_ensure.py     check_input_feature.py     
 
-
 --- 
 
 ## Part3:模型介绍
@@ -97,13 +94,52 @@ logits = tf.reshape(output, [-1, tf.shape(output)[-1]])
    
    代码文件: post_treat.py 
 
-
 --- 
 
 ## Part5: 模型效果评估  
 模型效果评估部分，主要采用官方baseline中的方法，并进行了一定封装．主要用于对预测各个部件的准确性进行评估，并存储预测的错误结果以用于后续分析.    
 功能所在文件为calc_acc.py   
 主要函数为check_part_acc
+
+
+---
+## Part6: TODO 
+### 数字通用前后缀挖掘
+由于时间关系，原有方案在将文本中的"中文数字"转换为阿拉伯数字时, 用了一种1字前缀+1字后缀的方式来匹配"中文数字" ，例如: 
+``` 
+'概天','到月', '于元', '在年', '于平', '足平', '过股', '过套', '招位', '前', '前中', '前名', '前个', '于的'
+``` 
+上面的这几种**词对**也是通过对数据集进行处理而得出的。表面上看，虽然上面的几种**词对**可以将一些数字匹配出来，但是这种1字前缀+1字后缀的方式会将一些**专有名词**中的**中文数字**进行误换. 所以后期需要做**数字通用前后缀挖掘**,即挖掘出更好的**n字前缀+n字后缀**
+
+
+> 有兴趣的可以看看是否可以将所有的数值相关的训练材料从**阿拉伯数字**转换为**中文数字**，最后评估下模型效果
+
+### BUGFIX: 
+``` 
+  File "nl2sql_main.py", line 816, in <module>
+    callbacks=[evaluator]
+  File "/home/yinshuai/anaconda3/envs/nl2sql-yscoder/lib/python3.6/site-packages/keras/legacy/interfaces.py", line 91, in wrapper
+    return func(*args, **kwargs)
+  File "/home/yinshuai/anaconda3/envs/nl2sql-yscoder/lib/python3.6/site-packages/keras/engine/training.py", line 1418, in fit_generator
+    initial_epoch=initial_epoch)
+  File "/home/yinshuai/anaconda3/envs/nl2sql-yscoder/lib/python3.6/site-packages/keras/engine/training_generator.py", line 251, in fit_generator
+    callbacks.on_epoch_end(epoch, epoch_logs)
+  File "/home/yinshuai/anaconda3/envs/nl2sql-yscoder/lib/python3.6/site-packages/keras/callbacks.py", line 79, in on_epoch_end
+    callback.on_epoch_end(epoch, logs)
+  File "nl2sql_main.py", line 798, in on_epoch_end
+    acc = self.evaluate()
+  File "nl2sql_main.py", line 806, in evaluate
+    return evaluate(valid_data, valid_tables)
+  File "nl2sql_main.py", line 721, in evaluate
+    R = nl2sql(question, table)  # 
+  File "nl2sql_main.py", line 555, in nl2sql
+    if entity_start_pos_list[0] != v_start:
+IndexError: list index out of range
+2209it [00:25, 86.28it/s]
+```
+
+### 部分冗余逻辑重写
+
 
 ## 附录:代码树
 ```

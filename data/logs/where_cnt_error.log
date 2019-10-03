@@ -1,22 +1,28 @@
+{"question": "商品房竣工面积或者新开工面积分别超过5亿平和9亿平的是哪几年发生的事", "table": "e0ae3902333a11e99bbc542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[1, 0, "90000"], [3, 0, "50000"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 0, 50000], [12, 0, "9"], [2, 0, 50000]], "cond_conn_op": 2}}
+{"question": "哪些城市上一周成交一手房超十五万平，这周成交超二十万平的呀", "table": "c98c5ca3332111e980eb542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "20"], [2, 0, "15"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 0, 200000]], "cond_conn_op": 0}}
 {"question": "我想问从13年到15年为止其京沪高铁营收总有多少啊", "table": "c5ab9c4f34b411e9ab54542696d6e445"}
 {"sql_right": {"agg": [5], "cond_conn_op": 2, "sel": [5], "conds": [[0, 2, "2013"], [0, 2, "2014"], [0, 2, "2015"]]}}
 {"sql_pred": {"agg": [5], "sel": [5], "conds": [], "cond_conn_op": 0}}
 {"question": "那个能帮我就是算一下那个13年到15年京沪高铁的营收总和吗，总共多少啊", "table": "c5ab9c4f34b411e9ab54542696d6e445"}
 {"sql_right": {"agg": [5], "cond_conn_op": 2, "sel": [5], "conds": [[0, 2, "2013"], [0, 2, "2014"], [0, 2, "2015"]]}}
-{"sql_pred": {"agg": [5], "sel": [5], "conds": [], "cond_conn_op": 0}}
+{"sql_pred": {"agg": [5, 5], "sel": [2, 4], "conds": [], "cond_conn_op": 0}}
 {"question": "请问一下就是京沪高铁从13年到15年营收一共有多少啊", "table": "c5ab9c4f34b411e9ab54542696d6e445"}
 {"sql_right": {"agg": [5], "cond_conn_op": 2, "sel": [5], "conds": [[0, 2, "2013"], [0, 2, "2014"], [0, 2, "2015"]]}}
 {"sql_pred": {"agg": [5], "sel": [5], "conds": [], "cond_conn_op": 0}}
-{"question": "12年金融街总地面积是多大呀，都在什么位置啊", "table": "5a4efa23312b11e9b5f9542696d6e445"}
-{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [4, 3], "conds": [[0, 2, "金融街"]]}}
-{"sql_pred": {"agg": [0, 0], "sel": [3, 4], "conds": [[1, 2, "2012年5月"], [0, 2, "金融街"]], "cond_conn_op": 1}}
-{"question": "花样年控股集团有限公司最新的股价是低于1的，我想知道它最新市值是多少？", "table": "e0aecbae333a11e99e03542696d6e445"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[1, 2, "花样年控股集团有限公司"], [3, 1, "1"]]}}
-{"sql_pred": {"agg": [0], "sel": [2], "conds": [[3, 1, 1], [1, 2, "花样年控股集团有限公司"], [1, 2, "华南城控股有限公司"]], "cond_conn_op": 1}}
+{"question": "想了解有哪些高速公司它EPS18E,EPS19E和EPS20E都在1以上的？", "table": "733c8cd734c611e9b5b2542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[3, 0, "1"], [4, 0, "1"], [5, 0, "1"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[3, 0, 1], [5, 0, 1]], "cond_conn_op": 1}}
+{"question": "我想知道达美那个辅助业务行李费和呃常旅客一共营收有多少啊", "table": "733be43834c611e9b078542696d6e445"}
+{"sql_right": {"agg": [5], "cond_conn_op": 2, "sel": [1], "conds": [[0, 2, "常旅客计划"], [0, 2, "行李费"]]}}
+{"sql_pred": {"agg": [5], "sel": [1], "conds": [[0, 2, "行李费"]], "cond_conn_op": 0}}
+{"question": "你能就是帮我算一下那个达美的常旅客计划和那个行李费啊，能有多少收入啊", "table": "733be43834c611e9b078542696d6e445"}
+{"sql_right": {"agg": [5], "cond_conn_op": 2, "sel": [1], "conds": [[0, 2, "常旅客计划"], [0, 2, "行李费"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 2], "conds": [[0, 2, "行李费"]], "cond_conn_op": 0}}
 {"question": "知否的平均收视有多高？", "table": "4d2922cc3aaa11e9bcc4f40f24344a08"}
-{"sql_right": {"agg": [5], "cond_conn_op": 0, "sel": [2], "conds": [[3, 2, "芒果TV"]]}}
-{"sql_pred": {"agg": [1], "sel": [2], "conds": [], "cond_conn_op": 0}}
-{"question": "湖南台的市场占比达到了多少？", "table": "4d2922cc3aaa11e9bcc4f40f24344a08"}
 {"sql_right": {"agg": [5], "cond_conn_op": 0, "sel": [2], "conds": [[3, 2, "芒果TV"]]}}
 {"sql_pred": {"agg": [5], "sel": [2], "conds": [], "cond_conn_op": 0}}
 {"question": "销售排名前三而且同比增长率小于15的是哪家公司", "table": "43b27b231d7111e99c07f40f24344a08"}
@@ -34,39 +40,54 @@
 {"question": "想咨询一下广深铁路2017年净利润会有多少，我了解到在2016年已经超过1百万元了。", "table": "c5ad95dc34b411e9ad08542696d6e445"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[0, 2, "净利润(百万元)"], [1, 0, "1"]]}}
 {"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 0, 1000000]], "cond_conn_op": 0}}
-{"question": "一共有多少个在这周和上周的时候平均来说成交的面积都超5万平的城市？", "table": "c98e25e8332111e994d8542696d6e445"}
-{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "5"], [2, 0, "5"]]}}
-{"sql_pred": {"agg": [4], "sel": [0], "conds": [[1, 0, 5]], "cond_conn_op": 0}}
-{"question": "本周销售套数1000，变化率为多少", "table": "69d2d58a334311e998d7542696d6e445"}
-{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [10], "conds": [[2, 0, "1000"]]}}
-{"sql_pred": {"agg": [0], "sel": [10], "conds": [], "cond_conn_op": 0}}
+{"question": "2012年销售额超过30而且2011第一季度销售额超过30的公司是哪个", "table": "69d22bb3334311e981da542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "30"], [2, 0, "30"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 0, 30]], "cond_conn_op": 0}}
+{"question": "那个不仅17年的EPS小于0.5，连18年和19年的EPS估值也小于0.5的都是什么证券啊", "table": "4d28b0303aaa11e9bd3ef40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[5, 1, "0.5"], [6, 1, "0.5"], [7, 1, "0.5"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 1, "0.5"], [5, 1, "0.5"]], "cond_conn_op": 1}}
+{"question": "我想知道就是那个17年每股收益小于0.5，而且预计在18和19年每股盈余也少于0.5的都是哪些证券啊", "table": "4d28b0303aaa11e9bd3ef40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[5, 1, "0.5"], [6, 1, "0.5"], [7, 1, "0.5"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 1, "0.5"], [5, 1, "0.5"]], "cond_conn_op": 1}}
+{"question": "你好啊，你帮我查一下就是哪些证券在17年每股盈余小于0.5的，还有预计在18年和19年的时候每一股收益也低于0.5的呀", "table": "4d28b0303aaa11e9bd3ef40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[5, 1, "0.5"], [6, 1, "0.5"], [7, 1, "0.5"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 1, "0.5"], [5, 1, "0.5"]], "cond_conn_op": 1}}
 {"question": "变化率咋算啊，目前只知道本周销售套数为1000套，有用吗", "table": "69d2d58a334311e998d7542696d6e445"}
 {"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [10], "conds": [[2, 0, "1000"]]}}
 {"sql_pred": {"agg": [0], "sel": [10], "conds": [], "cond_conn_op": 0}}
 {"question": "1111", "table": "69ce143d334311e9a60a542696d6e445"}
 {"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[3, 3, "1111"]]}}
 {"sql_pred": {"agg": [], "sel": [], "conds": [], "cond_conn_op": 0}}
-{"question": "你好啊，你能就是帮我查那个广深17年的EPS是多少，还有就是广深股票多少钱一股啊", "table": "733c977834c611e99f1e542696d6e445"}
-{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [1, 2], "conds": [[0, 2, "广深铁路"]]}}
-{"sql_pred": {"agg": [0, 0], "sel": [1, 2], "conds": [], "cond_conn_op": 0}}
-{"question": "哪些城市的房价比11年涨了超过12啊，现在买还能买到吗", "table": "2531a266302e11e98644542696d6e445"}
-{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[9, 0, "12"]]}}
-{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[6, 0, 2011], [8, 0, 12]], "cond_conn_op": 1}}
-{"question": "最新市值达到100亿的北辰实业，最新的每股价格是多少", "table": "5a508682312b11e9b885542696d6e445"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[2, 2, "100"], [1, 2, "北辰实业"]]}}
-{"sql_pred": {"agg": [0], "sel": [3], "conds": [[1, 2, "北辰实业"], [2, 0, 100], [2, 2, "100.0"]], "cond_conn_op": 1}}
-{"question": "四线城市一手房成交累计同比大于0，那么本周成交同比是多少，环比又是多少", "table": "c98cba33332111e99841542696d6e445"}
-{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [1, 2], "conds": [[3, 0, "0"]]}}
-{"sql_pred": {"agg": [0, 0], "sel": [1, 2], "conds": [[3, 0, 0], [0, 2, "四线平均"]], "cond_conn_op": 1}}
+{"question": "改编自什么小说的电影豆瓣评分高于7分，哪天首播啊", "table": "4d2a47ee3aaa11e99609f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [1, 4], "conds": [[3, 0, "7"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 4], "conds": [[3, 0, 7], [4, 2, "同名小说"]], "cond_conn_op": 1}}
 {"question": "想要知道7天成交环比低于4的城市当中哪个城市的7天成交也环比低于4", "table": "69d3e454334311e9831e542696d6e445"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[6, 1, "4"], [7, 1, "4"]]}}
 {"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 1, 4]], "cond_conn_op": 0}}
+{"question": "你帮我查一下今年第4周排在第一位的电视剧或者综艺的播放量吧", "table": "4d29ed6b3aaa11e9a5d8f40f24344a08"}
+{"sql_right": {"agg": [2], "cond_conn_op": 0, "sel": [2], "conds": [[0, 1, "11"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [], "cond_conn_op": 0}}
+{"question": "本期价格1900元的山西兰花在上个周的价格是多少", "table": "c5ae959934b411e99783542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[2, 2, "1900"], [0, 2, "山西兰花"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[2, 0, 1900], [2, 2, "1900.0"], [0, 2, "山西兰花"]], "cond_conn_op": 1}}
+{"question": "山西兰花的当期价格是1900元，那么上个星期的价格是多少", "table": "c5ae959934b411e99783542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[2, 2, "1900"], [0, 2, "山西兰花"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[2, 0, 1900], [2, 2, "1900.0"], [0, 2, "山西兰花"]], "cond_conn_op": 1}}
+{"question": "我想知道山西兰花上一周的价格，目前已经知道当期价格是1900元", "table": "c5ae959934b411e99783542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[2, 2, "1900"], [0, 2, "山西兰花"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[2, 0, 1900], [2, 2, "1900.0"], [0, 2, "山西兰花"]], "cond_conn_op": 1}}
+{"question": "请问一下2012年6月11号11APE也大于17而且10APE也大于17的证券简称是什么", "table": "c98daf26332111e99d17542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[5, 0, "17"], [6, 0, "17"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 0, 17]], "cond_conn_op": 0}}
 {"question": "北京的周均同比在2011年6月4号达到了52.77%，那么6月4号苏州的达到了多少", "table": "e0aca163333a11e99d33542696d6e445"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [12], "conds": [[0, 2, "2011/6/4"], [1, 2, "52.77"]]}}
-{"sql_pred": {"agg": [0], "sel": [12], "conds": [[11, 2, "5.47"], [0, 2, "2011/6/4"], [1, 2, "52.77"]], "cond_conn_op": 1}}
-{"question": "方便跟我说一下铁路运输Ⅱ(申万)这个月的涨跌幅是多少吗，我只知道它在这周涨跌幅是高于1的。", "table": "733c4cb334c611e9b645542696d6e445"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[1, 2, "铁路运输Ⅱ(申万)"], [3, 0, "1"]]}}
-{"sql_pred": {"agg": [0], "sel": [4], "conds": [[3, 0, 1], [1, 2, "港口Ⅱ(申万)"], [1, 2, "铁路运输Ⅱ(申万)"]], "cond_conn_op": 1}}
+{"sql_pred": {"agg": [0], "sel": [12], "conds": [[9, 2, "-6.34"], [0, 2, "2011/6/4"], [1, 2, "52.77"]], "cond_conn_op": 1}}
+{"question": "杭州萧山那个国际机场是哪的呀", "table": "0156028c351311e9b6bb542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[1, 2, "萧山国际机场"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[0, 2, "杭州"], [1, 2, "昌北国际机场"]], "cond_conn_op": 1}}
+{"question": "请问一下萧山的国际机场是在什么地方呀", "table": "0156028c351311e9b6bb542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[1, 2, "萧山国际机场"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 2, "昌北国际机场"], [1, 2, "萧山国际机场"]], "cond_conn_op": 2}}
 {"question": "播放量破千万的动漫有多少部啊？", "table": "4d2a3de33aaa11e9bfe7f40f24344a08"}
 {"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [1], "conds": [[2, 0, "1000"]]}}
 {"sql_pred": {"agg": [4], "sel": [1], "conds": [], "cond_conn_op": 0}}
@@ -76,72 +97,93 @@
 {"question": "知否的收视率有多少啊？", "table": "4d2a3de33aaa11e9bfe7f40f24344a08"}
 {"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [1], "conds": [[2, 0, "1000"]]}}
 {"sql_pred": {"agg": [0], "sel": [2], "conds": [], "cond_conn_op": 0}}
-{"question": "2011年6月25号深圳的周均同比是104.15%，那么同一时期北京的是多少", "table": "c98a9959332111e9b08b542696d6e445"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[4, 2, "104.15"], [0, 2, "2011/6/25"]]}}
-{"sql_pred": {"agg": [0], "sel": [1], "conds": [[4, 2, "104.15"], [8, 2, "6.25"], [11, 2, "6.67"], [0, 2, "2011/9/3"]], "cond_conn_op": 1}}
+{"question": "贷款利率调整前大于6%并且贷款利率调整后大于 6%在什么时候？", "table": "5a4ea2c2312b11e9a25b542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[4, 0, "6"], [5, 0, "6"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[4, 0, 6]], "cond_conn_op": 0}}
+{"question": "请问在什么时候贷款利率调整前大于6%并且贷款利率调整后大于6%？", "table": "5a4ea2c2312b11e9a25b542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[4, 0, "6"], [5, 0, "6"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[4, 0, 6]], "cond_conn_op": 0}}
+{"question": "在什么时间段贷款利率调整前大于6%并且贷款利率调整后大于6%？", "table": "5a4ea2c2312b11e9a25b542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[4, 0, "6"], [5, 0, "6"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[4, 0, 6]], "cond_conn_op": 0}}
+{"question": "想要了解PE19E或PE20E超过20的公司有哪些", "table": "01553ea6351311e981b5542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[7, 0, "20"], [8, 0, "20"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[9, 0, 20]], "cond_conn_op": 0}}
+{"question": "哪个公司的2016年上半年度季度营收同比增速大于0", "table": "0de5cff0351311e9a456542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "0"], [2, 0, "0"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 0, 0]], "cond_conn_op": 0}}
+{"question": "你知道2016年上半年度季度营收同比增速大于0是指哪个公司吗", "table": "0de5cff0351311e9a456542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "0"], [2, 0, "0"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[6, 0, 0]], "cond_conn_op": 0}}
 {"question": "麻烦请告知12年平均每周成交多少，已知在11年平均每周成交少于10的.", "table": "69d05545334311e99eda542696d6e445"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[0, 2, "杭州"], [3, 1, "10"]]}}
-{"sql_pred": {"agg": [0], "sel": [4], "conds": [[3, 1, 10]], "cond_conn_op": 0}}
-{"question": "你好啊，那个东方财富不是说周前收盘价12块多吗，那那个周收盘价是多少啊", "table": "4d23bd663aaa11e99219f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[1, 2, "东方财富"], [2, 0, "12"]]}}
-{"sql_pred": {"agg": [0], "sel": [3], "conds": [[2, 0, 12], [3, 2, "12.1"], [1, 2, "东方财富"]], "cond_conn_op": 1}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[4, 1, 10]], "cond_conn_op": 0}}
+{"question": "我想查询一下股票的代码，这些股票的交运子板块年涨跌幅都是低于0的", "table": "c5ac5f6e34b411e9b645542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[6, 1, "0"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[5, 1, 0], [4, 1, 0]], "cond_conn_op": 1}}
+{"question": "商誉/净资产2大于10并且商誉/净利润2大于 10的证券公司有哪些？", "table": "4d2488543aaa11e98fdbf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[8, 0, "10"], [9, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[4, 0, 10]], "cond_conn_op": 0}}
+{"question": "想知道这次需要进行一致性评价企业的药品数和批文数占比低于7%左右的企业有哪些", "table": "43afc99c1d7111e9936af40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[3, 1, "7.2"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[3, 1, 7], [4, 1, "7"]], "cond_conn_op": 1}}
+{"question": "哪些城市的房地产成交在上周，近四周以及上一年同期成交都大于1000的", "table": "69cca5a3334311e986ba542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[2, 0, "1000"], [4, 0, "1000"], [6, 0, "1000"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[3, 0, 1000], [2, 0, 1000]], "cond_conn_op": 1}}
 {"question": "土地出让楼面价40000，那容积率多少啊，成交总的花了多少钱啊", "table": "c989f997332111e981bf542696d6e445"}
 {"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [2, 4], "conds": [[5, 0, "40000"]]}}
 {"sql_pred": {"agg": [0, 0], "sel": [2, 4], "conds": [], "cond_conn_op": 0}}
-{"question": "2007到2012这几年，成交面积在一二月份有没有超9万平方米的", "table": "5a523e30312b11e98b92542696d6e445"}
-{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[1, 0, "9"], [2, 0, "10"]]}}
-{"sql_pred": {"agg": [], "sel": [], "conds": [[1, 0, 9]], "cond_conn_op": 0}}
+{"question": "请问北欧航空这只股票在18年11月16日收盘后达到的市值是多少？", "table": "6e617a4034ce11e99ef2542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [4], "conds": [[0, 2, "北欧航空"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[0, 2, "北欧航空"], [13, 2, "16.0"]], "cond_conn_op": 1}}
+{"question": "今年趋势降低余地不大的地产公司一共有多少个？", "table": "c9899dd4332111e9b4ca542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [0], "conds": [[2, 2, "降低余地不大"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [], "cond_conn_op": 0}}
+{"question": "一共有多少个今年趋势降低余地不大的地产公司？", "table": "c9899dd4332111e9b4ca542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [0], "conds": [[2, 2, "降低余地不大"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [], "cond_conn_op": 0}}
+{"question": "麻烦查查今年趋势降低余地不大的地产公司一共有多少个？", "table": "c9899dd4332111e9b4ca542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [0], "conds": [[2, 2, "降低余地不大"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [], "cond_conn_op": 0}}
+{"question": "你好，你知道龙猫，还有海王这两部影片这个星期的票房加到一块儿的话会有多少吗", "table": "4d2521ba3aaa11e9813cf40f24344a08"}
+{"sql_right": {"agg": [5], "cond_conn_op": 2, "sel": [1], "conds": [[0, 2, "1.海王"], [0, 2, "2.龙猫"]]}}
+{"sql_pred": {"agg": [5], "sel": [2], "conds": [[0, 2, "1.海王"], [1, 0, 1], [0, 2, "2.龙猫"]], "cond_conn_op": 2}}
 {"question": "请你帮我算一下上一周春城和鹿城成交面积之和，好吗？", "table": "252eb080302e11e9b489542696d6e445"}
 {"sql_right": {"agg": [5], "cond_conn_op": 2, "sel": [1], "conds": [[0, 2, "昆明"], [0, 2, "三亚"]]}}
 {"sql_pred": {"agg": [5], "sel": [1], "conds": [[0, 2, "长春"]], "cond_conn_op": 0}}
-{"question": "你好，我这边已经知道三月份和四月份成交面积都是超过50万平的，可以查询七月份的成交面积吗", "table": "5a51c36e312b11e9aa9b542696d6e445"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[3, 0, "50"], [4, 0, "50"]]}}
-{"sql_pred": {"agg": [], "sel": [], "conds": [[3, 2, "40.0"], [1, 0, 50], [2, 0, 50]], "cond_conn_op": 1}}
-{"question": "你知道在三月份和四月份成交面积都超过50万平的情况下，七月份的成交面积可以达到多少吗", "table": "5a51c36e312b11e9aa9b542696d6e445"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[3, 0, "50"], [4, 0, "50"]]}}
-{"sql_pred": {"agg": [0, 0], "sel": [1, 2], "conds": [[3, 2, "40.0"], [1, 0, 50], [2, 0, 50]], "cond_conn_op": 1}}
-{"question": "我想问问啊就是那个首都机场17前的免税运营商是哪个啊，首都机场不是15年底那个免税经营权就到期啊了吗", "table": "733d2b6634c611e9933c542696d6e445"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[0, 2, "首都机场"], [3, 2, "2015年底"]]}}
-{"sql_pred": {"agg": [0, 0], "sel": [1, 3], "conds": [[0, 2, "首都机场"]], "cond_conn_op": 0}}
+{"question": "近7日日均成交环比达到多少时房地产去年同期28日成交或者近7日日均交将低于100万平", "table": "c98a335c332111e99ca4542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [5], "conds": [[6, 1, "100"], [4, 1, "100"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[4, 1, 1000000]], "cond_conn_op": 0}}
 {"question": "请问今日上交所股价最高达到了多少？", "table": "69d4b4c5334311e99dff542696d6e445"}
 {"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [1], "conds": [[2, 1, "10"]]}}
 {"sql_pred": {"agg": [2], "sel": [2], "conds": [], "cond_conn_op": 0}}
 {"question": "你能告诉我昨天网易的收盘价是多少吗？", "table": "69d4b4c5334311e99dff542696d6e445"}
 {"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [1], "conds": [[2, 1, "10"]]}}
 {"sql_pred": {"agg": [0], "sel": [2], "conds": [], "cond_conn_op": 0}}
-{"question": "麻烦问一下每股收益11年的高于0.1，12年和13年预计会高于0.3和0.5的都是什么公司？", "table": "69d378e8334311e9bb4a542696d6e445"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[5, 0, "0.1"], [6, 0, "0.3"], [7, 0, "0.5"]]}}
-{"sql_pred": {"agg": [0], "sel": [0], "conds": [[7, 0, "0.5"], [6, 0, "0.3"], [6, 0, "0.5"], [5, 0, "0.1"], [7, 0, "0.3"]], "cond_conn_op": 1}}
+{"question": "我想知道有哪些证券就是在17年市盈率就少于20，而且啊在18年和19年的市盈率估值都小于20的呀", "table": "e0ac35f8333a11e99688542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[8, 1, "20"], [9, 1, "20"], [10, 1, "20"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[10, 1, 20], [8, 1, 20]], "cond_conn_op": 1}}
+{"question": "你好啊，能给我就是查查现在哪些证券就是不仅17年PE小于20，而且啊预计其18年和19年股价收益比率是低于20的呀", "table": "e0ac35f8333a11e99688542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[8, 1, "20"], [9, 1, "20"], [10, 1, "20"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[8, 1, 20], [11, 1, 20]], "cond_conn_op": 1}}
 {"question": "想了解房地产开发投资量高于1000亿时，同比增长可以达到百分之几", "table": "c98df9a6332111e98a66542696d6e445"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[0, 2, "房地产开发投资(亿元)"], [1, 0, "1000"]]}}
 {"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 0, 100000000000]], "cond_conn_op": 0}}
-{"question": "EPS2017大于0.1，EPS2018E大于0.1而且EPS2019E大于0.1的证券简称是什么", "table": "4d2689913aaa11e9a9f2f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[7, 0, "0.1"], [8, 0, "0.1"], [9, 0, "0.1"]]}}
-{"sql_pred": {"agg": [0], "sel": [0], "conds": [[4, 0, "0.1"], [8, 0, "0.1"]], "cond_conn_op": 1}}
-{"question": "请问一下EPS2017，EPS2018E和EPS2019E都大于0.1的证券简称是什么", "table": "4d2689913aaa11e9a9f2f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[7, 0, "0.1"], [8, 0, "0.1"], [9, 0, "0.1"]]}}
-{"sql_pred": {"agg": [0], "sel": [0], "conds": [[9, 0, "0.1"], [8, 0, "0.1"]], "cond_conn_op": 1}}
-{"question": "想要请问哪个证券简称EPS2017，EPS2018E和EPS2019E都大于0.1的", "table": "4d2689913aaa11e9a9f2f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[7, 0, "0.1"], [8, 0, "0.1"], [9, 0, "0.1"]]}}
-{"sql_pred": {"agg": [0], "sel": [0], "conds": [[9, 0, "0.1"], [8, 0, "0.1"]], "cond_conn_op": 1}}
-{"question": "诶，你知道哪个公司开发的游戏排在了今年第4周网页游戏开服排行榜中的6，7位啊，这些游戏都叫啥名啊", "table": "4d26b9f83aaa11e9add4f40f24344a08"}
-{"sql_right": {"agg": [0, 0], "cond_conn_op": 2, "sel": [1, 3], "conds": [[0, 2, "6"], [0, 2, "7"]]}}
-{"sql_pred": {"agg": [0, 0], "sel": [1, 3], "conds": [], "cond_conn_op": 0}}
 {"question": "你好啊，我想问你那个19年第4周网页游戏开服排行榜中的6，7位都是被哪些游戏占据了的呀，还有啊这些游戏都是哪些公司开发的呀", "table": "4d26b9f83aaa11e9add4f40f24344a08"}
 {"sql_right": {"agg": [0, 0], "cond_conn_op": 2, "sel": [1, 3], "conds": [[0, 2, "6"], [0, 2, "7"]]}}
-{"sql_pred": {"agg": [0, 0], "sel": [1, 3], "conds": [[0, 2, "7.0"]], "cond_conn_op": 0}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 3], "conds": [], "cond_conn_op": 0}}
+{"question": "总的市值多少的股票预计在12年和13年收益比率都会超过10%", "table": "69d41833334311e99c97542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[10, 0, "10"], [11, 0, "10"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[9, 0, 10]], "cond_conn_op": 0}}
 {"question": "鹅厂开发了几款手游啊？", "table": "4d26f39e3aaa11e995c3f40f24344a08"}
 {"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [2], "conds": [[2, 2, "腾讯"]]}}
 {"sql_pred": {"agg": [4], "sel": [1], "conds": [], "cond_conn_op": 0}}
 {"question": "一共有几款手机游戏是企鹅公司做的？", "table": "4d26f39e3aaa11e995c3f40f24344a08"}
 {"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [2], "conds": [[2, 2, "腾讯"]]}}
 {"sql_pred": {"agg": [4], "sel": [1], "conds": [], "cond_conn_op": 0}}
-{"question": "成分股有300或者代码为000300.SH指的是哪些板块", "table": "4d251cf53aaa11e9bce2f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[2, 1, "300"], [0, 2, "000300.SH"]]}}
-{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 0, 300], [2, 2, "300.0"], [0, 2, "000300.SH"]], "cond_conn_op": 2}}
-{"question": "导演是查德·斯塔赫斯基或者主演为瑞恩·雷诺兹、贾斯蒂斯·史密斯的电影是什么类型的呢", "table": "4d2815473aaa11e9858ff40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [4], "conds": [[2, 2, "查德·斯塔赫斯基"], [3, 2, "瑞恩·雷诺兹、贾斯蒂斯·史密斯"]]}}
-{"sql_pred": {"agg": [0], "sel": [4], "conds": [[3, 2, "瑞恩·雷诺兹、贾斯蒂斯·史密斯"], [3, 2, "史蒂夫·卡瑞尔"], [2, 2, "查德·斯塔赫斯基"]], "cond_conn_op": 2}}
+{"question": "我想问问啊就是在今年第4周网页游戏开服排行榜中排名11跟12都是哪些游戏啊", "table": "4d2709e33aaa11e9aaf9f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[0, 2, "11"], [0, 2, "12"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [], "cond_conn_op": 0}}
 {"question": "哪种类型的电影导演是查德·斯塔赫斯基或者主演为瑞恩·雷诺兹、贾斯蒂斯·史密斯", "table": "4d2815473aaa11e9858ff40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [4], "conds": [[2, 2, "查德·斯塔赫斯基"], [3, 2, "瑞恩·雷诺兹、贾斯蒂斯·史密斯"]]}}
 {"sql_pred": {"agg": [0], "sel": [4], "conds": [[3, 2, "瑞恩·雷诺兹、贾斯蒂斯·史密斯"], [3, 2, "史蒂夫·卡瑞尔"], [2, 2, "查德·斯塔赫斯基"]], "cond_conn_op": 2}}
@@ -151,6 +193,15 @@
 {"question": "请问有哪些城市在10年和11年成交土地面积大于10并且累计同比的？", "table": "69d5567a334311e99539542696d6e445"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[1, 0, "10"], [2, 0, "10"], [5, 0, "10"]]}}
 {"sql_pred": {"agg": [0], "sel": [0], "conds": [[1, 0, 10], [2, 0, 10]], "cond_conn_op": 1}}
+{"question": "哪些公司其EPS18，19还有20年的估值都是大于0.1的呀", "table": "015690ba351311e9ac4a542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[5, 0, "0.1"], [6, 0, "0.1"], [7, 0, "0.1"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[6, 0, "0.1"]], "cond_conn_op": 0}}
+{"question": "你好啊，我想问问你啊就是那个18，19还有20年的每股盈余预计大于0.1的都是什么公司", "table": "015690ba351311e9ac4a542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[5, 0, "0.1"], [6, 0, "0.1"], [7, 0, "0.1"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[6, 0, "0.1"]], "cond_conn_op": 0}}
+{"question": "你能给查查看有哪些公司预计18，19和20年每股收益会达到0.1以上的呀", "table": "015690ba351311e9ac4a542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[5, 0, "0.1"], [6, 0, "0.1"], [7, 0, "0.1"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[7, 0, "0.1"], [6, 0, "0.1"]], "cond_conn_op": 1}}
 {"question": "成交量环比是负增长的城市及其上周的成交量是多少", "table": "69d46851334311e9a9e1542696d6e445"}
 {"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 1], "conds": [[3, 1, "0"]]}}
 {"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [], "cond_conn_op": 0}}
@@ -159,19 +210,40 @@
 {"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [], "cond_conn_op": 0}}
 {"question": "帮我查一下12年EPE是多少谢谢，我只查到他11EPE的数值是高于10的", "table": "e0ae7bee333a11e99031542696d6e445"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [7], "conds": [[0, 2, "卧龙地产"], [6, 0, "10"]]}}
-{"sql_pred": {"agg": [0], "sel": [7], "conds": [[6, 0, 10]], "cond_conn_op": 0}}
-{"question": "请问一下欢乐斗地主这个游戏和问道这个游戏分别是什么公司研发的啊", "table": "4d27000c3aaa11e99112f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [2], "conds": [[1, 2, "欢乐斗地主"], [1, 2, "问道"]]}}
-{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 2, "欢乐斗地主"]], "cond_conn_op": 0}}
-{"question": "你好，你知道那个福州在12年的1月份，还有3月份住宅总的成交面积的均值吗", "table": "5a4edf57312b11e9b253542696d6e445"}
-{"sql_right": {"agg": [1], "cond_conn_op": 2, "sel": [2], "conds": [[0, 2, "2012年3月"], [0, 2, "2012年1月"]]}}
-{"sql_pred": {"agg": [1], "sel": [2], "conds": [[0, 2, "2012年3月"], [2, 2, "30.0"], [0, 2, "2011年3月"]], "cond_conn_op": 2}}
+{"sql_pred": {"agg": [0], "sel": [6], "conds": [[4, 0, 10]], "cond_conn_op": 0}}
+{"question": "诶，那个19年和20年的PE估值都低于20的有哪些证券啊，收盘价多少啊", "table": "0156172b351311e986b3542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 2, "sel": [1, 2], "conds": [[9, 1, "20"], [10, 1, "20"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 2], "conds": [[10, 1, 20], [9, 1, 20], [8, 1, 20]], "cond_conn_op": 1}}
+{"question": "呃我想知道那个19年和20年的市盈率低于20的证券收盘价，还有就是都是什么证券呀", "table": "0156172b351311e986b3542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 2, "sel": [1, 2], "conds": [[9, 1, "20"], [10, 1, "20"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 2], "conds": [[10, 1, 20], [8, 1, 20], [8, 1, 19]], "cond_conn_op": 1}}
+{"question": "2011年的股票本益比高于十倍，预计2012年的股票本益比也高于十倍的公司有多少家呀", "table": "69d2873a334311e9bb9b542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [1], "conds": [[6, 0, "10"], [7, 0, "10"]]}}
+{"sql_pred": {"agg": [4], "sel": [1], "conds": [[6, 0, 10]], "cond_conn_op": 0}}
+{"question": "你好，你帮我算一下那些一一年的股价收益比率超过十倍，估计一二年的股价收益比率也超过十倍的公司数量吧", "table": "69d2873a334311e9bb9b542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [1], "conds": [[6, 0, "10"], [7, 0, "10"]]}}
+{"sql_pred": {"agg": [4], "sel": [1], "conds": [[6, 0, 10]], "cond_conn_op": 0}}
+{"question": "你好啊，我就是想问一下啊那个12年或者13年变动百分比超过2的公司代码，还有啊都是哪些公司啊", "table": "69d3b0c5334311e99a4a542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 2, "sel": [1, 0], "conds": [[7, 0, "2"], [8, 0, "2"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[7, 0, 2]], "cond_conn_op": 0}}
+{"question": "诶，你知道就是我国哪些特高压建设项目说是要投资100亿的吗，还有啊这些项目有说什么时候开工吗", "table": "0151f30c351311e9ba68542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [0, 3], "conds": [[2, 0, "100"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 3], "conds": [[2, 0, 100], [0, 2, "晋南东-南阳-荆门交流1000千伏"]], "cond_conn_op": 1}}
+{"question": "有几个航空公司的一月份和二月份最新业务量数据同比增速都是超过5%的", "table": "c5ac137d34b411e9a777542696d6e445"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[2, 0, "5"], [3, 0, "5"], [4, 0, "5"]]}}
+{"sql_pred": {"agg": [4], "sel": [0], "conds": [[1, 0, 5], [3, 0, 5]], "cond_conn_op": 1}}
 {"question": "一线城市在10年供应土地已达四千五百二十六万平米，我很好奇在11年可以达到多少", "table": "69d56130334311e981e2542696d6e445"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[0, 2, "一线城市"], [1, 2, "4526"]]}}
 {"sql_pred": {"agg": [0], "sel": [2], "conds": [[0, 2, "一线城市"]], "cond_conn_op": 0}}
-{"question": "那个售价为一万是在福州仓山哪个楼盘啊，降价幅度高吗，多少啊", "table": "5a4edb7a312b11e9b158542696d6e445"}
-{"sql_right": {"agg": [0, 0], "cond_conn_op": 1, "sel": [0, 3], "conds": [[2, 2, "10000"], [1, 2, "仓山区"]]}}
-{"sql_pred": {"agg": [0, 0], "sel": [0, 3], "conds": [[2, 2, 10000]], "cond_conn_op": 0}}
+{"question": "你能不能告诉我一一年一线城市的土地供应有多大啊，目前已经知道一零年的是四千五百二十六万平方米", "table": "69d56130334311e981e2542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[0, 2, "一线城市"], [1, 2, "4526"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[0, 2, "一线城市"]], "cond_conn_op": 0}}
+{"question": "你好啊，帮我查查看12年一月到五月期间有哪些地区是房地产开发或者住宅投资超过5000亿的呀", "table": "c989e6c0332111e9949d542696d6e445"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[1, 0, "5000"], [2, 0, "5000"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[2, 0, 500000000000]], "cond_conn_op": 0}}
+{"question": "我想问一下就是哪些公司在12年和13年的时候变动的百分比都大于1的呀，那公司代码是什么", "table": "69d3cdca334311e9bd4b542696d6e445"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 1, "sel": [1, 0], "conds": [[7, 0, "1"], [8, 0, "1"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [0, 1], "conds": [[6, 0, 1]], "cond_conn_op": 0}}
 {"question": "我想知道福州哪些楼盘售价为一万，并且啊在仓山的呀，那这些楼盘降价幅度有多大啊", "table": "5a4edb7a312b11e9b158542696d6e445"}
 {"sql_right": {"agg": [0, 0], "cond_conn_op": 1, "sel": [0, 3], "conds": [[2, 2, "10000"], [1, 2, "仓山区"]]}}
 {"sql_pred": {"agg": [0, 0], "sel": [0, 3], "conds": [[1, 2, "仓山区"]], "cond_conn_op": 0}}
@@ -184,9 +256,9 @@
 {"question": "2015年2月什么公司生产了3G制式的数字移动电话机", "table": "aac6e9c73b0611e9b344f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[6, 2, "2015-02"], [3, 2, "WCDMA数字移动电话机"]]}}
 {"sql_pred": {"agg": [0], "sel": [1], "conds": [[6, 2, "2015-02"], [3, 2, "数字移动电话机"], [0, 2, "3.0"]], "cond_conn_op": 1}}
-{"question": "那个请问在黄浦区有个上海博物馆的开放时间是啥时候？", "table": "ab8a242e3b0611e98972f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[1, 2, "黄浦"], [2, 2, "上海博物馆"]]}}
-{"sql_pred": {"agg": [0], "sel": [3], "conds": [[2, 2, "博物馆"], [1, 2, "黄浦"], [2, 2, "上海博物馆"]], "cond_conn_op": 1}}
+{"question": "电子信息工程和通信工程的学科门类是什么", "table": "f1eeb43d453d11e98a6ff40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [5], "conds": [[2, 2, "电子信息工程"], [2, 2, "通信工程"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[2, 2, "电子信息工程"]], "cond_conn_op": 0}}
 {"question": "你知道目前有哪些单位已有人入围面试的吗，这些单位招的是什么岗你知道吗", "table": "f3bbfd87453d11e99c51f40f24344a08"}
 {"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [4, 5], "conds": [[8, 0, "0"]]}}
 {"sql_pred": {"agg": [0, 0], "sel": [4, 5], "conds": [], "cond_conn_op": 0}}
@@ -205,21 +277,30 @@
 {"question": "2014年11月13号生产了什么规格的水性金属面漆，这种水性金属面漆的批号是20141113001", "table": "a8c726383b0611e980d2f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[5, 2, "2014-11-13/20141113001"], [2, 2, "水性金属面漆"]]}}
 {"sql_pred": {"agg": [0], "sel": [4], "conds": [[2, 2, "水性金属面漆"], [5, 2, "2014-11-13/605860"], [5, 2, "2014-11-13/20141113001"]], "cond_conn_op": 1}}
-{"question": "你帮我查一下目前吉他有多少把", "table": "f4e094e3453d11e984ddf40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[1, 2, "吉他"], [4, 2, "把"]]}}
-{"sql_pred": {"agg": [0], "sel": [3], "conds": [], "cond_conn_op": 0}}
+{"question": "你好啊，那个10年3月1号到5号需要在虹桥机场中货航大楼上的是哪些课程啊", "table": "f53e5cdc453d11e9ab43f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[2, 2, "2010年3月1日至5日"], [4, 2, "虹桥机场中货航大楼"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[0, 2, "5.0"], [2, 2, "2010年3月1日至5日"], [4, 2, "虹桥机场中货航大楼"]], "cond_conn_op": 1}}
+{"question": "美学专业或者年龄不足35岁的可以应聘哪些职位", "table": "f0a00fb0453d11e9accaf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [2], "conds": [[1, 2, "美学专业"], [3, 2, "35以下"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[3, 1, 35], [1, 2, "美学专业"], [0, 2, "35.0"]], "cond_conn_op": 2}}
+{"question": "广东茂名绿银农化有限公司没通过审核是什么原因", "table": "a888794c3b0611e99e50f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[1, 2, "广东"], [2, 2, "广东茂名绿银农化有限公司"]]}}
+{"sql_pred": {"agg": [], "sel": [], "conds": [[2, 2, "广东茂名绿银农化有限公司"]], "cond_conn_op": 0}}
+{"question": "哪些招20人以上的岗位需要本科学历？", "table": "abbf13ab3b0611e9a6d1f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[3, 2, "本科"], [5, 0, "20"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[5, 0, 20], [5, 2, "20.0"], [3, 2, "本科"]], "cond_conn_op": 1}}
 {"question": "中央办公厅一共有几个职位是要进行专业考试的", "table": "f1d81b14453d11e980ebf40f24344a08"}
 {"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [2], "conds": [[12, 2, "是"], [0, 2, "中央办公厅"]]}}
 {"sql_pred": {"agg": [4], "sel": [2], "conds": [[0, 2, "中央办公厅"]], "cond_conn_op": 0}}
 {"question": "你好，你知道中央办公厅有多少个岗位是要进行专业方面考试的吗", "table": "f1d81b14453d11e980ebf40f24344a08"}
 {"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [2], "conds": [[12, 2, "是"], [0, 2, "中央办公厅"]]}}
 {"sql_pred": {"agg": [4], "sel": [2], "conds": [[0, 2, "中央办公厅"]], "cond_conn_op": 0}}
-{"question": "你好啊我想查查康奈尔还有耶鲁这两所大学所在的国家是哪个", "table": "a9482dc73b0611e99210f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [3], "conds": [[2, 2, "耶鲁大学"], [2, 2, "康奈尔大学"]]}}
-{"sql_pred": {"agg": [0], "sel": [3], "conds": [[2, 2, "康奈尔大学"], [2, 2, "杜伦大学"], [2, 2, "耶鲁大学"]], "cond_conn_op": 2}}
-{"question": "你好，我想知道央视少儿和BTV卡酷这两个频道总共有几部动画来着", "table": "f40fcc07453d11e9aa2df40f24344a08"}
-{"sql_right": {"agg": [4], "cond_conn_op": 2, "sel": [4], "conds": [[0, 2, "央视少儿频道"], [0, 2, "BTV卡酷频道"]]}}
-{"sql_pred": {"agg": [4], "sel": [4], "conds": [[0, 2, "央视少儿频道"], [0, 2, "BTV卡酷频道"], [0, 2, "辽宁青少频道"]], "cond_conn_op": 2}}
+{"question": "诶那个中央办公厅目前有几个岗是要求专业考试的呀", "table": "f1d81b14453d11e980ebf40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [2], "conds": [[12, 2, "是"], [0, 2, "中央办公厅"]]}}
+{"sql_pred": {"agg": [4], "sel": [2], "conds": [[0, 2, "中央办公厅"]], "cond_conn_op": 0}}
+{"question": "你知道这本汉英经贸分类词典的出版社是谁吗，它的编写者是苑春鸣", "table": "efc0e1c7453d11e99a81f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[2, 2, "苑春鸣"], [0, 2, "汉英经贸分类词典"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[0, 2, "汉英经贸分类词典"], [2, 2, "苑春鸣"], [0, 2, "上海词典"]], "cond_conn_op": 1}}
 {"question": "你知道浙江工商大学经济学的专任教师岗招聘的人数是多少吗", "table": "a94c536b3b0611e9b701f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[0, 2, "浙江工商大学"], [3, 2, "专任教师"], [7, 2, "经济学类"]]}}
 {"sql_pred": {"agg": [0], "sel": [4], "conds": [[0, 2, "浙江工商大学"], [3, 2, "专任教师"]], "cond_conn_op": 1}}
@@ -228,79 +309,67 @@
 {"sql_pred": {"agg": [0], "sel": [4], "conds": [[2, 2, "初中音乐教师"], [2, 2, "初中英语教师"], [2, 2, "高中美术教师"]], "cond_conn_op": 2}}
 {"question": "你好，你帮我查一下那个长沙货运中心要招几位货运服务岗的人", "table": "ed38c6fa453d11e9b344f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [4], "conds": [[2, 2, "长沙货运中心货运服务岗位"]]}}
-{"sql_pred": {"agg": [0], "sel": [4], "conds": [[2, 2, "长沙货运中心货运服务岗位"], [5, 2, "会计、财务管理"]], "cond_conn_op": 1}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[2, 2, "长沙货运中心货运服务岗位"], [2, 2, "海口车务段货运服务岗位"]], "cond_conn_op": 1}}
 {"question": "你好啊我是学那个护理的但是不知道那个警察体育与战术训练教研部的招录对专业有没有什么要求呢", "table": "ab53defa3b0611e9b50df40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [4], "conds": [[0, 2, "警察体育与战术训练教研部"]]}}
 {"sql_pred": {"agg": [0], "sel": [4], "conds": [[0, 2, "警察体育与战术训练教研部"], [0, 2, "公安管理系"]], "cond_conn_op": 1}}
-{"question": "富兰克牌西洋参含片一盒有187.2g，这是什么公司生产的", "table": "ed0df600453d11e98318f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[4, 2, "187.2g/盒"], [2, 2, "富兰克牌西洋参含片"]]}}
-{"sql_pred": {"agg": [0], "sel": [5], "conds": [[4, 2, "187.2g/盒"], [4, 2, "42g/盒"], [2, 2, "富兰克牌西洋参含片"]], "cond_conn_op": 1}}
 {"question": "请问介词“在”它的一个出现次数是多少你知道吗？", "table": "aa78b1de3b0611e9b5d5f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[1, 2, "在"], [3, 2, "介词"]]}}
 {"sql_pred": {"agg": [0], "sel": [4], "conds": [[3, 2, "介词"]], "cond_conn_op": 0}}
-{"question": "一共有多少个项目是市级财政补助资金超过20万元并且县（区）财政补助资金超过20万元的？", "table": "f62208a8453d11e9b12ef40f24344a08"}
-{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [3], "conds": [[8, 0, "20"], [9, 0, "20"]]}}
-{"sql_pred": {"agg": [4], "sel": [3], "conds": [[6, 0, 20]], "cond_conn_op": 0}}
-{"question": "请问总共有多少个项目是市级财政补助资金超过20万元并且县（区）财政补助资金超过20万元的？", "table": "f62208a8453d11e9b12ef40f24344a08"}
-{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [3], "conds": [[8, 0, "20"], [9, 0, "20"]]}}
-{"sql_pred": {"agg": [4], "sel": [3], "conds": [[6, 0, 20]], "cond_conn_op": 0}}
 {"question": "你知道那些要求40周岁以下年龄的是啥岗吗", "table": "a9302f3d3b0611e9ae5cf40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[4, 2, "40周岁以下"], [4, 2, "30周岁以下"]]}}
 {"sql_pred": {"agg": [0], "sel": [1], "conds": [[4, 2, "40周岁以下"]], "cond_conn_op": 0}}
-{"question": "金城出版社出版在哪个时间出版的这本金融内战 ", "table": "a904150c3b0611e98a24f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[1, 2, "金融内战"], [3, 2, "金城出版社"]]}}
-{"sql_pred": {"agg": [0], "sel": [4], "conds": [[3, 2, "金城出版社"], [1, 2, "金融内战"], [3, 2, "中信出版社"]], "cond_conn_op": 1}}
-{"question": "广州市公安局白云区分局的基层派出所二级警员岗位总共录取的人数是多少", "table": "a9597bd13b0611e9bfdef40f24344a08"}
-{"sql_right": {"agg": [5], "cond_conn_op": 1, "sel": [5], "conds": [[0, 2, "广州市公安局白云区分局"], [2, 2, "基层派出所二级警员"]]}}
-{"sql_pred": {"agg": [5], "sel": [5], "conds": [[2, 2, "基层派出所二级警员"], [4, 2, "金融财会类职位;从事公安财务、审计等工作"], [0, 2, "广州市公安局白云区分局"]], "cond_conn_op": 1}}
-{"question": "你告诉我50T离心柱型动物组织基因组DNA提取试剂盒卖多少钱啊", "table": "ef637a38453d11e9bf0df40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[2, 2, "50T"], [1, 2, "离心柱型动物组织基因组DNA提取试剂盒"]]}}
-{"sql_pred": {"agg": [0], "sel": [3], "conds": [[1, 2, "离心柱型动物组织基因组DNA提取试剂盒"]], "cond_conn_op": 0}}
-{"question": "哪些源头公司的废物编号是7404000010.0且由宁波口岸批准？", "table": "f311c040453d11e9b67ff40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[6, 2, "宁波"], [2, 2, "7404000010.0"]]}}
-{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 2, "7404000010.0"]], "cond_conn_op": 0}}
-{"question": "宁波口岸批准的废物编号为7404000010.0是出自哪些加工单位？", "table": "f311c040453d11e9b67ff40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[6, 2, "宁波"], [2, 2, "7404000010.0"]]}}
-{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 2, "7404000010.0"]], "cond_conn_op": 0}}
-{"question": "废物编号为7404000010.0的废物中，哪些公司的是由宁波口岸批准？", "table": "f311c040453d11e9b67ff40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[6, 2, "宁波"], [2, 2, "7404000010.0"]]}}
-{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 2, "7404000010.0"]], "cond_conn_op": 0}}
+{"question": "想问一下铁路学校招这个小学部的音乐教师对学历有怎样的要求", "table": "edc62e63453d11e9b041f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [7], "conds": [[2, 2, "铁路学校"], [3, 2, "小学音乐"]]}}
+{"sql_pred": {"agg": [0], "sel": [7], "conds": [[2, 2, "铁路学校"], [5, 2, "小学"], [11, 2, "具有小学音乐学科教师资格证"]], "cond_conn_op": 1}}
+{"question": "诶你知道哪些岗不要求职称和职业资格证的吗", "table": "f1d36828453d11e990c2f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[12, 2, "不限"], [14, 2, "不限"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [2, 12], "conds": [[9, 2, "不限"]], "cond_conn_op": 0}}
+{"question": "最低学历为硕士且人数是1的学院叫什么？", "table": "ab9c5e633b0611e9bb41f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[2, 2, "1"], [3, 2, "硕士及以上"]]}}
+{"sql_pred": {"agg": [0], "sel": [0], "conds": [[3, 2, "硕士及以上"], [2, 2, "1.0"], [1, 2, "林学"]], "cond_conn_op": 1}}
+{"question": "海林市高中生物教师这个职位有说是只招男性或女性吗，还是说不限？", "table": "a9508b593b0611e98b51f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [9], "conds": [[0, 2, "海林市高级中学"], [1, 2, "生物教师"]]}}
+{"sql_pred": {"agg": [0], "sel": [9], "conds": [[0, 2, "海林市高级中学"]], "cond_conn_op": 0}}
+{"question": "成都工业学院在2017年7月7号到2017年7月15号这段时间的培训费用是多少", "table": "f02a9b05453d11e9820cf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [8], "conds": [[3, 2, "2017.7.7-2017.7.15"], [2, 2, "成都工业学院"]]}}
+{"sql_pred": {"agg": [0], "sel": [8], "conds": [[1, 2, "2017119439708.0"], [0, 2, "17.0"], [2, 2, "成都工业学院"]], "cond_conn_op": 1}}
 {"question": "有多少个项目在2016年开工，次年就完工的", "table": "f59e7561453d11e9acf9f40f24344a08"}
 {"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[2, 2, "2016"], [3, 2, "2017"]]}}
 {"sql_pred": {"agg": [4], "sel": [0], "conds": [[2, 2, "2016.0"]], "cond_conn_op": 0}}
-{"question": "我想知道2016年开工，一年就建成的项目有多少个", "table": "f59e7561453d11e9acf9f40f24344a08"}
-{"sql_right": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[2, 2, "2016"], [3, 2, "2017"]]}}
-{"sql_pred": {"agg": [4], "sel": [0], "conds": [[2, 2, "2016.0"]], "cond_conn_op": 0}}
-{"question": "请问哪本书是花山文艺出版社出版社还有哪些是江苏凤凰文艺出版社出版的", "table": "f14c17cc453d11e98dbaf40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[2, 2, "花山文艺出版社"], [2, 2, "江苏凤凰文艺出版社"]]}}
-{"sql_pred": {"agg": [0], "sel": [0], "conds": [[2, 2, "团结出版社"], [2, 2, "江苏凤凰文艺出版社"], [2, 2, "花山文艺出版社"]], "cond_conn_op": 2}}
 {"question": "2018年1月16日吉林建筑大学有哪些专业要考试的", "table": "a9622de83b0611e987bbf40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[1, 2, "2018年01月16日"], [0, 2, "吉林建筑大学"]]}}
 {"sql_pred": {"agg": [0], "sel": [3], "conds": [[1, 2, "2018年01月16日"]], "cond_conn_op": 0}}
-{"question": "中国国际电视总公司引进的哈克·费恩历险记太好看了，看到一半欲罢不能，有多少集啊，够不够看", "table": "aa6e7e6e3b0611e993fbf40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[2, 2, "中国国际电视总公司"], [1, 2, "哈克·费恩历险记"]]}}
-{"sql_pred": {"agg": [0], "sel": [4], "conds": [[2, 2, "中国国际电视总公司"], [1, 2, "哈克·费恩历险记"], [1, 2, "最后一次赛跑"]], "cond_conn_op": 1}}
-{"question": "自主类中介服务项目或者中介服务项目服务时限是双方协商约定的中介服务项目收费依据及标准是什么", "table": "a8c0e15e3b0611e9bb85f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [7], "conds": [[6, 2, "自主类"], [8, 2, "双方协商约定"]]}}
-{"sql_pred": {"agg": [0, 0], "sel": [7, 8], "conds": [[5, 2, "1.《中华人民共和国气象法》（2000年1月1日，中华人民共和国主席令第23号，2016年11月7日中华人民共和国主席令第57号修订）第十二条“未经依法批准，任何组织或者个人不得迁移气象台站；确因实施城市规划或者国家重点工程建设，需要迁移国家基准气候站、基本气象站的，应当报经国务院气象主管机构批准；需要迁移其他气象台站的，应当报经省、自治区、直辖市气象主管机构批准。迁建费用由建设单位承担。”2.《气象台站迁建行政许可管理办法》（2016年9月1日，中国气象局令第30号）第三条第二款“省、自治区、直辖市气象主管机构负责本行政区域内其他气象台站迁建行政许可的审批和管理，并承担大气本底站、国家基准气候站和国家基本气象站迁建行政许可的初审和管理。”第六条第二款“申请人在提出申请时，应向受理机构提供以下材料：……（二）气象台站选址报告书；……”"], [8, 2, "双方协商约定"], [6, 2, "自主类"]], "cond_conn_op": 2}}
+{"question": "请问天津四十五中的《yestertoday》是一等奖吗？", "table": "f047e068453d11e99818f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[1, 2, "《yestertoday》"], [3, 2, "天津市第四十五中学"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[3, 2, "天津市第四十五中学"], [5, 2, "三等奖"], [1, 2, "《yestertoday》"]], "cond_conn_op": 1}}
 {"question": "哪些项目的建设内容及规模是2015年棚户区改造配套基础设施建设，其中用于采煤沉陷区棚户区改造2651万元或者下达计划文号为黑发改投资[2015]228号", "table": "a8cb77383b0611e9abbaf40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[2, 2, "2015年棚户区改造配套基础设施建设，其中用于采煤沉陷区棚户区改造2651万元。"], [3, 2, "黑发改投资[2015]228号"]]}}
-{"sql_pred": {"agg": [0], "sel": [1], "conds": [[1, 2, "双鸭山市2015年棚户区改造配套基础设施建设项目"], [3, 2, "黑发改投资[2015]228号"], [2, 2, "2015年棚户区改造配套基础设施建设，其中用于采煤沉陷区棚户区改造2651万元。"]], "cond_conn_op": 2}}
-{"question": "建设内容及规模是2015年棚户区改造配套基础设施建设，其中用于采煤沉陷区棚户区改造2651万元或者下达计划文号为黑发改投资[2015]228号的项目有哪些", "table": "a8cb77383b0611e9abbaf40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[2, 2, "2015年棚户区改造配套基础设施建设，其中用于采煤沉陷区棚户区改造2651万元。"], [3, 2, "黑发改投资[2015]228号"]]}}
 {"sql_pred": {"agg": [0], "sel": [1], "conds": [[1, 2, "双鸭山市2015年棚户区改造配套基础设施建设项目"], [3, 2, "黑发改投资[2015]228号"], [2, 2, "2015年棚户区改造配套基础设施建设，其中用于采煤沉陷区棚户区改造2651万元。"]], "cond_conn_op": 2}}
 {"question": "我想知道建设内容及规模是2015年棚户区改造配套基础设施建设，其中用于采煤沉陷区棚户区改造2651万元或者下达计划文号为黑发改投资[2015]228号的项目名称，你能不能告诉我", "table": "a8cb77383b0611e9abbaf40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [1], "conds": [[2, 2, "2015年棚户区改造配套基础设施建设，其中用于采煤沉陷区棚户区改造2651万元。"], [3, 2, "黑发改投资[2015]228号"]]}}
-{"sql_pred": {"agg": [0], "sel": [1], "conds": [[1, 2, "双鸭山市2015年棚户区改造配套基础设施建设项目"], [3, 2, "黑发改投资[2015]228号"], [3, 2, "黑发改投资[2015]176号"], [6, 2, "双鸭山市尖山区人民法院"]], "cond_conn_op": 2}}
-{"question": "审核通过的俱乐部中，哪些是三个A的？", "table": "ee6850e8453d11e9ad86f40f24344a08"}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[1, 2, "双鸭山市2015年棚户区改造配套基础设施建设项目"], [3, 2, "黑发改投资[2015]228号"], [6, 2, "双鸭山市尖山区人民法院"], [3, 2, "黑发改投资[2015]265号"]], "cond_conn_op": 2}}
+{"question": "这种2层每平方米16.5g的餐巾纸是什么时候生产的", "table": "aa756ce33b0611e9bc8bf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [7], "conds": [[6, 2, "定量：16.5g/㎡2层"], [1, 2, "餐巾纸"]]}}
+{"sql_pred": {"agg": [0], "sel": [7], "conds": [[1, 2, "餐巾纸"], [6, 2, "定量：16.5g/㎡2层"], [6, 2, "定量21g/㎡单层"]], "cond_conn_op": 1}}
+{"question": "什么时候生产了规格为定量：16.5g/㎡2层的餐巾纸", "table": "aa756ce33b0611e9bc8bf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [7], "conds": [[6, 2, "定量：16.5g/㎡2层"], [1, 2, "餐巾纸"]]}}
+{"sql_pred": {"agg": [0], "sel": [7], "conds": [[1, 2, "餐巾纸"], [6, 2, "定量：16.5g/㎡2层"], [0, 2, "2.0"]], "cond_conn_op": 1}}
+{"question": "审核通过的3A俱乐部都有哪些？", "table": "ee6850e8453d11e9ad86f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[3, 2, "通过"], [2, 2, "AAA"]]}}
-{"sql_pred": {"agg": [0], "sel": [1], "conds": [[0, 2, "30.0"], [3, 2, "通过"], [2, 2, "A"]], "cond_conn_op": 1}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 2, "A"]], "cond_conn_op": 0}}
 {"question": "有什么3A俱乐部通过了审核？", "table": "ee6850e8453d11e9ad86f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[3, 2, "通过"], [2, 2, "AAA"]]}}
 {"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 2, "A"]], "cond_conn_op": 0}}
-{"question": "行政许可事项编码是 000000000002189230-XK-010-0000或者行政许可事项名称为出版物批发单位设立、变更审批的审批部门有多少个", "table": "abe8cb8c3b0611e9934ef40f24344a08"}
-{"sql_right": {"agg": [4], "cond_conn_op": 2, "sel": [3], "conds": [[1, 2, "000000000002189230-XK-010-0000"], [2, 2, "出版物批发单位设立、变更审批"]]}}
-{"sql_pred": {"agg": [4], "sel": [3], "conds": [[2, 2, "出版物批发单位设立、变更审批"], [2, 2, "音像制作单位的设立、变更审批"], [1, 2, "000000000002189230-XK-010-0000"]], "cond_conn_op": 2}}
+{"question": "有哪些货物是食用的并且签发日期是2018-08-24的？", "table": "a7af9cba3b0611e9ac76f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[2, 2, "食用"], [3, 2, "2018-08-24"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[3, 2, "2018-08-24"]], "cond_conn_op": 0}}
+{"question": "麻烦问一下有哪些货物是食用的并且签发日期是2018-08-24的？", "table": "a7af9cba3b0611e9ac76f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[2, 2, "食用"], [3, 2, "2018-08-24"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[3, 2, "2018-08-24"]], "cond_conn_op": 0}}
+{"question": "帮我查查有哪些货物是食用的并且签发日期是2018-08-24的？", "table": "a7af9cba3b0611e9ac76f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[2, 2, "食用"], [3, 2, "2018-08-24"]]}}
+{"sql_pred": {"agg": [0], "sel": [1], "conds": [[3, 2, "2018-08-24"]], "cond_conn_op": 0}}
 {"question": "2017年清水中学的项目在哪里实施啊", "table": "a9361aa13b0611e98ec8f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[4, 2, "2017年"], [1, 2, "清水中学"]]}}
 {"sql_pred": {"agg": [0], "sel": [3], "conds": [[4, 2, "2017年"]], "cond_conn_op": 0}}
@@ -309,31 +378,40 @@
 {"sql_pred": {"agg": [0], "sel": [3], "conds": [[4, 2, "2017年"]], "cond_conn_op": 0}}
 {"question": "凤凰县神秘苗乡这条线路的规模是什么，建设的内容又是什么", "table": "ab4109873b0611e9b3e1f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[0, 2, "1、凤凰县"], [1, 2, "神秘苗乡"]]}}
-{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 2, "神秘苗乡"]], "cond_conn_op": 0}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 2, "神秘苗乡"], [1, 2, "大湘西12条文化生态旅游精品线路"], [0, 2, "1、凤凰县"]], "cond_conn_op": 1}}
 {"question": "你好，能不能告诉我凤凰县神秘苗乡线路的建设内容以及规模啊", "table": "ab4109873b0611e9b3e1f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[0, 2, "1、凤凰县"], [1, 2, "神秘苗乡"]]}}
 {"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 2, "神秘苗乡"]], "cond_conn_op": 0}}
-{"question": "请问一下国际1级心算的定价是多少呢？", "table": "f6ade8c0453d11e98dd9f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [5], "conds": [[1, 2, "国际1级心算"]]}}
-{"sql_pred": {"agg": [0, 0], "sel": [5, 6], "conds": [[1, 2, "国际4级心算"], [1, 2, "国际1级心算"]], "cond_conn_op": 2}}
 {"question": "哪种商品每批要抽6个样品以满足实验和留样需求", "table": "abd8f86b3b0611e994c9f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [1], "conds": [[3, 2, "每批6个（满足实验和留样需求）"]]}}
-{"sql_pred": {"agg": [0], "sel": [1], "conds": [[3, 2, "每批3辆（满足实验和留样需求）"], [3, 2, "每批6个（满足实验和留样需求）"]], "cond_conn_op": 1}}
+{"sql_pred": {"agg": [], "sel": [], "conds": [[3, 2, "每批3辆（满足实验和留样需求）"], [3, 2, "每批6个（满足实验和留样需求）"]], "cond_conn_op": 1}}
 {"question": "为满足实验和留样需求，必须每批取样6个的商品是什么", "table": "abd8f86b3b0611e994c9f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [1], "conds": [[3, 2, "每批6个（满足实验和留样需求）"]]}}
-{"sql_pred": {"agg": [0], "sel": [1], "conds": [[3, 2, "每批3辆（满足实验和留样需求）"], [3, 2, "每批6个（满足实验和留样需求）"]], "cond_conn_op": 1}}
+{"sql_pred": {"agg": [], "sel": [], "conds": [[3, 2, "每批3辆（满足实验和留样需求）"], [3, 2, "每批6个（满足实验和留样需求）"]], "cond_conn_op": 1}}
 {"question": "你好，你帮我查一下这次达标的产品分别是由哪一家机构检测的", "table": "a88cecab3b0611e994ebf40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [8], "conds": [[7, 2, "合格"]]}}
 {"sql_pred": {"agg": [0], "sel": [8], "conds": [], "cond_conn_op": 0}}
-{"question": "想问一下IE2-160L-4型号的三相异步电动机是哪家公司生产的", "table": "aa2aadd93b0611e9bdedf40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[3, 2, "三相异步电动机"], [5, 2, "IE2-160L-4"]]}}
-{"sql_pred": {"agg": [0], "sel": [1], "conds": [[4, 2, "三得"], [3, 2, "异步电动机"], [5, 2, "IE2-160L-4"]], "cond_conn_op": 1}}
-{"question": "国家日用金属制品质量监督检验中心（沈阳）对樱花嵌入式燃气灶进行了抽检，结果怎么样", "table": "f23c7a82453d11e98f5bf40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [7], "conds": [[8, 2, "国家日用金属制品质量监督检验中心（沈阳）"], [3, 2, "樱花嵌入式燃气灶"]]}}
-{"sql_pred": {"agg": [0], "sel": [7], "conds": [[3, 2, "樱花嵌入式燃气灶"], [3, 2, "嵌入式燃气灶"], [8, 2, "国家日用金属制品质量监督检验中心（沈阳）"]], "cond_conn_op": 1}}
-{"question": "沈阳国家日用金属制品质量监督检验中心检查的樱花嵌入式燃气灶合不合格啊", "table": "f23c7a82453d11e98f5bf40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [7], "conds": [[8, 2, "国家日用金属制品质量监督检验中心（沈阳）"], [3, 2, "樱花嵌入式燃气灶"]]}}
-{"sql_pred": {"agg": [0], "sel": [7], "conds": [[3, 2, "樱花嵌入式燃气灶"], [3, 2, "嵌入式燃气灶"], [8, 2, "国家日用金属制品质量监督检验中心（沈阳）"]], "cond_conn_op": 1}}
+{"question": "你知道IT快车的店员岗计划招聘的人数是多少吗", "table": "ab2cc3cf3b0611e98812f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[1, 2, "IT快车"], [2, 2, "店员"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[1, 2, "IT快车"]], "cond_conn_op": 0}}
+{"question": "在武大有哪些是一般性的课题研究呢", "table": "f52e52b3453d11e9835af40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[5, 2, "武汉大学"], [3, 2, "一般课题"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[3, 2, "一般课题"], [3, 2, "重点课题"], [5, 2, "武汉大学"]], "cond_conn_op": 1}}
+{"question": "音乐学（音乐教育方向）专业或者沈阳音乐学院的对应高职专业代码是多少", "table": "f1e79745453d11e9acb9f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [5], "conds": [[2, 2, "音乐学（音乐教育方向）"], [1, 2, "沈阳音乐学院"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[2, 2, "英语（国际贸易）"], [2, 2, "音乐学（音乐教育方向）"], [1, 2, "沈阳音乐学院"]], "cond_conn_op": 2}}
+{"question": "你好，请帮我查一下音乐学（音乐教育方向）专业或者沈阳音乐学院的对应高职专业代码", "table": "f1e79745453d11e9acb9f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [5], "conds": [[2, 2, "音乐学（音乐教育方向）"], [1, 2, "沈阳音乐学院"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[2, 2, "英语（国际贸易）"], [2, 2, "音乐学（音乐教育方向）"], [1, 2, "沈阳音乐学院"]], "cond_conn_op": 2}}
+{"question": "你知道音乐学（音乐教育方向）专业或者沈阳音乐学院的对应高职专业代码吗", "table": "f1e79745453d11e9acb9f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [5], "conds": [[2, 2, "音乐学（音乐教育方向）"], [1, 2, "沈阳音乐学院"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[2, 2, "英语（国际贸易）"], [2, 2, "音乐学（音乐教育方向）"], [1, 2, "沈阳音乐学院"]], "cond_conn_op": 2}}
+{"question": "罗湖和南山的公安分局人口管理科办公时间你帮我查一下呗", "table": "a7dbad703b0611e9ad70f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [3], "conds": [[1, 2, "罗湖公安分局人口管理科"], [1, 2, "南山公安分局人口管理科"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[1, 2, "南山公安分局人口管理科"], [1, 2, "盐田公安分局人口管理科"], [0, 2, "罗湖分局"]], "cond_conn_op": 2}}
+{"question": "诶你知道那个罗湖和南山的公安分局人口管理科具体什么时候上班的吗", "table": "a7dbad703b0611e9ad70f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [3], "conds": [[1, 2, "罗湖公安分局人口管理科"], [1, 2, "南山公安分局人口管理科"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[1, 2, "南山公安分局人口管理科"], [1, 2, "盐田公安分局人口管理科"], [0, 2, "罗湖分局"]], "cond_conn_op": 2}}
 {"question": "北京有几家三级甲等医院啊", "table": "aa577cc73b0611e994def40f24344a08"}
 {"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [2], "conds": [[4, 2, "三级甲等"]]}}
 {"sql_pred": {"agg": [4], "sel": [2], "conds": [[4, 2, "三级甲等"], [2, 2, "北京广仁医院"]], "cond_conn_op": 1}}
@@ -342,16 +420,25 @@
 {"sql_pred": {"agg": [4], "sel": [2], "conds": [[4, 2, "三级甲等"], [2, 2, "北京广仁医院"]], "cond_conn_op": 1}}
 {"question": "请问一下啊什么岗位要求助产方向的护理专业啊", "table": "ab2406263b0611e99282f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [3], "conds": [[6, 2, "护理专业（助产方向）"]]}}
-{"sql_pred": {"agg": [0], "sel": [3], "conds": [[6, 2, "护理专业（助产方向）"], [6, 2, "护理学"]], "cond_conn_op": 1}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[3, 2, "产房"], [6, 2, "护理学"]], "cond_conn_op": 1}}
 {"question": "PEPE裤子一共有多少条？", "table": "a87933ba3b0611e99e2ef40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[1, 2, "PEPE"], [2, 2, "裤子"]]}}
-{"sql_pred": {"agg": [0], "sel": [4], "conds": [[1, 2, "PEPE"]], "cond_conn_op": 0}}
-{"question": "我想知道PEPE裤子的数量是多少？", "table": "a87933ba3b0611e99e2ef40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[1, 2, "PEPE"], [2, 2, "裤子"]]}}
 {"sql_pred": {"agg": [0], "sel": [4], "conds": [[1, 2, "PEPE"]], "cond_conn_op": 0}}
 {"question": "你好啊，我想问问打算招几个高中的生物和化学老师啊", "table": "a920e2403b0611e99e82f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [8], "conds": [[4, 2, "高中生物教师"], [4, 2, "高中化学教师"]]}}
 {"sql_pred": {"agg": [0], "sel": [8], "conds": [[4, 2, "高中化学教师"]], "cond_conn_op": 0}}
+{"question": "有多少个企业的生产线不止一条或者站点在龙岗区龙港镇龙西村", "table": "ab8abc683b0611e99d0af40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 2, "sel": [1], "conds": [[6, 0, "1"], [2, 2, "龙岗区龙港镇龙西村"]]}}
+{"sql_pred": {"agg": [4], "sel": [1], "conds": [[2, 2, "龙岗区龙港镇龙西村"]], "cond_conn_op": 0}}
+{"question": "基层工作最低年限不限制或者需要组织专业考试的考试类别有哪些", "table": "a830431c3b0611e9b2dff40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [5], "conds": [[11, 2, "无限制"], [12, 2, "是"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[7, 2, "英语（高级翻译、同声传译等专业方向）"]], "cond_conn_op": 0}}
+{"question": "哪些考试类别不限制基层工作最低年限或者需要组织专业考试的", "table": "a830431c3b0611e9b2dff40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [5], "conds": [[11, 2, "无限制"], [12, 2, "是"]]}}
+{"sql_pred": {"agg": [], "sel": [], "conds": [[7, 2, "英语（高级翻译、同声传译等专业方向）"]], "cond_conn_op": 0}}
+{"question": "属于杰出青年科学基金项目的项目有哪些？", "table": "abb967333b0611e9a8a9f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [3], "conds": [[4, 2, "杰出青年科学基金项目"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[4, 2, "面上项目"], [4, 2, "杰出青年科学基金项目"]], "cond_conn_op": 1}}
 {"question": "just a test", "table": "a8583fa13b0611e996c9f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [4], "conds": [[5, 2, "由交易所付费"]]}}
 {"sql_pred": {"agg": [], "sel": [], "conds": [], "cond_conn_op": 0}}
@@ -363,79 +450,91 @@
 {"sql_pred": {"agg": [0], "sel": [0], "conds": [], "cond_conn_op": 0}}
 {"question": "请问周五（11月30日）的水果会有什么啊？", "table": "f4f0636e453d11e994c4f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [5], "conds": [[0, 2, "水果"]]}}
-{"sql_pred": {"agg": [0, 0], "sel": [0, 5], "conds": [], "cond_conn_op": 0}}
-{"question": "学分小于3分或者备注是限定选修课课程组9学分（每位学生必修）的专业有哪些", "table": "f4bc98f3453d11e9a4a9f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[3, 1, "3"], [4, 2, "限定选修课课程组9学分（每位学生必修）"]]}}
-{"sql_pred": {"agg": [0], "sel": [0], "conds": [[4, 2, "每位学生必修"], [1, 2, "限定选修课程组"], [3, 1, 3]], "cond_conn_op": 2}}
-{"question": "哪些专业的学分小于3分或者备注是限定选修课课程组9学分（每位学生必修）", "table": "f4bc98f3453d11e9a4a9f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[3, 1, "3"], [4, 2, "限定选修课课程组9学分（每位学生必修）"]]}}
-{"sql_pred": {"agg": [0], "sel": [0], "conds": [[4, 2, "限定选修课课程组9学分（每位学生必修）"], [4, 2, "每位学生必修"], [3, 1, 3]], "cond_conn_op": 2}}
-{"question": "你知道学分小于3分或者备注是限定选修课课程组9学分（每位学生必修）的专业吗，快告诉我", "table": "f4bc98f3453d11e9a4a9f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [0], "conds": [[3, 1, "3"], [4, 2, "限定选修课课程组9学分（每位学生必修）"]]}}
-{"sql_pred": {"agg": [0], "sel": [0], "conds": [[4, 2, "每位学生必修"], [1, 2, "限定选修课程组"], [3, 1, 3]], "cond_conn_op": 2}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [], "cond_conn_op": 0}}
 {"question": "你知道正常联想主机的编号都是多少吗", "table": "ee1b1000453d11e9b09df40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[2, 2, "联想"], [1, 2, "主机"], [4, 2, "正常"]]}}
 {"sql_pred": {"agg": [0], "sel": [0], "conds": [[2, 2, "联想"], [1, 2, "主机"]], "cond_conn_op": 1}}
-{"question": "联想哪个编号的主机正常没问题的呀", "table": "ee1b1000453d11e9b09df40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [0], "conds": [[2, 2, "联想"], [1, 2, "主机"], [4, 2, "正常"]]}}
-{"sql_pred": {"agg": [0], "sel": [0], "conds": [[2, 2, "联想"], [1, 2, "主机"]], "cond_conn_op": 1}}
-{"question": "被材料学专业录取的考生中，哪些编号的考生选择了自己来取录取录取通知书？", "table": "ef7382a1453d11e9827cf40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[2, 2, "材料学"], [7, 2, "自取"]]}}
-{"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 2, "材料学"]], "cond_conn_op": 0}}
-{"question": "你知道那个淄博审计局要招什么专业的审计吗", "table": "a895488f3b0611e981edf40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[0, 2, "淄博市审计局"], [2, 2, "审计职位"]]}}
-{"sql_pred": {"agg": [0], "sel": [6], "conds": [[0, 2, "淄博市审计局"], [2, 2, "审计职位"], [2, 2, "审计业务职位"]], "cond_conn_op": 1}}
+{"question": "我想问一下啊那个可爱多香芋牛奶口味的冰淇淋408克一箱的价格是多少", "table": "aa44830c3b0611e98556f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[2, 2, "可爱多甜筒香芋牛奶口味冰淇淋多支装"], [3, 2, "408g"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[2, 2, "可爱多甜筒香芋牛奶口味冰淇淋"]], "cond_conn_op": 0}}
 {"question": "在2015年北京抽查的生产企业有哪些呢？", "table": "aa624de13b0611e9abc3f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[3, 2, "2015年"], [2, 2, "北京市"]]}}
 {"sql_pred": {"agg": [0], "sel": [1], "conds": [[3, 2, "2015年"]], "cond_conn_op": 0}}
-{"question": "帮我看看，有哪些北京地区的企业2015年抽查的？", "table": "aa624de13b0611e9abc3f40f24344a08"}
+{"question": "请问一下，在北京地区2015年抽查的企业有哪些呀？", "table": "aa624de13b0611e9abc3f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[3, 2, "2015年"], [2, 2, "北京市"]]}}
 {"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 2, "北京市"]], "cond_conn_op": 0}}
 {"question": "能不能告诉我第一个学期的必修课马克思主义法理学是几个学分的", "table": "f322a270453d11e99ac4f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[4, 2, "第一学期（秋季）"], [2, 2, "马克思主义法理学"]]}}
 {"sql_pred": {"agg": [0], "sel": [3], "conds": [[0, 2, "专业必修课（14学分）"], [2, 2, "马克思主义法理学"], [4, 2, "第一学期（秋季）"]], "cond_conn_op": 1}}
-{"question": "你可以帮我查一下南航这个驾校的教练车数量吗", "table": "ab2ab8873b0611e98e59f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [2], "conds": [[1, 2, "南航驾校"]]}}
-{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 2, "南航驾校"], [1, 2, "江农驾校"]], "cond_conn_op": 2}}
-{"question": "诶你说那个天津动物园有哪里是要整顿修改的呀，还有大连森林动物园呢", "table": "aa02cf5c3b0611e9bf66f40f24344a08"}
+{"question": "我发现大通县支行的营业室在线上分配的数量在100枚以上，就想问问线下的额度有多少", "table": "ef94dbd1453d11e9a092f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[2, 2, "大通县支行营业室"], [4, 0, "100"]]}}
+{"sql_pred": {"agg": [0], "sel": [5], "conds": [[2, 2, "大通县支行营业室"], [4, 0, 100], [2, 2, "城西支行营业室"]], "cond_conn_op": 1}}
+{"question": "天津动物园和大连森林动物园分别有什么地方需要整改的吗", "table": "aa02cf5c3b0611e9bf66f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [4], "conds": [[1, 2, "天津市动物园"], [1, 2, "大连森林动物园"]]}}
-{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 2, "天津市动物园"], [1, 2, "大连森林动物园"], [4, 2, "保障经费；场馆需重新改造"]], "cond_conn_op": 2}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 2, "天津市动物园"], [1, 2, "大连森林动物园"], [1, 2, "濮阳市科普海洋生物有限公司"]], "cond_conn_op": 2}}
+{"question": "化学化工学院中属于发明专利的专利是哪些？", "table": "abd961873b0611e99fa2f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[7, 2, "化学化工学院"], [3, 2, "发明"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[7, 2, "化学化工学院"]], "cond_conn_op": 0}}
 {"question": "有什么发明专利是来自化学化工学院？", "table": "abd961873b0611e99fa2f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[7, 2, "化学化工学院"], [3, 2, "发明"]]}}
 {"sql_pred": {"agg": [0], "sel": [2], "conds": [[7, 2, "化学化工学院"]], "cond_conn_op": 0}}
+{"question": "哪些化学化工学院的专利是发明专利？", "table": "abd961873b0611e99fa2f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[7, 2, "化学化工学院"], [3, 2, "发明"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[7, 2, "化学化工学院"]], "cond_conn_op": 0}}
+{"question": "你帮我查一下那些生产达标餐具清洁剂的公司名吧", "table": "aac6cbb33b0611e9af1cf40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[2, 2, "餐具清洁剂"], [7, 2, "合格"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [], "cond_conn_op": 0}}
+{"question": "你好，你知道目前被抽检的产品中有哪些是达标的吗，还有这些达标的产品都是什么公司生产的你知道吗", "table": "ab4d149e3b0611e98a58f40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [2, 1], "conds": [[4, 2, "合格"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [1, 2], "conds": [], "cond_conn_op": 0}}
+{"question": "请问金属有机国家重点实验室黄正小组招这个研究助理所要求的专业是什么", "table": "aa8540f33b0611e9b786f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[0, 2, "金属有机国家重点实验室"], [1, 2, "黄正组"], [2, 2, "研究助理"]]}}
+{"sql_pred": {"agg": [0], "sel": [6], "conds": [[2, 2, "研究助理"], [0, 2, "金属有机国家重点实验室"]], "cond_conn_op": 1}}
 {"question": " 你知道金属有机实验室黄正他们组的这个助理岗位是要招什么专业的人吗", "table": "aa8540f33b0611e9b786f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[0, 2, "金属有机国家重点实验室"], [1, 2, "黄正组"], [2, 2, "研究助理"]]}}
 {"sql_pred": {"agg": [0], "sel": [6], "conds": [[2, 2, "研究助理"], [0, 2, "金属有机国家重点实验室"]], "cond_conn_op": 1}}
 {"question": "日本的东京体育报作为一份全国性的体育晚报，发行的数量大概是多少", "table": "f60ac2d7453d11e9ad9bf40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[3, 2, "日本"], [1, 2, "东京体育报"]]}}
-{"sql_pred": {"agg": [0], "sel": [4], "conds": [[3, 2, "美国"], [3, 2, "日本"], [1, 2, "东京体育报"]], "cond_conn_op": 1}}
-{"question": "找找有哪些岗位的学历要求得是硕士学位，读的是大气科学类专业，还有单位都是哪些呢？", "table": "a868b5613b0611e9a5e8f40f24344a08"}
-{"sql_right": {"agg": [0, 0], "cond_conn_op": 1, "sel": [2, 1], "conds": [[6, 2, "硕士"], [4, 2, "大气科学"]]}}
-{"sql_pred": {"agg": [0, 0], "sel": [1, 2], "conds": [[2, 2, "综合气象业务"], [6, 2, "硕士"], [4, 2, "大气科学类"]], "cond_conn_op": 1}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[1, 2, "中日体育报"], [3, 2, "日本"], [1, 2, "东京体育报"]], "cond_conn_op": 1}}
 {"question": "百色—深圳的经济舱最高限价是多少？", "table": "a97294303b0611e992a5f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[3, 2, "百色"], [4, 2, "深圳"]]}}
 {"sql_pred": {"agg": [0], "sel": [6], "conds": [[3, 2, "百色"]], "cond_conn_op": 0}}
-{"question": "你知道欢乐寒假（初一）是卖多少钱一本吗？", "table": "abac4db03b0611e99a64f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[0, 2, "七年级"], [3, 2, "欢乐寒假"]]}}
-{"sql_pred": {"agg": [0], "sel": [5], "conds": [[3, 2, "欢乐寒假"]], "cond_conn_op": 0}}
+{"question": "我想请问从百色到深圳坐经济舱，最高限价有多少啊？", "table": "a97294303b0611e992a5f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[3, 2, "百色"], [4, 2, "深圳"]]}}
+{"sql_pred": {"agg": [0], "sel": [6], "conds": [[3, 2, "百色"]], "cond_conn_op": 0}}
+{"question": "你能告诉我坐百色出发深圳到达的航班经济舱最高限价多少钱吗？", "table": "a97294303b0611e992a5f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[3, 2, "百色"], [4, 2, "深圳"]]}}
+{"sql_pred": {"agg": [0], "sel": [6], "conds": [[3, 2, "百色"]], "cond_conn_op": 0}}
+{"question": "你把那些被农业部农业机械试验鉴定总站鉴定的机械名称以及证书的编号告诉我一下呗", "table": "a7c5ae263b0611e98ebaf40f24344a08"}
+{"sql_right": {"agg": [0, 0], "cond_conn_op": 0, "sel": [2, 5], "conds": [[7, 2, "农业部农业机械试验鉴定总站"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [2, 5], "conds": [[7, 2, "农业部农业机械试验鉴定总站"], [1, 2, "上海申港机械厂"]], "cond_conn_op": 1}}
 {"question": "哪几本书是人教社初次发行？", "table": "ed472e14453d11e9aa84f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[0, 2, "人教社"], [2, 2, "初版"]]}}
 {"sql_pred": {"agg": [0], "sel": [1], "conds": [[0, 2, "人教社"]], "cond_conn_op": 0}}
-{"question": "请问初次发行的书里哪些是人教版出版的？", "table": "ed472e14453d11e9aa84f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[0, 2, "人教社"], [2, 2, "初版"]]}}
-{"sql_pred": {"agg": [0], "sel": [1], "conds": [[0, 2, "人教社"]], "cond_conn_op": 0}}
-{"question": "你好，你知道有几个人参加这个叫高级企业管理，并得维持三周的这个培训项目吗", "table": "a95fd8573b0611e98ba2f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[2, 2, "高级企业管理"], [4, 2, "3周"]]}}
-{"sql_pred": {"agg": [0], "sel": [5], "conds": [[2, 2, "农业管理培训项目"], [4, 2, "2周"], [2, 2, "高级企业管理"]], "cond_conn_op": 1}}
 {"question": "安全教育培训或者评分标准为1、未保证安全生产投入的，扣2分；2、安全生产费用使用不全，每少1项，扣1分，扣完4分为止的内容是什么", "table": "a89521f83b0611e9a3b9f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [2], "conds": [[1, 2, "安全教育培训"], [4, 2, "1、未保证安全生产投入的，扣2分；2、安全生产费用使用不全，每少1项，扣1分，扣完4分为止。"]]}}
-{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 2, "安全投入"], [0, 2, "1.0"], [1, 2, "安全教育培训"], [3, 1, 2]], "cond_conn_op": 2}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 2, "安全投入"], [1, 2, "安全生产规章制度"], [1, 2, "安全教育培训"]], "cond_conn_op": 2}}
 {"question": "什么内容的评分标准为1、未保证安全生产投入的，扣2分；2、安全生产费用使用不全，每少1项，扣1分，扣完4分为止或者项目为安全教育培训", "table": "a89521f83b0611e9a3b9f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [2], "conds": [[1, 2, "安全教育培训"], [4, 2, "1、未保证安全生产投入的，扣2分；2、安全生产费用使用不全，每少1项，扣1分，扣完4分为止。"]]}}
-{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 2, "安全投入"], [0, 2, "1.0"], [4, 1, 2], [1, 2, "安全教育培训"]], "cond_conn_op": 2}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[1, 2, "安全教育培训"], [1, 2, "安全投入"], [1, 2, "安全生产规章制度"], [0, 2, "2.0"]], "cond_conn_op": 2}}
 {"question": "你可以告诉我安全教育培训或者评分标准为1、未保证安全生产投入的，扣2分；2、安全生产费用使用不全，每少1项，扣1分，扣完4分为止的内容吗，谢谢", "table": "a89521f83b0611e9a3b9f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [2], "conds": [[1, 2, "安全教育培训"], [4, 2, "1、未保证安全生产投入的，扣2分；2、安全生产费用使用不全，每少1项，扣1分，扣完4分为止。"]]}}
-{"sql_pred": {"agg": [], "sel": [], "conds": [[1, 2, "安全投入"], [3, 1, 2], [1, 2, "安全教育培训"], [4, 1, 1]], "cond_conn_op": 2}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[4, 2, "1、未保证安全生产投入的，扣2分；2、安全生产费用使用不全，每少1项，扣1分，扣完4分为止。"], [0, 2, "1.0"], [0, 2, "2.0"], [1, 2, "安全教育培训"], [1, 2, "安全投入"]], "cond_conn_op": 2}}
+{"question": "请问辽宁光电他们公司的地址在哪里", "table": "a93c94543b0611e99e53f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [3], "conds": [[2, 2, "辽宁光电电子股份有限公司"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[2, 2, "鞍山通信工程公司"], [2, 2, "辽宁光电电子股份有限公司"]], "cond_conn_op": 1}}
+{"question": "我想问一下东湖水世界这个项目总的投资金额是多少", "table": "a96bad823b0611e9b9c0f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [4], "conds": [[1, 2, "东湖水世界项目"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[1, 2, "东湖水世界项目"], [1, 2, "斫琴坊项目"]], "cond_conn_op": 2}}
+{"question": "这个东湖水世界的项目总投资有多少了", "table": "a96bad823b0611e9b9c0f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [4], "conds": [[1, 2, "东湖水世界项目"]]}}
+{"sql_pred": {"agg": [0], "sel": [4], "conds": [[1, 2, "东湖水世界项目"], [1, 2, "斫琴坊项目"]], "cond_conn_op": 2}}
+{"question": "那个你知道要求本科工程测量的都是什么岗吗", "table": "ee000d63453d11e98482f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [2], "conds": [[6, 2, "本科"], [5, 2, "工程测量"]]}}
+{"sql_pred": {"agg": [0], "sel": [2], "conds": [[5, 2, "工程测量"]], "cond_conn_op": 0}}
+{"question": "我想知道哪间中学的节目获得了一等奖来着", "table": "f3248285453d11e9a009f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[1, 2, "中学组"], [6, 2, "一等奖"]]}}
+{"sql_pred": {"agg": [0, 0], "sel": [3, 4], "conds": [[6, 2, "一等奖"]], "cond_conn_op": 0}}
 {"question": "帮我找找啊，年薪5到6万的岗位有多少个呀", "table": "ab4dc6dc3b0611e9aa57f40f24344a08"}
 {"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [5], "conds": [[9, 2, "50000-60000元/年"]]}}
 {"sql_pred": {"agg": [4], "sel": [5], "conds": [[9, 2, "5万"], [9, 2, "6万"]], "cond_conn_op": 1}}
@@ -444,16 +543,25 @@
 {"sql_pred": {"agg": [4], "sel": [5], "conds": [[9, 2, "5万"], [9, 2, "6万"]], "cond_conn_op": 1}}
 {"question": "你知道有多少个岗位的年薪是在5到6万之间的吗", "table": "ab4dc6dc3b0611e9aa57f40f24344a08"}
 {"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [5], "conds": [[9, 2, "50000-60000元/年"]]}}
-{"sql_pred": {"agg": [4], "sel": [5], "conds": [[9, 0, 60000], [9, 0, 5]], "cond_conn_op": 1}}
+{"sql_pred": {"agg": [4], "sel": [5], "conds": [[9, 2, "5万"], [9, 2, "6万"]], "cond_conn_op": 2}}
+{"question": "一共有几家生产复方枸橼酸铁铵糖浆的呀", "table": "a93eb9a83b0611e9a163f40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [5], "conds": [[0, 2, "复方枸橼酸铁铵糖浆"]]}}
+{"sql_pred": {"agg": [4], "sel": [5], "conds": [[2, 2, "复方"], [0, 2, "复方枸橼酸铁铵糖浆"]], "cond_conn_op": 1}}
+{"question": "你帮我查生产复方枸橼酸铁铵糖浆的总共是多少家企业啊", "table": "a93eb9a83b0611e9a163f40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [5], "conds": [[0, 2, "复方枸橼酸铁铵糖浆"]]}}
+{"sql_pred": {"agg": [5], "sel": [5], "conds": [[2, 2, "复方"], [0, 2, "复方枸橼酸铁铵糖浆"]], "cond_conn_op": 1}}
+{"question": "你算算看目前生产复方枸橼酸铁铵糖浆的有多少家公司啊", "table": "a93eb9a83b0611e9a163f40f24344a08"}
+{"sql_right": {"agg": [4], "cond_conn_op": 0, "sel": [5], "conds": [[0, 2, "复方枸橼酸铁铵糖浆"]]}}
+{"sql_pred": {"agg": [4], "sel": [5], "conds": [[2, 2, "复方"], [0, 2, "复方枸橼酸铁铵糖浆"]], "cond_conn_op": 1}}
 {"question": "我想问一下位于北京祥云小镇的悠游堂海盗主题乐园营业的时间是多少", "table": "a99d0d703b0611e9866bf40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [5], "conds": [[2, 2, "悠游堂海盗主题乐园北京祥云小镇店"]]}}
 {"sql_pred": {"agg": [0], "sel": [5], "conds": [[2, 2, "悠游堂海盗主题乐园北京回龙观店"], [2, 2, "悠游堂海盗主题乐园北京祥云小镇店"]], "cond_conn_op": 1}}
 {"question": "帮我查询悠游堂海盗主题乐园的北京祥云小镇店的营业时间谢谢", "table": "a99d0d703b0611e9866bf40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [5], "conds": [[2, 2, "悠游堂海盗主题乐园北京祥云小镇店"]]}}
 {"sql_pred": {"agg": [0], "sel": [5], "conds": [[2, 2, "悠游堂海盗主题乐园北京回龙观店"], [2, 2, "悠游堂海盗主题乐园北京祥云小镇店"]], "cond_conn_op": 1}}
-{"question": "辽宁省农村留守儿童教育现状调查研究报告和IT知识与英语语言教学的结合的作者是谁", "table": "f4608d47453d11e9b282f40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 2, "sel": [3], "conds": [[1, 2, "辽宁省农村留守儿童教育现状调查研究报告"], [1, 2, "IT知识与英语语言教学的结合"]]}}
-{"sql_pred": {"agg": [0], "sel": [3], "conds": [[1, 2, "中学生综合实践活动指南"], [1, 2, "辽宁省农村留守儿童教育现状调查研究报告"], [1, 2, "IT知识与英语语言教学的结合"]], "cond_conn_op": 2}}
+{"question": "我想问一下啊长沙市园林管理局所属单位文秘这个岗位要求要有什么学历的啊", "table": "aa8edfeb3b0611e9b238f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [6], "conds": [[1, 2, "长沙市园林管理局所属事业单位"], [3, 2, "文秘"]]}}
+{"sql_pred": {"agg": [0], "sel": [6], "conds": [[1, 2, "长沙市园林管理局所属事业单位"]], "cond_conn_op": 0}}
 {"question": "在中国大陆或者在香港上映的3D电影有哪些呀？", "table": "ab5fd9a63b0611e98cdff40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[5, 2, "中国大陆/香港"], [4, 2, "3D"]]}}
 {"sql_pred": {"agg": [0], "sel": [1], "conds": [[5, 2, "香港"], [4, 2, "3D"], [5, 2, "中国大陆"]], "cond_conn_op": 2}}
@@ -463,9 +571,15 @@
 {"question": "哈喽，你知道有哪些3D电影在中国大陆或在香港上映的吗？", "table": "ab5fd9a63b0611e98cdff40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[5, 2, "中国大陆/香港"], [4, 2, "3D"]]}}
 {"sql_pred": {"agg": [0], "sel": [1], "conds": [[5, 2, "香港"], [4, 2, "3D"], [5, 2, "中国大陆"]], "cond_conn_op": 1}}
-{"question": "有哪些产品的封装是胶印平装并且是安徽新华印刷股份有限公司印的？", "table": "ef2fee5c453d11e9b3c4f40f24344a08"}
+{"question": "芜湖市有哪些高职学校", "table": "aa95d2333b0611e980a6f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[1, 2, "高职"], [2, 2, "芜湖市"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[2, 2, "芜湖市"]], "cond_conn_op": 0}}
+{"question": "你知道有哪些高职院校在芜湖市吗", "table": "aa95d2333b0611e980a6f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[1, 2, "高职"], [2, 2, "芜湖市"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[2, 2, "芜湖市"]], "cond_conn_op": 0}}
+{"question": "你帮我查一下那个芜湖的高职学校名", "table": "aa95d2333b0611e980a6f40f24344a08"}
+{"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [3], "conds": [[1, 2, "高职"], [2, 2, "芜湖市"]]}}
+{"sql_pred": {"agg": [0], "sel": [3], "conds": [[2, 2, "芜湖市"]], "cond_conn_op": 0}}
+{"question": "麻烦问一下，封装是胶印平装的且是安徽新华印刷股份有限公司印的产品有哪些呢？", "table": "ef2fee5c453d11e9b3c4f40f24344a08"}
 {"sql_right": {"agg": [0], "cond_conn_op": 1, "sel": [1], "conds": [[4, 2, "胶印平装"], [2, 2, "安徽新华印刷股份有限公司"]]}}
 {"sql_pred": {"agg": [0], "sel": [1], "conds": [[2, 2, "安徽新华印刷股份有限公司"], [4, 2, "胶印平装"], [4, 2, "胶印精装"]], "cond_conn_op": 1}}
-{"question": "我想到朝阳区公安消防支队受理大厅办理业务，具体地址在哪？", "table": "f6f9a8c5453d11e99ccdf40f24344a08"}
-{"sql_right": {"agg": [0], "cond_conn_op": 0, "sel": [2], "conds": [[1, 2, "北京市朝阳区公安消防支队受理大厅"]]}}
-{"sql_pred": {"agg": [0], "sel": [2], "conds": [[5, 2, "大兴区"], [1, 2, "北京市朝阳区公安消防支队受理大厅"]], "cond_conn_op": 1}}
