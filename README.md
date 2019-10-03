@@ -26,7 +26,7 @@
 conda create --name nl2sql-yscoder python=3.6
 source activate
 conda activate nl2sql-yscoder
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple  -r requirements.txt
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple  -r requirements
 ``` 
 root@481c7f8087a2
 
@@ -50,18 +50,8 @@ sh start_test.sh
   - 数据集位置 
 
 
-## Part2: 数据探查
-- AB型问题
-  如初一欢乐寒假
 
-- 一词对应多列, 例如　2019年且2020年大于3的
-
-- 同义词解决方案 鹅场　对应　腾讯
-
-- 数据库内数据要规整,  保证单位的统一性
-
-
-## Part3: 预处理
+## Part2: 预处理
 --- 
 ###  一. 数值类型转化
 
@@ -83,7 +73,7 @@ sh start_test.sh
 
 --- 
 
-## Part4:模型介绍
+## Part3:模型介绍
 Todo (这两天把图做好　)
 
 > 注意，如果执行此代码报错，需要修改一下Keras的backend/tensorflow_backend.py，将sparse_categorical_crossentropy函数中原本是  
@@ -97,10 +87,17 @@ logits = tf.reshape(output, [-1, tf.shape(output)[-1]])
 ``` 
 
 
+模型解决的特殊问题: 
+- AB型问题
+   例如:初一欢乐寒假这本书多少钱。 这个句子当中的初一与欢乐寒假是相邻的两个不同列的候选值  
+- 一个候选值对应多列, 例如　eps2011与eps2012均大于10的股票有哪些? 这里的10对应了表中的两个列
+
+
+
 
 
 --- 
-## Part5: 后处理    
+## Part4: 后处理    
    后处理主要包括如下几块:
    1. 数字中的部分**数位缺失**,例如**200000** 模型之预测到**200**,根据数字的性质，可以对缺失的数位做补齐处理
    2. question中数值单位和表中单位进行统一. 例如question当中票房的单位是"亿",而在相关表中该列的单位为"百万". 本数据集中数值相关的单位存储在表的列名称或者表的title中.
@@ -110,13 +107,13 @@ logits = tf.reshape(output, [-1, tf.shape(output)[-1]])
 
 --- 
 
-## Part6: 模型效果评估  
+## Part5: 模型效果评估  
 模型效果评估部分，主要采用官方baseline中的方法，并进行了一定封装．主要用于对预测各个部件的准确性进行评估，并存储预测的错误结果以用于后续分析.    
 功能所在文件为calc_acc.py   
 主要函数为check_part_acc
 
 ---
-## Part7: TODO 
+## Part6: TODO 
 ### 数字通用前后缀挖掘
 由于时间关系，原有方案在将文本中的"中文数字"转换为阿拉伯数字时, 用了一种1字前缀+1字后缀的方式来匹配"中文数字" ，例如: 
 ``` 
@@ -126,6 +123,12 @@ logits = tf.reshape(output, [-1, tf.shape(output)[-1]])
 
 
 > 有兴趣的可以看看是否可以将所有的数值相关的训练材料从**阿拉伯数字**转换为**中文数字**，最后评估下模型效果
+
+
+### 同义词解决方案 
+例如如何将问题中的鹅场和腾讯关联起来
+
+
 
 ### BUGFIX: 
 ``` 
@@ -203,7 +206,7 @@ IndexError: list index out of range
 │   └── weights
 │       └── nl2sql_finetune.weights
 ├── Dockerfile
-├── requirements.txt
+├── requirements
 ├── img
 │   └── nl2sql_model_old.png
 ├── README.md
