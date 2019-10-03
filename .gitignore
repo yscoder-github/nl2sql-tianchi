@@ -1,5 +1,5 @@
 /input/*
-# *.txt
+*.txt
 .idea/*
 *.csv
 *.zip
@@ -14,4 +14,4 @@
 *.json 
 *.db 
 bert_model.* 
-
+vocab.txt
