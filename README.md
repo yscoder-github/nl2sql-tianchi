@@ -23,9 +23,10 @@
 #### 2. Python相关环境
 
 ``` shell 
-conda create --name nl2sql-yscoder python=3.6
+conda create --name nl2sql-yscoder1 python=3.6
 source activate
-conda activate nl2sql-yscoder
+conda activate nl2sql-yscoder1
+pip install --upgrade pip  
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple  -r requirements
 ``` 
 root@481c7f8087a2
@@ -76,6 +77,8 @@ sh start_test.sh
 ## Part3:模型介绍
 Todo (这两天把图做好　)
 
+
+[部分训练日志](https://github.com/yscoder-github/nl2sql-tianchi/blob/master/EXELOG.md)
 > 注意，如果执行此代码报错，需要修改一下Keras的backend/tensorflow_backend.py，将sparse_categorical_crossentropy函数中原本是  
 
 ``` python 
@@ -130,7 +133,7 @@ logits = tf.reshape(output, [-1, tf.shape(output)[-1]])
 
 
 
-### BUGFIX: 
+### BUGFIX:  (FIXED)
 ``` 
   File "nl2sql_main.py", line 816, in <module>
     callbacks=[evaluator]
