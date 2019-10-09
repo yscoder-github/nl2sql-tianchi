@@ -40,7 +40,7 @@ num_cond_conn_op = 3 # conn_sql_dict = {0:"", 1:"and", 2:"or"}
 csel_num = 20 # col cnt 最大为20 
 
 # learning_rate = 5e-5
-learning_rate = 15e-5 # from 15 to 8 
+learning_rate = 15e-5 # 8 is Ok and testing 15
 min_learning_rate = 1e-5
 
 config_path = os.path.join(model_bert_wwm_path, 'chinese-bert_chinese_wwm_L-12_H-768_A-12/bert_config.json')
@@ -497,9 +497,9 @@ def nl2sql(question, table):
                         if 1 in pcdiv[0][v_start: v_end].argmax(1):
 
                             entity_start_pos_list = [v_start + 1 + idx  for idx, mark in enumerate(pcdiv[0][v_start + 1: v_end].argmax(1)) if mark == 1]
-                            if entity_start_pos_list[0] != v_start:
+                            if len(entity_start_pos_list) > 0 and entity_start_pos_list[0] != v_start:
                                 entity_start_pos_list.insert(0, v_start)
-                            if entity_start_pos_list[-1] != v_end:
+                            if len(entity_start_pos_list) > 0 and entity_start_pos_list[-1] != v_end:
                                 entity_start_pos_list.append(v_end)
 
                             for idx in range(len(entity_start_pos_list) - 1):
@@ -552,9 +552,9 @@ def nl2sql(question, table):
                     if 1 in pcdiv[0][v_start: v_end].argmax(1):
 
                         entity_start_pos_list = [v_start + 1 + idx  for idx, mark in enumerate(pcdiv[0][v_start + 1: v_end].argmax(1)) if mark == 1]
-                        if entity_start_pos_list[0] != v_start:
+                        if len(entity_start_pos_list) > 0 and entity_start_pos_list[0] != v_start:
                             entity_start_pos_list.insert(0, v_start)
-                        if entity_start_pos_list[-1] != v_end:
+                        if len(entity_start_pos_list) > 0 and  entity_start_pos_list[-1] != v_end:
                             entity_start_pos_list.append(v_end)
 
                         for idx in range(len(entity_start_pos_list) - 1):
@@ -738,7 +738,9 @@ def evaluate(data, tables):
     pbar.close()
     return 1 - acc[-1]
 
+
 if mode == 'evaluate':
+    # model.load_weights(weight_save_path) # 
     evaluate(valid_data, valid_tables)
     import sys
     sys.exit(0) 
@@ -746,6 +748,7 @@ if mode == 'evaluate':
 
 def test(data, tables, submit_path):
     pbar = tqdm()
+    model.load_weights(weight_save_path) # 
     F = open(submit_path, 'w')
     for i, d in enumerate(data):
         question = d['question']
