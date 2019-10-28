@@ -131,7 +131,7 @@ class data_generator:
                 '''
                 这里的xm的左侧和右侧的mask值为0,  len(d['question']) 这个长度被标记为1, 
                 mask其实就是像一个盖子一样，把有用的东西盖起来，或者说标记出来对后续有用的东西。 
-                为什么xm的左侧这个[cls]被标记为0了？因为这个位置铁打不动，长度固定就是１
+                为什么xm的左侧这个[cls]被标记为0了？因为这个位置固定，长度固定就是１
                 同理xm右侧这个[seq]被标记为0了，因为这个[sep]没啥用这里.
                 '''  
                 xm = [0] + [1] * len(d['question']) + [0]
@@ -141,10 +141,6 @@ class data_generator:
                     h.append(len(x1))
                     x1.extend(_x1)
                     x2.extend(_x2)
-                '''
-                batch中的每一个hm其实就是告诉你，前len(h)这个长度是有效的，后面都是为了凑 header_max_cnt 而pandding出来的０．
-                padding出来的东西对loss无任何意义.
-                '''
                 hm = [1] * len(h) 
                 sel = []
                 for j in range(len(h)):
@@ -154,7 +150,7 @@ class data_generator:
                     else:
                         sel.append(num_agg - 1) 
                 conn = [d['sql']['cond_conn_op']]
-                csel0 = np.zeros(len(d['question']) + 2, dtype='int32') # 这里的0既表示padding,表示当前位置不对应任何表中的列
+                csel0 = np.zeros(len(d['question']) + 2, dtype='int32')
                 csel1 = np.zeros(len(d['question']) + 2, dtype='int32')
                 csel2 = np.zeros(len(d['question']) + 2, dtype='int32')
                 cop = np.zeros(len(d['question']) + 2, dtype='int32') + num_op - 1 
@@ -330,7 +326,7 @@ x1, x2, xm, h, hm, sel, conn, csel0, csel1, csel2, cop, cdiv = (
 hm = Lambda(lambda x: K.expand_dims(x, 1))(hm) # header的mask.shape=(None, 1, h_len)
 
 x = bert_model([x1_in, x2_in]) # shape x [?, ?, 768] [batch_size, n_step(n_input_step), hidden_size]
-x4conn = Lambda(lambda x: x[:, 0])(x) #x[:, 0]是获取每个训练样本的输入的第0个step,也就是用来判断条件之间关联运算符 [None, hidden_size]
+x4conn = Lambda(lambda x: x[:, 0])(x) #x[:, 0] [None, hidden_size]
 pconn = Dense(num_cond_conn_op, activation='softmax')(x4conn) # [None, num_cond_conn_op]
 
 # h记录各个header[cls]所在的位置, 这个seq_gather的作用就是把input_x中的header[cls]搞出来。 
@@ -352,7 +348,7 @@ pcsel_att = Lambda(lambda x: x[..., 0])(pcsel_att) # [None,q_n_step，h_n_step]
 pcsel_h_part = Lambda(lambda x: K.batch_dot(x[0], x[1]))([pcsel_att, x4h_ori]) # [None, q_n_step, hidden_siz]    
 pcsel = concatenate([x_ori, pcsel_h_part], axis=-1) 
 
-pcsel = Dense(1200, activation='relu')(pcsel) #[None, q_n_step, 1200]  relu 缓解梯度爆炸
+pcsel = Dense(1200, activation='relu')(pcsel) #[None, q_n_step, 1200] 
 pcdiv = Dense(2, activation='softmax')(pcsel)
 
 pcsel0 = Dense(csel_num, activation='softmax')(pcsel) # [bs, q_step, 3, num_op]
@@ -370,13 +366,7 @@ train_model = Model(
     [psel, pconn, pcop, pcsel0, pcsel1, pcsel2, pcdiv]
 )
 
-'''
-mask存在的意义是什么? 为什么被mask的位置要用1,而padding要用0??? 
-(1) mask的位置说明这个位置的数据是有效的，我们后续会专门把为１的部分拿出来，比如计算损失等
-(2) 在训练过程中，数据会以batch的形式进行组织，例如batch_size=16, 在这16组训练数据中，以question长度为例，这16组数据的question长度是不同的，那么一般会这样做：
- 获取这16个question中的长度最大值，然后question中的有效部分会通过mask 1值来记录，而question中未达到max_len的部分会通过padding 0标记.
- 所以其实这个mask并没有很神奇，只不过是为了标记一下哪些位置是"有用的"，而且后续计算损失等会"保留"的.
-'''
+
 xm = xm # question的mask.shape=(None, x_len)  
 
 hm = hm[:, 0] # header的mask.shape=(None, h_len)  # 这个操作就是去掉1，torch中有squeeze压紧方法做这个事情
@@ -490,7 +480,6 @@ def nl2sql(question, table):
                     v_end = v_start + len(v_str)
                     v_start_idx, v_end_idx, smooth_val = smooth_numeric(v_start - 1, v_end - 1, question)
                     unit_first, unit_second  = get_append_unit(v_start - 1, v_end - 1, question) # unit_firt: 亿 unit_second: 元
-                    
                     # 添加div中的信息
                     # print(max(pcdiv[0][v_start: v_end].argmax(1)))
                     if max(pcdiv[0][v_start: v_end].argmax(1)) > 0:# 0 

@@ -77,7 +77,6 @@ def get_unit_from_title(title):
        title: '010年至今土地市场成交情况（万亿、万平）'
        ret: 万亿　万平　
     """
-
     # unit_regex = "(亿元).*?亿美元', '万平方米', '万平', '千桶','万人','万平米','亿股', '万吨','万亿件','元/平米',
     # '亿吨','亿件', '万支', '亿人民币', '亿', '万人次', '百万美元', '百万元'"
     unit_list = re.findall(r'（(.*?)）', title)
@@ -185,7 +184,6 @@ def number_trans_test():
     assert number_trans(100,'当月累计成交量','图17、重点类型城市二手房成交数据（万平米）',format_of_number='万', format_desc='平') ==100
     assert number_trans(40,'总市值（亿港元）','表 3：传媒互联网行业港股情况 传媒互联网行业港股情况',format_of_number='亿', format_desc=None) ==40
     assert number_trans(40,'总市值（亿港元）','表 3：传媒互联网行业港股情况 传媒互联网行业港股情况',format_of_number='亿', format_desc=None) ==40
-
 
 
 if __name__ == "__main__":

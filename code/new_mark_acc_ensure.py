@@ -521,7 +521,7 @@ def check_other():
         conds = d['sql']['conds']
         types = table_types[d['table_id']]
         header = table_headers[d['table_id']]
-        question = trans_question_acc(question) # 转化是必须的
+        question = trans_question_acc(question)
         if question in bad_question|wrong_mark_official|correct_q_set|\
                     no_num_similar_set| q_one_vs_more_col_set|q_need_exactly_match_set|\
                    q_need_exactly_match_more_strinct_set|q_text_contain_similar_set|q_need_col_similar_set:
