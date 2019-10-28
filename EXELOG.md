@@ -142,5 +142,6 @@ Epoch 20/40
 2205it [00:25, 82.22it/s]Traceback (most recent call last):
 
 ...... 
+未完待续
 ```
 

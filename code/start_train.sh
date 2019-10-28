@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-PYTHONHASHSEED=0 python nl2sql_main.py --mode='train'
+python nl2sql_main.py --mode='train'
