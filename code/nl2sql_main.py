@@ -26,6 +26,7 @@ from new_mark_acc_ensure import *
 from question_prepro import * 
 from utils import read_data
 import argparse
+from config import config
 parser = argparse.ArgumentParser()
 parser.add_argument('--mode', type=str, default='', help='execute mode, eg: train/test/evaluate')
 args = parser.parse_args()
@@ -128,12 +129,6 @@ class data_generator:
                 t = self.tables[d['table_id']]['headers']
                 dtypes = self.tables[d['table_id']]['types']
                 x1, x2 = tokenizer.encode(d['question'])  
-                '''
-                这里的xm的左侧和右侧的mask值为0,  len(d['question']) 这个长度被标记为1, 
-                mask其实就是像一个盖子一样，把有用的东西盖起来，或者说标记出来对后续有用的东西。 
-                为什么xm的左侧这个[cls]被标记为0了？因为这个位置固定，长度固定就是１
-                同理xm右侧这个[seq]被标记为0了，因为这个[sep]没啥用这里.
-                '''  
                 xm = [0] + [1] * len(d['question']) + [0]
                 h = []
                 for j in t:
